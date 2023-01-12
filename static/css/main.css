@@ -20,6 +20,7 @@ header.navbar{
 }
 
 header.navbar a {
+    font-size: large;
     color: wheat;
     text-decoration: none;
     display: inline-block;

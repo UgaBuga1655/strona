@@ -22,7 +22,11 @@ def file_submit():
         except:
             response = ["Niewłaściwy plik"]
         return render_template("file-submit.html", response = response) 
-  
+
+
+@app.route('/spiewnik')
+def spiewnik():
+    return render_template("spiewnik.html") 
         
 
 @app.route("/vts/editor")
