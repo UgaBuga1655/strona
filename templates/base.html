@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block css %}{% endblock %}
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+</head>
+<header class="navbar">
+    <a href="/">Strona główna</a>
+    <a href="#">Przepisy</a>
+    <a href="#">Śpiewnik</a>
+    <a href="/vts">VTS</a>
+</header>
+<body>
+    <div class="wrapper">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="wrapper">
+        Tobiasz 2023
+    </div>
+</body>
+{% block javascript %}{% endblock %}
+

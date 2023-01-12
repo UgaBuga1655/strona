@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/vts.css">
+{% endblock %}
+
+
+{% block title %}Edytor{% endblock %}
+
+{% block content %}
+
+
+<h1 class="text-center">Edytor klasy</h1>
+
+
+<p>Jeśli chcesz, możesz wgrać plik, aby go edytować.</p>
+
+
+<form>
+    <label for="file-form">
+        Wybierz plik
+    </label>
+    <input style="display: none;"type="file" id="file-form" >
+</form>
+
+<form>
+    <input type="text" name="group" id="group-form" placeholder="Rozszerzenie">
+    <input type="button" onclick="addGroup()" value="Dodaj rozszerzenie">
+</form>
+
+<div id="groups" class="card"></div>
+
+<form class="input-group">
+    <input type="text"  name="name" id="name-form" placeholder="Imię">
+    <input type="text" name="surname" id="surname-form" placeholder="Nazwisko">
+    <input type="button" onclick="addStudent()" value="Dodaj ucznia">
+</form>
+
+<div id="table" class="card">
+</div>
+<div>
+    <input type="button" onclick="generateFileFromTable()" value="Zapisz">
+    <form style="display: inline;" action="/vts/file-submit" method="post" enctype="application/x-www-form-urlencoded">
+        <textarea readonly id="text-field" class="form-control" name="dane" style="display: none;"></textarea>
+        <input onclick="generateFileFromTable()" type="submit" value="Zapisz i znajdź odpowiedzi">
+    </form>
+</div>
+
+
+
+
+{% endblock %}
+
+{% block javascript %}
+    <!-- (A) LOAD FILE SAVER -->
+    <!-- https://cdnjs.com/libraries/FileSaver.js -->
+    <!-- https://github.com/eligrey/FileSaver.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="/static/scripts/editor.js"></script>
+    
+{% endblock %}
