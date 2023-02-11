@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/szyfry.css">
+{% endblock %}
+
+
+{% block title %}Szyfry{% endblock %}
+
+
+{% block content %}
+
+<h1>Szyfry</h1>
+<div id="select" class="select">
+    <span class="button" onclick="populateInputCard(this, 'morse')">Morse</span>
+    <span class="button" onclick="populateInputCard(this, 'cezar')">Cezar</span>
+    <span class="button" onclick="populateInputCard(this, 'sylabowy')">Sylabowy</span>
+</div>
+
+<div id="input" class="">
+
+    <div id="morse" class="invisible">
+        <h2>Alfabet Morse'a</h2>
+
+        <textarea name="message" id="morse-message" placeholder="Twoja wiadomość" wrap="soft" style="width: calc(100% - 22px);" required=""></textarea>
+        <select name="mode" id="morse-mode">
+            <option value="zaszyfruj">Zaszyfruj</option>
+            <option value="odszyfruj">Odszyfruj</option>
+        </select>
+        <input type="button" value="Potwierdź" onclick="processMorse()">
+
+        <div id="morse-response" class="card invisible">Twoja wiadomość</div>
+    </div>
+
+    <div id="cezar" class="invisible">
+        Cezar
+    </div>
+
+    <div id="sylabowy" class="invisible">
+        Sylabowy
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+    <script src="/static/scripts/szyfry.js"></script>
+{% endblock %}
+

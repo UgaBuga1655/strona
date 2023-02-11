@@ -48,6 +48,7 @@ input[type=button], input[type=submit], label{
     border-radius: 10px;
     transition: all 0.2s ease-in;
 }
+
 input[type=button]:hover, input[type=submit]:hover, label:hover {
     font-weight: bold;
     border-color: wheat;
@@ -57,5 +58,6 @@ input[type=button]:hover, input[type=submit]:hover, label:hover {
 
 ::placeholder {
     font-family: 'Courier New', Courier, monospace;
-    color: wheat;
+    color: antiquewhite;
+
 }

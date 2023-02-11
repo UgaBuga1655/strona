@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=0.75, user-scalable=yes">
+    <link rel="icon" type="image/x-icon" href="/static/images/don-pedro.jpg">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     {% block css %}{% endblock %}
     <title>
         {% block title %}{% endblock %}
     </title>
 </head>
-<header class="navbar">
-    <a href="/">Strona główna</a>
-    <a href="/spiewnik">Śpiewnik</a>
-    <a href="/vts">VTS</a>
+<header id="navbar" class="navbar">
+    <a id="a-index" href="/">Strona główna</a>
+    <a id="a-spiewnik" href="/spiewnik">Śpiewnik</a>
+    <a id="a-szyfry" href="/szyfry">Szyfry</a>
+    <a id="a-vts" href="/vts">VTS</a>
 </header>
 <body>
-    <div class="wrapper">
+    <div id="content" class="wrapper">
         {% block content %}{% endblock %}
     </div>
-    <div class="wrapper">
+    <div id="footer" class="wrapper">
         Tobiasz 2023
     </div>
 </body>
 {% block javascript %}{% endblock %}
 
+<script>
+    document.getElementById("a-{{ active_tab }}").classList.add("active-tab")
+</script>

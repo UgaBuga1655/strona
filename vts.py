@@ -1,5 +1,6 @@
 from itertools import combinations
 import networkx as nx
+from flask import Blueprint, render_template, request
 
 # algorytm ze strony:
 # https://iq.opengenus.org/algorithm-to-find-cliques-of-a-given-size-k/
@@ -85,8 +86,27 @@ def main(file):
     response = print_cliques(graph)
     return response
 
-def dupa():
-    return "dupa"
 
-if __name__ == "__main__":
-    print(dupa())
+
+vts = Blueprint('vts', __name__, )
+active_tab = "vts"
+
+@vts.route('/')
+def vts_route():
+    return render_template("vts.html", active_tab=active_tab)
+
+@vts.route("/file-submit", methods=["POST", "GET"])
+def file_submit():
+    if request.method == "GET":
+        return render_template("file-submit.html", active_tab=active_tab)
+    if request.method == "POST":
+        file = request.form.get('dane')
+        try:
+            response = vts.main(file)
+        except:
+            response = ["Niewłaściwy plik"]
+        return render_template("file-submit.html", response = response, active_tab=active_tab)
+    
+@vts.route("/editor")
+def editor():
+    return render_template("editor.html", active_tab=active_tab)
