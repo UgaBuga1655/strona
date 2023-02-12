@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 import json
-import re
+from random import randint
 
 def morse_encrypt(text):
     morse = {
@@ -139,6 +139,47 @@ def sylabowy_encrypt(message):
         response+=letter
     return response
 
+def vigenere_encrypt(message):
+    response = {"text": '', "key" : ''}
+    text = message['text']
+    upper = message['alphabet']
+    lower = upper.lower()
+    al_len = len(upper)
+    rawkey = message['key'].upper()
+
+    # formatuje klucz, żeby to były same duże litery
+    if rawkey:
+        key = [x for x in rawkey if x in upper]
+    else:
+        # liczy znaki w tekście, które należa do alfabetu
+        condensed_text = [x for x in text.upper() if x in upper]
+        # losuje literę klucza dla każdej litery w skondensowanym tekście
+        key = [upper[randint(1, al_len)-1] for _ in condensed_text]
+
+    key_len = len(key)
+    mode = int(message['mode'])
+    k = 0
+    for letter in text:
+        if letter in upper:
+            # numer litery w wiadomości
+            i = upper.index(letter)
+            # przesunięcie to numer odpowiedniej litery klucza
+            move = upper.index(key[k%key_len])
+            # stosuje szyfr cezara z właściwym przesunięciem
+            response['text'] += upper[(i+move*mode)%al_len]
+            k+=1
+        elif letter in lower:
+            i = lower.index(letter)
+            move = upper.index(key[k%key_len])
+            response['text'] += lower[(i+move*mode)%al_len]
+            k+=1
+        else:
+            response['text'] += letter
+    response['key'] = ''.join(key)
+    return response
+
+
+
 
 szyfry = Blueprint('szyfry', __name__, )
 active_tab="szyfry"
@@ -172,5 +213,12 @@ def cezar():
 def sylabowy():
     message = request.get_json()
     message = sylabowy_encrypt(message)
+    response = json.dumps(message)
+    return response
+
+@szyfry.route("/vigenere", methods=["POST"])
+def vigenere():
+    message = request.get_json()
+    message = vigenere_encrypt(message)
     response = json.dumps(message)
     return response

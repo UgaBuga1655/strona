@@ -24,6 +24,7 @@ input, textarea, select{
 
 textarea {
     width: calc(100% - 22px);
+    display: block;
 }
 
 input[type=button]{

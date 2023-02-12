@@ -91,3 +91,30 @@ function processSylabowy() {
     )
     .catch((err) => console.log(err))
 }
+
+function processVigenere() {
+    let message = document.getElementById("vigenere-message").value
+    if (message == '') {return false}
+    let key = document.getElementById("vigenere-key").value
+    let alphabet = document.getElementById("vigenere-alphabet").value
+    let mode = document.getElementById("vigenere-mode").value
+    fetch("/szyfry/vigenere", {
+        "body": JSON.stringify({"text" : message, "key": key, "alphabet": alphabet, "mode": mode}),
+        "headers" : {"Content-Type" : "application/json"},
+        "method": "POST"
+    })
+    .then((res) => {
+        return res.json()
+    })
+    .then(
+        data => {
+            console.log(data)
+            let response_card = document.getElementById('vigenere-response');
+            response_card.innerHTML = data["text"]
+            response_card.classList.remove('invisible')
+            let vigenere_key = document.getElementById("vigenere-key")
+            vigenere_key.value = data["key"]
+        }
+    )
+    .catch((err) => console.log(err))
+}

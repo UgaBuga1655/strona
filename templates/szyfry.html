@@ -15,6 +15,7 @@
 <div id="select" class="select">
     <span class="button" onclick="populateInputCard(this, 'morse')">Morse</span>
     <span class="button" onclick="populateInputCard(this, 'cezar')">Cezar</span>
+    <span class="button" onclick="populateInputCard(this, 'vigenere')">Vigenère</span>
     <span class="button" onclick="populateInputCard(this, 'sylabowy')">Sylabowy</span>
 </div>
 
@@ -41,7 +42,7 @@
         <textarea id="cezar-message" placeholder="Twoja wiadomość" wrap="soft"></textarea>
         <label for="cezar-alphabet">Alfabet: </label>
         <select id="cezar-alphabet">
-            <option value="ABCDEFGHIJKLMOPQRSTUVWXYZ">ABCDEFGHIJKLMOPQRSTUVWXYZ</option>
+            <option value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">ABCDEFGHIJKLMNOPQRSTUVWXYZ</option>
             <option value="AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSTUWYZŹŻ">AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSTUWYZŹŻ</option>
             <option value="AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ">AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ</option>
         </select>
@@ -58,6 +59,29 @@
         <input type="button" value="Potwierdź" onclick="processCezar()">
 
         <div id="cezar-response" class="card invisible">Twoja wiadomość</div>
+    </div>
+
+    <div id="vigenere" class="invisible">
+        <h2>Szyfr Vigenère'a</h2>
+        <label for="vigenere-message">Wiadomość:</label>
+        <textarea  id="vigenere-message" placeholder="Twoja wiadomość" wrap="soft"></textarea>
+        <label for="vigenere-key">Klucz:</label>
+        <textarea id="vigenere-key" placeholder="Zostaw pusty, aby wygenerować losowy" wrap="soft"></textarea>
+        <label for="vigenere-alphabet">Alfabet: </label>
+        <select id="vigenere-alphabet">
+            <option value="ABCDEFGHIJKLMNOPQRSTUVWXYZ">ABCDEFGHIJKLMNOPQRSTUVWXYZ</option>
+            <option value="AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSTUWYZŹŻ">AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSTUWYZŹŻ</option>
+            <option value="AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ">AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ</option>
+        </select>
+        <br>
+        <label for="vigenere-mode">Tryb: </label>
+        <select id="vigenere-mode">
+            <option value=1>Zaszyfruj</option>
+            <option value=-1>Odszyfruj</option>
+        </select>
+        <br>
+        <input type="button" value="Potwierdź" onclick="processVigenere()">
+        <div id="vigenere-response" class="card invisible">Twoja wiadomość</div>
     </div>
 
     <div id="sylabowy" class="invisible">
@@ -88,6 +112,7 @@
         <div id="sylabowy-response" class="card invisible">Twoja wiadomość</div>
     </div>
 
+    
 </div>
 
 
