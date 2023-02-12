@@ -11,29 +11,28 @@ input, textarea, select{
     font-size: medium;
     color: wheat;
     text-decoration: none;
-    /* display: inline-block; */
+    /* display: block; */
     background-color: black;
     border-radius: 10px;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
     padding: 10px;
-}
-
-select, textarea {
+    margin: 5px;
+    border: 1px;
     border-style: solid;
-    height: fit-content;
-}
-textarea {
-    height: 100%;
-}
-input{
-    border: 3px;
-    border-style: dotted;
-    border-color: black;
 }
 
-input:hover{
+
+textarea {
+    width: calc(100% - 22px);
+}
+
+input[type=button]{
+    height: 42px;
+}
+
+input[type=button]:hover{
+    
     font-weight: bold;
-    border-color: wheat;
     cursor: pointer;
     color: antiquewhite;
 }
@@ -41,4 +40,8 @@ input:hover{
 ::placeholder {
     font-family: 'Courier New', Courier, monospace;
     color: antiquewhite;
+}
+
+label {
+    margin: 5px
 }

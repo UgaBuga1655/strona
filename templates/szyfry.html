@@ -23,22 +23,69 @@
     <div id="morse" class="invisible">
         <h2>Alfabet Morse'a</h2>
 
-        <textarea name="message" id="morse-message" placeholder="Twoja wiadomość" wrap="soft" style="width: calc(100% - 22px);" required=""></textarea>
-        <select name="mode" id="morse-mode">
+        <textarea id="morse-message" placeholder="Twoja wiadomość" wrap="soft"></textarea>
+        <label for="morse-mode">Tryb: </label>
+        <select id="morse-mode">
             <option value="zaszyfruj">Zaszyfruj</option>
             <option value="odszyfruj">Odszyfruj</option>
         </select>
+        <br>
         <input type="button" value="Potwierdź" onclick="processMorse()">
 
         <div id="morse-response" class="card invisible">Twoja wiadomość</div>
     </div>
 
     <div id="cezar" class="invisible">
-        Cezar
+        <h2>Szyfr Cezara</h2>
+
+        <textarea id="cezar-message" placeholder="Twoja wiadomość" wrap="soft"></textarea>
+        <label for="cezar-alphabet">Alfabet: </label>
+        <select id="cezar-alphabet">
+            <option value="ABCDEFGHIJKLMOPQRSTUVWXYZ">ABCDEFGHIJKLMOPQRSTUVWXYZ</option>
+            <option value="AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSTUWYZŹŻ">AĄBCĆDEĘFGHIJKLŁMNŃOÓPRSTUWYZŹŻ</option>
+            <option value="AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ">AĄBCĆDEĘFGHIJKLŁMNŃOÓPQRSŚTUVWXYZŹŻ</option>
+        </select>
+        <br>
+        <label for="cezar-move">Przesunięcie: </label>
+        <input id="cezar-move" type="number" min="1" max="35" step="1" size='12' value="3">
+        <br>
+        <label for="cezar-mode">Tryb: </label>
+        <select id="cezar-mode">
+            <option value=1>Zaszyfruj</option>
+            <option value=-1>Odszyfruj</option>
+        </select>
+        <br>
+        <input type="button" value="Potwierdź" onclick="processCezar()">
+
+        <div id="cezar-response" class="card invisible">Twoja wiadomość</div>
     </div>
 
     <div id="sylabowy" class="invisible">
-        Sylabowy
+        <h2>Szyfry sylabowe</h2>
+        <textarea id="sylabowy-message" placeholder="Twoja wiadomość" wrap="soft"></textarea>
+        <label for="sylabowy-key">Szyfr:</label>
+        <select id="sylabowy-key">
+            <option value="GADERYPOLUKI">GA-DE-RY-PO-LU-KI</option>
+            <option value="POLITYKARENU">PO-LI-TY-KA-RE-NU</option>
+            <option value="MOTYLECUDAKI">MO-TY-LE-CU-DA-KI</option>
+            <option value="KACEMINUTOWY">KA-CE-MI-NU-TO-WY</option>
+            <option value="KONIECMATURY">KO-NI-EC-MA-TU-RY</option>
+            <option value="NOWEBUTYLISA">NO-WE-BU-TY-LI-SA</option>
+            <option value="MALINOWEBUTY">MA-LI-NO-WE-BU-TY</option>
+            <option value="BITWAOCHMURY">BI-TW-AO-CH-MU-RY</option>
+            <option value="BAWOLETYKIJU">BA-WO-LE-TY-KI-JU</option>
+            <option value="ZIELONYBUK"  >ZI-EL-ON-YB-UK   </option>
+            <option value="NASZHUFIEC"  >NA-SZ-HU-FI-EC   </option>
+            <option value="GUBIKALESONY">GU-BI-KA-LE-SO-NY</option>
+            <option value="POLEMINEFAGU">PO-LE-MI-NE-FA-GU</option>
+            <option value="PADYGIMOZETU">PA-DY-GI-MO-ZE-TU</option>
+            <option value="KULOPERYZAGI">KU-LO-PE-RY-ZA-GI</option>
+            <option value="REGULAMINOWY">RE-GU-LA-MI-NO-WY</option>
+            <option value="HALOJUPITERY">HA-LO-JU-PI-TE-RY</option>
+        </select>
+        <br>
+        <input type="button" value="Potwierdź" onclick="processSylabowy()">
+        <div id="sylabowy-response" class="card invisible">Twoja wiadomość</div>
     </div>
 
 </div>

@@ -48,9 +48,9 @@ def morse_encrypt(text):
         '8' : '–––··',
         '9' : '––––·',
         '0' : '–––––',
-        '.' : '',
-        '!' : '',
-        '?' : '',
+        '.' : '/',
+        '!' : '/',
+        '?' : '/',
         ' ' : ''
     }
     text = text.lower()
@@ -110,10 +110,37 @@ def morse_decrypt(message):
 
     return message
 
+def cezar_encrypt(message):
+    response = ''
+    text = message['text']
+    upper = message["alphabet"]
+    lower = upper.lower()
+    mode = int(message['mode'])
+    move = int(message['move'])%len(upper)
+    for letter in text:
+        if letter in upper:
+            i = upper.index(letter)
+            response += upper[(i+mode*move)%len(upper)]
+        elif letter in lower:
+            i = lower.index(letter)
+            response += lower[(i+mode*move)%len(lower)]
+        else:
+            response += letter
+    return response
+
+def sylabowy_encrypt(message):
+    response = ''
+    text = message['text']
+    key = message['key']+message['key'].lower()
+    for letter in text:
+        if letter in key:
+            i = key.index(letter)
+            letter = (key[i-1] if i%2 else key[i+1])
+        response+=letter
+    return response
 
 
 szyfry = Blueprint('szyfry', __name__, )
-# cors = CORS(szyfry, resources={r"/*": {"origins": "*"}})
 active_tab="szyfry"
 
 @szyfry.route("/")
@@ -124,7 +151,7 @@ def index():
 def morse():
     
     message = request.get_json()
-    print(message)
+    # print(message)
 
 
     # print(message)s
@@ -132,4 +159,18 @@ def morse():
     response = json.dumps(message)
 
     # print(response)
+    return response
+
+@szyfry.route("/cezar", methods=["POST"])
+def cezar():
+    message = request.get_json()
+    message = cezar_encrypt(message)
+    response = json.dumps(message)
+    return response
+
+@szyfry.route("/sylabowy", methods=["POST"])
+def sylabowy():
+    message = request.get_json()
+    message = sylabowy_encrypt(message)
+    response = json.dumps(message)
     return response
