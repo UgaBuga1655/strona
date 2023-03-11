@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<song>
+  <properties>
+    <titles>
+      <title>107 Gloria, gloria, gloria</title>
+    </titles>
+    <ccliNo>No.</ccliNo>
+    <authors>
+      <author/>
+    </authors>
+  </properties>
+  <lyrics>
+    <verse name="v1">
+      <lines>Gloria, gloria, gloria Patri et Filio, <br/>Gloria, gloria, gloria Spiritui Sancto.</lines>
+    </verse>
+  </lyrics>
+</song>

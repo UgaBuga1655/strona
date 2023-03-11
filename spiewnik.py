@@ -117,7 +117,7 @@ def search_song(title):
         return render_template("search.html", titles=titles, active_tab=active_tab)
     
 
-@spiewnik.route('/song/<title>', methods=["POST", "GET"])
+@spiewnik.route('/song/<title>')
 def show_song(title):
     title = escape(title)
     session = start_session()
@@ -131,7 +131,23 @@ def show_song(title):
     if not song:
             song = "Nie znaleziono takiego utworu..."
 
-    if request.method == "POST":
-        return song
-    else:
-        return render_template("song.html", song=render_html(song), title=title, active_tab=active_tab)
+    return render_template("song.html", song=render_html(song), title=title, active_tab=active_tab)
+    
+@spiewnik.route('/download/<title>')
+def download_song(title):
+    title = escape(title)
+    session = start_session()
+    try:
+        session.execute("open songs")
+        song = session.execute(f'xquery song[properties/titles[title = "{title}"]]')
+    finally:
+        if session:
+            session.close()
+
+    # o co biega? Kiedy atrybut xmlns z jakiegoś powodu totalnie wykrzacza BaseX, a bez niego wykrzacza się OpenLP, dlatego w bazie danych pliki go nie mają, a jest dodawany przy pobieraniu... 😒
+    # HACK
+    song = ET.fromstring(song)
+    song.set("xmlns", "http://openlyrics.info/namespace/2009/song")
+    song = ET.tostring(song, encoding='unicode')
+
+    return song
