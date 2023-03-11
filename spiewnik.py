@@ -44,38 +44,50 @@ def serialize_node_group(group):
 def render_html(song):
     html = {}
     song = ET.fromstring(song)
+
     # tytuł
     titles = song.findall("./properties/titles/title")
     html["first_title"] = titles.pop(0).text
     html["secondary_titles"] = serialize_node_group(titles)
+
     # autorzy
     authors = song.findall("./properties/authors/author")
     authors = serialize_node_group(authors)
-    if authors[0] != None:
-        html["authors"] = ", ".join(authors) if len(authors)>1 else authors[0]
-    else:
+    try:   
+        if authors[0] == None or authors[0] == "()":
+            html["authors"] = ""
+        else:
+            html["authors"] = ", ".join(authors) if len(authors)>1 else authors[0]        
+    except:
         html["authors"] = ""
+
     # kolejność zwrotek
     verse_order = song.find("./properties/verseOrder")
-    if not verse_order:
+
+    try:
+        verse_order = verse_order.text.split(' ')
+    except:
         verse_order = []
         for verse in song.findall("./lyrics/"):
             verse_order.append(verse.attrib['name'])
-    else:
-        verse_order = serialize_node_group(verse_order).split(' ')
 
-    # html["verse_order"] = verse_order
 
     # tekst
     html["verses"] = []
     for verse_name in verse_order:
+        # znalezienie zwrotki i zamiana na stringa
         verse = song.find(f"./lyrics/verse[@name='{verse_name}']/lines")
         verse  = ET.tostring(verse, encoding='unicode')
+        # dzielenie na linijki
         verse = re.sub('</*lines>', '', verse)
+        verse = re.sub('<line>', '', verse)
+        verse = re.sub('</line>', '<br />', verse)
         verse = verse.split("<br />")
-        # print(verse)
+        # wcięcie dla nie-zwrotek
+        if not re.match("v", verse_name):
+            verse = ["    " + line for line in verse]
         html["verses"].append(verse)
-    # print(html)
+
     
     return html
 
