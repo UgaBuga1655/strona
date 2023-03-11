@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<song>
+  <properties>
+    <titles>
+      <title>081 Magnificat, Magnificat</title>
+    </titles>
+    <ccliNo>No.</ccliNo>
+    <authors>
+      <author/>
+    </authors>
+  </properties>
+  <lyrics>
+    <verse name="v1">
+      <lines>Magnificat, Magnificat,<br/>Magnificat anima mea Dominum.<br/>Magnificat, Magnificat, <br/>Magnificat anima mea!</lines>
+    </verse>
+  </lyrics>
+</song>

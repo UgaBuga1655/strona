@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<song>
+  <properties>
+    <titles>
+      <title>051 Baruch ha szem na Meszijah Jeszua</title>
+    </titles>
+    <ccliNo>No.</ccliNo>
+    <authors>
+      <author/>
+    </authors>
+  </properties>
+  <format>
+    <tags application="OpenLP">
+      <tag name="p">
+        <open>&lt;p&gt;</open>
+        <close>&lt;/p&gt;</close>
+      </tag>
+    </tags>
+  </format>
+  <lyrics>
+    <verse name="o1">
+      <lines>Baruch ha szem na Meszijah Jeszua, <br/>baruch ha szem Adonai. <br/><tag name="p"/><br/>Uwielbiaj duszo Mesjasza Jezusa,		<br/>uwielbiaj swego Pana.	/x2</lines>
+    </verse>
+  </lyrics>
+</song>

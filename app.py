@@ -1,18 +1,18 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 from vts import vts
 from szyfry import szyfry
+import spiewnik
 
 
 app = Flask(__name__)
+spiewnik.setup()
 
 
 @app.route('/')
 def index():
     return render_template("index.html", active_tab="index")
 
-@app.route('/spiewnik')
-def spiewnik():
-    return render_template("spiewnik.html", active_tab="spiewnik") 
+app.register_blueprint(spiewnik.spiewnik, url_prefix="/spiewnik")
         
 app.register_blueprint(vts, url_prefix="/vts")
 

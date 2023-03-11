@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<song>
+  <properties>
+    <titles>
+      <title>274 Wysłuchaj nas Panie</title>
+    </titles>
+    <authors>
+      <author>()</author>
+    </authors>
+  </properties>
+  <lyrics>
+    <verse name="v1">
+      <lines>Wysłuchaj nas Panie<br/>Do Ciebie wołamy!<br/>Wysłuchaj, prosimy Cię!</lines>
+    </verse>
+  </lyrics>
+</song>

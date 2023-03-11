@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/szyfry.css">
+{% endblock %}
+
+{% block javascript %}
+<script src="/static/scripts/spiewnik.js"></script>
+{% endblock %}
+
+{% block title %}Śpiewnik{% endblock %}
+
+
+{% block content %}
+<h1>Śpiewnik</h1>
+<input type="text" onchange="searchSong(this.value)" placeholder="Tytuł">
+<a id="submit" href="#" class="button">Wyszukaj</a>
+
+<ul>
+    {% for x in titles[:-1] %}
+    <li> <a href="/spiewnik/song/{{x}}">{{x}}</a> </li>
+    {% endfor %}
+
+</ul>
+
+{% endblock %}
+
+
