@@ -8,6 +8,13 @@
 <p>Po co mi jeszcze jeden śpiewnik w Internecie? Żeby miał wszystkie piosenki, które chcę, żeby miał takie akordy, jakie ja gram i żeby szybko się ładował. No i żeby nie miał reklam.</p>
 <p>Dodatkowo chcę dopisać sobie do CV aplikację webową z użyciem bazy danych. Dwie pieczenie na jednym ogniu.</p>
 
+<input type="text" onchange="searchSong(this.value)" placeholder="Tytuł">
+<a id="submit" href="#" class="button">Wyszukaj</a>
+
+
 {% endblock %}
 
 
+{% block javascript %}
+<script src="/static/scripts/spiewnik.js"></script>
+{% endblock %}

@@ -41,6 +41,29 @@ header.navbar a, .button {
     margin-bottom: 10px;
 }
 
+input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: wheat;
+    text-decoration: none;
+    /* display: block; */
+    background-color: black;
+    border-radius: 10px;
+    transition: all 0.1s ease-in;
+    padding: 10px;
+    margin: 5px;
+    border: 1px;
+    border-style: solid;
+}
+
+a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+a:hover {
+    color: wheat;
+}
 
 div.wrapper {
     padding: 15px;
