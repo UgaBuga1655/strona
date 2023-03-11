@@ -5,8 +5,9 @@
 {% block content %}
 <h1>Śpiewnik</h1>
 
-<p>Po co mi jeszcze jeden śpiewnik w Internecie? Żeby miał wszystkie piosenki, które chcę, żeby miał takie akordy, jakie ja gram i żeby szybko się ładował. No i żeby nie miał reklam.</p>
-<p>Dodatkowo chcę dopisać sobie do CV aplikację webową z użyciem bazy danych. Dwie pieczenie na jednym ogniu.</p>
+<p>Po prostu śpiewnik. Lżejszy i szybszy od innych w internecie, a do tego najmojszy. Niedługo powinny pojawić się akordy.</p>
+<p>Piosenki są przechowywane w formacie <a href="https://docs.openlyrics.org/en/latest/">XML OpenLyrics</a>, używanym między innymi przez <a href="https://openlp.org/">OpenLP</a>. Chętnie przygarnę więcej piosenek marzących o znalezieniu się w Internecie.</p>
+<p>Jako baza danych służy mi <a href="https://basex.org/">BaseX</a>. <a href="https://pypi.org/project/BaseXClient/">Klient dla Pythona</a> działa przyjemnie, chociaż dokumentacja mogłby być ciut łatwiej dostępna.</p>
 
 <input type="text" onchange="searchSong(this.value)" placeholder="Tytuł">
 <a id="submit" href="#" class="button">Wyszukaj</a>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<song>
+    <properties>
+        <titles>
+            <title>Hosadyna</title>
+        </titles>
+        <authors>
+            <author>Piosenka Ludowa</author>
+        </authors>
+    </properties>
+    <lyrics>
+        <verse name="v1">
+            <lines>
+                <line>Hej od Krakowa jadę</line>
+                <line>w dalekie, obce strony,</line>
+                <line>bo mi nie chcieli dać, hosadyna!</line>
+                <line>Dziewczyny ulubionej.</line>
+            </lines>
+        </verse>
+        <verse name="v2">
+            <lines>
+                <line>A jak mi cię nie dadzą</line>
+                <line>utopię się we Wiśle,</line>
+                <line>żebyś ty widziała, hosadyna!</line>
+                <line>Jak ja o tobie myślę.</line>
+            </lines>
+        </verse>
+        <verse name="v3">
+            <lines>
+                <line>Jak ja o tobie myslę</line>
+                <line>i myśleć nie przestanę,</line>
+                <line>przy tobie dziewczyno, hosadyna!</line>
+                <line>Na zawszę pozostanę.</line>
+            </lines>
+        </verse>
+        <verse name="v4">
+            <lines>
+                <line>Choć mi nie dadzą wiana</line>
+                <line>to ja o to nie stoję,</line>
+                <line>jeszcze się pochwalę, hosadyna!</line>
+                <line>Żeś ty kochanie moje.</line>
+            </lines>
+        </verse>
+        <verse name="v5">
+            <lines>
+                <line>Choć mi nie dadzą wiana</line>
+                <line>to ja się nie powadzę,</line>
+                <line>pod twoim okienkiem, hosadyna!</line>
+                <line>Oj, białą różę wsadę.</line>
+            </lines>
+        </verse>
+        <verse name="v6">
+            <lines>
+                <line>Oj, białą różę wsadzę,</line>
+                <line>oj, jeszcze i czerwoną,</line>
+                <line>a bo mam za żonkę, hosadyna!</line>
+                <line>Dziwczynę ulubioną.</line>
+            </lines>
+        </verse>
+        <verse name="v7">
+            <lines>
+                <line>A jak mi będą ludzie,</line>
+                <line>na ciebie gadać wiele,</line>
+                <line>to ich zaprosimy, hosadyna!</line>
+                <line>Do ciebie na wesele.</line>
+            </lines>
+        </verse>
+    </lyrics>
+</song>
