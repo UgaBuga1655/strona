@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<song version="0.9" >
+    <properties>
+        <titles>
+            <title>Superbohater</title>
+        </titles>
+        <authors>
+            <author>SMKKPM</author>
+        </authors>
+        <verseOrder>c1 v1 c1 c1 v2 c1 c2</verseOrder>
+    </properties>
+    <lyrics>
+        <verse name="c1">
+            <lines>Chciałbym mieć supermoc jak superbohater,<br/>może wtedy zwróciłbym na siebie twoją uwagę,<br/>ale nie mam supermocy jak superbohater,<br />nie mam też twojej uwagi, bo jestem zwykłym chłopakiem.</lines>
+        </verse>
+        <verse name="v1">
+            <lines>Gdybym miał supermoc, mógłbym zawrócić ci w głowie<br/>i byś moje, a nie jego cerowała superstroje.<br />To moja superszczoteczka byłaby w twojej łazience<br />i to o mnie by kręcili filmy, mnie robili zdjęcie,<br />a jak przyszłoby do tego, że musiałbym świat ratować,<br />nasza miłość zwyciężyłaby każdego wroga.</lines>
+        </verse>
+        <verse name="v2">
+            <lines>Mógłbym cofnąć czas, gdy spóźnisz się do pracy,<br/>gdy ktoś krzywo by się patrzył, miałbym w moich oczach laser.<br />Jednym gestem dłoni przesuwałbym budynki,<br />a drugą ręką wręczałbym ci drobne upominki.<br />Chciałbym mieć taką moc, by móc się tobie przyśnić<br />lub móc zmieniać się w gąbkę, żebyś brała mnie pod prysznic,<br />ale nie jest ze mnie żaden superbohater<br />i nie mam superklaty tylko zwykłą klatę...</lines>
+        </verse>
+        <verse name="c2">
+            <lines>Chciałbym mieć supermoc jak superbohater,<br/>może wtedy zwróciłbym na siebie twoją uwagę,<br/>ale nie mam supermocy jak superbohater,<br />póki co udaję, że jestem zwykłym chłopakiem.</lines>
+        </verse>
+    </lyrics>
+</song>

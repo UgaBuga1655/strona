@@ -15,7 +15,7 @@
 <h1>Śpiewnik</h1>
 <input type="text" onchange="searchSong(this.value)" placeholder="Tytuł">
 <a id="submit" href="#" class="button">Wyszukaj</a>
-
+<h2>{{author}}</h2>
 <ul>
     {% for x in titles %}
     <li> <a href="/spiewnik/song/{{x}}">{{x}}</a> </li>

@@ -2,11 +2,12 @@
 <song version="0.9">
   <properties>
     <titles>
-      <title>501 HYMN</title>
+      <title>Hymn Katolickiego Liceum Montessori im. Sprawiedliwych Wśród Narodów Świata w Krakowie</title>
     </titles>
     <verseOrder>v1 c1 v2 c1 v3 c1 v4 c1</verseOrder>
     <authors>
-      <author>Kamil Cyganik, Witold Żiżka</author>
+      <author>Kamil Cyganik</author>
+      <author>Witold Żiżka</author>
     </authors>
   </properties>
   <lyrics>

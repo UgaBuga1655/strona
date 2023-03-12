@@ -2,11 +2,13 @@
 <song version="0.9">
   <properties>
     <titles>
-      <title>260 KOMUNIA</title>
+      <title>Komunia</title>
     </titles>
     <verseOrder>v1 v2 v3</verseOrder>
     <authors>
-      <author>słowa: Wojciech Bąk,muzyka: ks. R. Rak, ks. J. Modliński</author>
+      <author>Wojciech Bąk</author>
+      <author>ks. R. Rak</author>
+      <author>ks. J. Modliński</author>
     </authors>
   </properties>
   <lyrics>

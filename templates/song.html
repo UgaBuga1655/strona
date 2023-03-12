@@ -14,9 +14,15 @@
     <div>
         <h1 style="margin-bottom: 0;">{{ song["first_title"] }}</h1>
         {% for title in song["secondary_titles"] %}
-            <h2>{{ title }}</h2>
+            <h2 style="margin: 0;">({{ title }})</h2>
         {% endfor %}
-        <p style="margin-top: 0; font-style: italic;">{{ song["authors"] }}</p>
+        <p style="margin-top: 0; font-style: italic;">
+            {% for author in song["authors"] %}
+                    <a href="/spiewnik/author/{{ author }}">{{ author }}</a>
+                    
+            {% endfor %}
+            
+        </p>
     <!-- <p>{{ song["verse_order"] }}</p> -->
         <div id="songtext" class="songtext" style="font-size: 18px;">
             {% for element in song["verses"] %}

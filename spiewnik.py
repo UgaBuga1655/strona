@@ -57,7 +57,7 @@ def render_html(song):
         if authors[0] == None or authors[0] == "()":
             html["authors"] = ""
         else:
-            html["authors"] = ", ".join(authors) if len(authors)>1 else authors[0]        
+            html["authors"] = authors 
     except:
         html["authors"] = ""
 
@@ -80,7 +80,7 @@ def render_html(song):
         verse_text  = ET.tostring(verse_text, encoding='unicode')
         # dzielenie na linijki
         verse_text = re.sub('</*lines>', '', verse_text)
-        verse_text = verse_text.split("<br />")
+        verse_text = verse_text.strip().split("<br />")
         verse = {}
         verse["text"] = verse_text
         # wcięcie dla nie-zwrotek
@@ -107,7 +107,10 @@ def search_song(title):
     try:
         session.execute("open songs")
         titles = session.execute(f"xquery for $x in song/properties/titles/title[matches(upper-case(.) ,upper-case('{title}'))] \
-                               return concat(data($x), '<br>')").split("<br>")[:-1:]
+                               order by $x return concat(data($x), '<br>')").split("<br>")[:-1:] \
+                            + \
+        session.execute(f"xquery for $x in song/properties where $x/authors/author[matches(upper-case(.) ,upper-case('{title}'))] \
+                        order by $x/titles/title return concat(data($x/titles/title), '<br>')").split("<br>")[:-1:]
     finally:
         if session:
             session.close()
@@ -157,3 +160,24 @@ def download_song(title):
     song = ET.tostring(song, encoding='unicode')
 
     return song
+
+@spiewnik.route('/author/<name>')
+def author(name):
+    name = escape(name)
+    session = start_session()
+    try:
+        session.execute("open songs")
+        titles = session.execute(f'xquery for $x in song/properties where $x/authors/author="{name}" \
+                                order by $x/titles/title return concat(data($x/titles/title), "<br>")').split("<br>")[:-1:]
+    finally:
+        if session:
+            session.close()
+
+
+    # redirect directly to the song if only one matches the search term
+
+    
+    if request.method == "POST":
+        return titles
+    else:
+        return render_template("search.html", titles=titles, author=name, active_tab=active_tab)
