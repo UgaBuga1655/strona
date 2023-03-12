@@ -6,6 +6,10 @@
 
 
 {% block content %}
+    <a class="button" onclick="history.back()">Wstecz</a>
+    <a class="button" href="/spiewnik/download/{{title}}" download="{{title}}.xml">Pobierz</a>
+    <a class="button" style="user-select: none;" onclick="changeFontSize(1)">A+</a>
+    <a class="button" style="user-select: none;" onclick="changeFontSize(-1)">A-</a>
 
     <div>
         <h1 style="margin-bottom: 0;">{{ song["first_title"] }}</h1>
@@ -14,10 +18,10 @@
         {% endfor %}
         <p style="margin-top: 0; font-style: italic;">{{ song["authors"] }}</p>
     <!-- <p>{{ song["verse_order"] }}</p> -->
-        <div style="margin-top: 30px;">
+        <div id="songtext" class="songtext" style="font-size: 18px;">
             {% for element in song["verses"] %}
-                    <p>
-                        {% for line in element %}
+                    <p class="{{element['class']}}">
+                        {% for line in element['text'] %}
                                 {{ line }} <br>
                         {% endfor %}
                         
@@ -25,10 +29,14 @@
             {% endfor %}
             
         </div>
-        <a class="button" href="/spiewnik/download/{{title}}" download="{{title}}.xml">Pobierz</a>
+        
     </div>
     
 
+{% endblock %}
+
+{% block javascript %}
+<script src="/static/scripts/spiewnik.js"></script>
 {% endblock %}
 
 

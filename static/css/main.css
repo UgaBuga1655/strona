@@ -119,3 +119,13 @@ div.card {
     display: block;
 }
 
+div.songtext {
+    margin-top: 30px;
+    transition: 0.1s;
+
+}
+
+div.songtext p.indent{
+    margin-left: 5%;
+}
+

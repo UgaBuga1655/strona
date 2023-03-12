@@ -1,5 +1,5 @@
 from BaseXClient import BaseXClient
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect
 from markupsafe import escape
 import xml.etree.ElementTree as ET
 import re
@@ -76,16 +76,16 @@ def render_html(song):
     html["verses"] = []
     for verse_name in verse_order:
         # znalezienie zwrotki i zamiana na stringa
-        verse = song.find(f"./lyrics/verse[@name='{verse_name}']/lines")
-        verse  = ET.tostring(verse, encoding='unicode')
+        verse_text = song.find(f"./lyrics/verse[@name='{verse_name}']/lines")
+        verse_text  = ET.tostring(verse_text, encoding='unicode')
         # dzielenie na linijki
-        verse = re.sub('</*lines>', '', verse)
-        verse = re.sub('<line>', '', verse)
-        verse = re.sub('</line>', '<br />', verse)
-        verse = verse.split("<br />")
+        verse_text = re.sub('</*lines>', '', verse_text)
+        verse_text = verse_text.split("<br />")
+        verse = {}
+        verse["text"] = verse_text
         # wcięcie dla nie-zwrotek
         if not re.match("v", verse_name):
-            verse = ["    " + line for line in verse]
+            verse["class"] = "indent"
         html["verses"].append(verse)
 
     
@@ -107,10 +107,16 @@ def search_song(title):
     try:
         session.execute("open songs")
         titles = session.execute(f"xquery for $x in song/properties/titles/title[matches(upper-case(.) ,upper-case('{title}'))] \
-                               return concat(data($x), '<br>')").split("<br>")
+                               return concat(data($x), '<br>')").split("<br>")[:-1:]
     finally:
         if session:
             session.close()
+
+
+    # redirect directly to the song if only one matches the search term
+    if len(titles)==1:
+        return redirect(f"/spiewnik/song/{titles[0]}")
+    
     if request.method == "POST":
         return titles
     else:
