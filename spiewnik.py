@@ -109,8 +109,8 @@ def search_song(title):
         titles = session.execute(f"xquery for $x in song/properties/titles/title[matches(upper-case(.) ,upper-case('{title}'))] \
                                order by $x return concat(data($x), '<br>')").split("<br>")[:-1:] \
                             + \
-        session.execute(f"xquery for $x in song/properties where $x/authors/author[matches(upper-case(.) ,upper-case('{title}'))] \
-                        order by $x/titles/title return concat(data($x/titles/title), '<br>')").split("<br>")[:-1:]
+        session.execute(f"xquery for $x in song/properties where $x/authors/author[matches(upper-case(.), upper-case('{title}'))] \
+                        order by $x/titles/*[1] return concat(data($x/titles/*[1]), '<br>')").split("<br>")[:-1:]
     finally:
         if session:
             session.close()
@@ -167,8 +167,9 @@ def author(name):
     session = start_session()
     try:
         session.execute("open songs")
-        titles = session.execute(f'xquery for $x in song/properties where $x/authors/author="{name}" \
-                                order by $x/titles/title return concat(data($x/titles/title), "<br>")').split("<br>")[:-1:]
+        query = f"xquery for $x in song/properties[authors/author='{name}'] order by $x/titles/*[1] return concat(data($x/titles/*[1]), '<br>')"
+        print(query)
+        titles = session.execute(query).split("<br>")[:-1:]
     finally:
         if session:
             session.close()
