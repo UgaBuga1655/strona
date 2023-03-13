@@ -124,8 +124,9 @@ def search_song(title):
                     concat(data($title), '<br>') \
                 )   \
                 else ( \
-                    concat(data($x/titles/title), ' - ', string-join(($x/authors/author), ', '), '<br>') \
+                    concat(data($x/titles/title[1]), ' - ', string-join(($x/authors/author), ', '), '<br>') \
                 )"
+        
                 # znajduje piosenki
 
         titles = session.execute(query).split("<br>")[:-1:]

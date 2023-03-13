@@ -1,6 +1,7 @@
 function searchSong(title){
     let button = document.getElementById("submit")
-    button.setAttribute("href", "/spiewnik/search/"+title)
+    x = (title.length <3 ? '#' :  "/spiewnik/search/"+title)
+    button.setAttribute("href", x)
 }
 
 function changeFontSize(value){
