@@ -6,9 +6,8 @@
     </titles>
     <verseOrder>v1 c1 v2 c1 v3 c1</verseOrder>
     <authors>
-      <author></author>
     </authors>
-  </properties>
+    <themes><theme>Ludowe</theme></themes></properties>
   <lyrics>
     <verse name="v1">
       <lines>Gdybym miał gitarę,<br/>To bym na niej grał.<br/>Opowiedziałbym o swej miłości,<br/>Którą przeżyłem sam. /2x</lines>

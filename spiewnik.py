@@ -117,19 +117,24 @@ def search_song(title):
         session.execute("open songs")
         query = f"xquery for $x in song/properties \
                 let $title := $x/titles/title[matches(upper-case(.), upper-case('{title}'))] \
-                let $authors := for $author in $x/authors return 'w'   \
-                where $title \
-                or $x/authors/author[matches(upper-case(.), upper-case('{title}'))] \
-                return if(not($x/authors/author)) then ( \
-                    concat(data($title), '<br>') \
-                )   \
-                else ( \
-                    concat(data($x/titles/title[1]), ' - ', string-join(($x/authors/author), ', '), '<br>') \
-                )"
-        
-                # znajduje piosenki
+                where $title or $x/authors/author[matches(upper-case(.), upper-case('{title}'))] \
+                return concat(\
+                    if (count($title)=1) then ( \
+                        data($title) \
+                    ) else ( \
+                        data($x/titles/title[1]) \
+                    ), \
+                    if ($x/authors/author) then (\
+                        concat(' - ', string-join(($x/authors/author), ', '))\
+                    ) else (''))"
 
-        titles = session.execute(query).split("<br>")[:-1:]
+        
+                # znajduje piosenki, które mają tytuł lub autora zgodnego z wynikiem wyszukuwania
+                # bierze dopasowany tytuł, jeśli jest dokładnie jeden
+                # bierze pierwszy tytuł jeśli są więcej niż jeden dopasowane tytuły lub żaden (piosenka została dopasowana po autorze)
+                # dopisuje autora, jeśli piosenka go ma
+
+        titles = session.execute(query).split("\n")
         titles.sort()
 
     finally:
@@ -190,9 +195,8 @@ def author(name):
         session.execute("open songs")
         query = f"xquery for $x in song/properties[authors/author='{name}']\
                 order by $x/titles/*[1] \
-                return concat(data($x/titles/*[1]), ' - ', string-join(($x/authors/author), ', '), '<br>')"
-        print(query)
-        titles = session.execute(query).split("<br>")[:-1:]
+                return concat(data($x/titles/*[1]), ' - ', string-join(($x/authors/author), ', '))"
+        titles = session.execute(query).split("\n")
     finally:
         if session:
             session.close()
@@ -208,14 +212,14 @@ def theme(theme):
         query = f"xquery for $x in song/properties[themes/theme='{theme}'] \
                 let $title := $x/titles/*[1]\
                 order by $title \
-                return if(not($x/authors/author)) then ( \
-                    concat(data($title), '<br>') \
-                )   \
-                else ( \
-                    concat(data($title), ' - ', string-join(($x/authors/author), ', '), '<br>') \
-                )"
+                return concat( \
+                    data($title). \
+                    if(($x/authors/author)) then ( \
+                        concat(' - ', string-join(($x/authors/author), ', ')) \
+                    ) else () )"
+
         print(query)
-        titles = session.execute(query).split("<br>")[:-1:]
+        titles = session.execute(query).split("\n")
     finally:
         if session:
             session.close()
