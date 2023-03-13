@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,18 +5,18 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme><theme>Maryjne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Z dawna Polski Tyś Królową, Maryjo!<br/>Ty za nami przemów słowo, Maryjo!<br/>Ociemniałym podaj rękę,<br/>Niewytrwałym skracaj mękę,<br/>Twe Królestwo weź w porękę, Maryjo!</lines>
+      <lines>Z dawna Polski Tyś Królową, Maryjo!<br />Ty za nami przemów słowo, Maryjo!<br />Ociemniałym podaj rękę,<br />Niewytrwałym skracaj mękę,<br />Twe Królestwo weź w porękę, Maryjo!</lines>
     </verse>
     <verse name="v2">
-      <lines>Gdyś pod krzyżem Syna stała, Maryjo!<br/>Tyleś, Matko, wycierpiała, Maryjo!<br/>Przez Twego Syna konanie<br/>Uproś sercom zmartwychwstanie,<br/>W ojców wierze daj wytrwanie, Maryjo!</lines>
+      <lines>Gdyś pod krzyżem Syna stała, Maryjo!<br />Tyleś, Matko, wycierpiała, Maryjo!<br />Przez Twego Syna konanie<br />Uproś sercom zmartwychwstanie,<br />W ojców wierze daj wytrwanie, Maryjo!</lines>
     </verse>
     <verse name="v3">
-      <lines>Z dawna Polski Tyś Królową, Maryjo! <br/>Ty za nami przemów słowo, Maryjo! <br/>Miej w opiece naród cały,<br/>Który żyje dla Twej chwały,<br/>Niech rozwija się wspaniały, Maryjo!</lines>
+      <lines>Z dawna Polski Tyś Królową, Maryjo! <br />Ty za nami przemów słowo, Maryjo! <br />Miej w opiece naród cały,<br />Który żyje dla Twej chwały,<br />Niech rozwija się wspaniały, Maryjo!</lines>
     </verse>
   </lyrics>
 </song>

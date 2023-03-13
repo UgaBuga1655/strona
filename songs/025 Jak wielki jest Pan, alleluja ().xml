@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <ccliNo>No.</ccliNo>
     <authors>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>(Oo!) Jak wielki jest Pan, alleluja! x3<br/>kocham Go/ wielbię Go/ chcę z Nim być.</lines>
+      <lines>(Oo!) Jak wielki jest Pan, alleluja! x3<br />kocham Go/ wielbię Go/ chcę z Nim być.</lines>
     </verse>
   </lyrics>
 </song>

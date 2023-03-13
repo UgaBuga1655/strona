@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Nie wypowie nic</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Nie wypowie, nie wypowie Twej miłości nic /x2<br/>Niezgłębiona wielkość jej,<br/>Niepojęty jest jej dar.</lines>
+      <lines>Nie wypowie, nie wypowie Twej miłości nic /x2<br />Niezgłębiona wielkość jej,<br />Niepojęty jest jej dar.</lines>
     </verse>
   </lyrics>
 </song>

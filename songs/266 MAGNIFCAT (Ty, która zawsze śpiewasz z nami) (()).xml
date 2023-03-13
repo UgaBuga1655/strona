@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,21 +5,21 @@
     </titles>
     <verseOrder>v1 c1 v2 c1 v3 c1</verseOrder>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme><theme>Maryjne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>1. Ty, która zawsze śpiewasz z nami:<br/>Magnificat, Magnificat.<br/>Paschę daj spożyć dobra Pani,<br/>jak wskazał nam Stwórca i Pan.</lines>
+      <lines>1. Ty, która zawsze śpiewasz z nami:<br />Magnificat, Magnificat.<br />Paschę daj spożyć dobra Pani,<br />jak wskazał nam Stwórca i Pan.</lines>
     </verse>
     <verse name="c1">
       <lines>Ave Maria gratia plena /x2</lines>
     </verse>
     <verse name="v2">
-      <lines>2. Matko cierpiąca kłopotami<br/>Tych naszych dni i naszych lat<br/>Podnoś codzienne nasze krzyże<br/>I Jego chleb z nami dziel.</lines>
+      <lines>2. Matko cierpiąca kłopotami<br />Tych naszych dni i naszych lat<br />Podnoś codzienne nasze krzyże<br />I Jego chleb z nami dziel.</lines>
     </verse>
     <verse name="v3">
-      <lines>3. Ty, która ciągle jesteś z nami<br/>Wraz z aniołami ulituj się<br/>Pomóż rozwiązać ziemskie sprawy <br/>I wspieraj nas i prowadź nas.</lines>
+      <lines>3. Ty, która ciągle jesteś z nami<br />Wraz z aniołami ulituj się<br />Pomóż rozwiązać ziemskie sprawy <br />I wspieraj nas i prowadź nas.</lines>
     </verse>
   </lyrics>
 </song>

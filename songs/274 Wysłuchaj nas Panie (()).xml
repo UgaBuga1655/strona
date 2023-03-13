@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Wysłuchaj nas Panie</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Wysłuchaj nas Panie<br/>Do Ciebie wołamy!<br/>Wysłuchaj, prosimy Cię!</lines>
+      <lines>Wysłuchaj nas Panie<br />Do Ciebie wołamy!<br />Wysłuchaj, prosimy Cię!</lines>
     </verse>
   </lyrics>
 </song>

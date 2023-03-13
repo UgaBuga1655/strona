@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,24 +5,25 @@
     </titles>
     <verseOrder>v1 v2 v3 v4 v5</verseOrder>
     <authors>
-      <author>słowa: Edyta Siewak, muzyka: Paweł Bębenek</author>
+      <author>Edyta Siewak</author>
+      <author>Paweł Bębenek</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>1. Błogosławcie Pana, wszystkie Jego dzieła,<br/>Które by nie kwitły, gdyby nie cierpienie, <br/>błogosławcie Pana.</lines>
+      <lines>1. Błogosławcie Pana, wszystkie Jego dzieła,<br />Które by nie kwitły, gdyby nie cierpienie, <br />błogosławcie Pana.</lines>
     </verse>
     <verse name="v2">
-      <lines>2. Błogosławcie Pana wszystkie łzy i żale,<br/>Każda moja słabość i upokorzenie, <br/>błogosławcie Pana.</lines>
+      <lines>2. Błogosławcie Pana wszystkie łzy i żale,<br />Każda moja słabość i upokorzenie, <br />błogosławcie Pana.</lines>
     </verse>
     <verse name="v3">
-      <lines>3. Błogosławcie Pana wszystkie moje rany,<br/>Na które Duch Święty staje się balsamem, <br/>błogosławcie Pana.</lines>
+      <lines>3. Błogosławcie Pana wszystkie moje rany,<br />Na które Duch Święty staje się balsamem, <br />błogosławcie Pana.</lines>
     </verse>
     <verse name="v4">
-      <lines>4. Niech Cię błogosławią wszystkie me niemoce,<br/>Ból skrzętnie skrywany po bezsennej nocy, <br/>Niech Cię błogosławią.</lines>
+      <lines>4. Niech Cię błogosławią wszystkie me niemoce,<br />Ból skrzętnie skrywany po bezsennej nocy, <br />Niech Cię błogosławią.</lines>
     </verse>
     <verse name="v5">
-      <lines>5. Błogosławcie Pana, że Mu ufam jeszcze,<br/>Że mnie wciąż uzdrawia łaski swojej deszczem,<br/>Błogosławcie Pana.</lines>
+      <lines>5. Błogosławcie Pana, że Mu ufam jeszcze,<br />Że mnie wciąż uzdrawia łaski swojej deszczem,<br />Błogosławcie Pana.</lines>
     </verse>
   </lyrics>
 </song>

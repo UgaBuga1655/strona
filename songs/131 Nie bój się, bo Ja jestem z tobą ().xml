@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,9 +5,9 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -19,7 +18,7 @@
   </format>
   <lyrics>
     <verse name="c1">
-      <lines>Nie bój się, bo Ja jestem z tobą  /3x <br/>	- mówi Pan.<br/><br/>Odkupiłem cię, dałem ci imię Me,<br/>Moim jesteś więc już<br/>Nie utoniesz, gdy będziesz po wodzie szedł,<br/>Ogień nie strawi cię<br/>NIE! NIE! Nie utoniesz! <br/>NIE! NIE! Nie spłoniesz!  <br/>Bo Ja jestem z tobą - mówi Pan.</lines>
+      <lines>Nie bój się, bo Ja jestem z tobą  /3x <br />	- mówi Pan.<br /><br />Odkupiłem cię, dałem ci imię Me,<br />Moim jesteś więc już<br />Nie utoniesz, gdy będziesz po wodzie szedł,<br />Ogień nie strawi cię<br />NIE! NIE! Nie utoniesz! <br />NIE! NIE! Nie spłoniesz!  <br />Bo Ja jestem z tobą - mówi Pan.</lines>
     </verse>
   </lyrics>
 </song>

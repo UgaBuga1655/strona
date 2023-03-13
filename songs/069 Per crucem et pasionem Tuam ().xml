@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Per crucem et pasionem Tuam <br/>Libera nos Domine / x3 Domine<br/><br/>Per crucem et pasionem Tuam <br/>Libera nos Domine / x3 Domine<br/><br/>Per sanktam resurectionem Tuam <br/>Libera Nos Domine / x3 Domine</lines>
+      <lines>Per crucem et pasionem Tuam <br />Libera nos Domine / x3 Domine<br /><br />Per crucem et pasionem Tuam <br />Libera nos Domine / x3 Domine<br /><br />Per sanktam resurectionem Tuam <br />Libera Nos Domine / x3 Domine</lines>
     </verse>
   </lyrics>
 </song>

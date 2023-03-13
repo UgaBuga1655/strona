@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,27 +6,27 @@
     <verseOrder>c1 v1 c1 v2 c1 v3 c1 v4 c1 v5 c1</verseOrder>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="c1">
       <lines>Alleluja, alleluja, alleluja, alleluja! /x2</lines>
     </verse>
     <verse name="v1">
-      <lines>Niech zabrzmi Panu chwała w niebiosach,<br/>na wysokościach cześć niech oddadzą,<br/>Wielbijcie Pana duchy niebieskie,<br/>Wielbijcie Pana Jego zastępy.</lines>
+      <lines>Niech zabrzmi Panu chwała w niebiosach,<br />na wysokościach cześć niech oddadzą,<br />Wielbijcie Pana duchy niebieskie,<br />Wielbijcie Pana Jego zastępy.</lines>
     </verse>
     <verse name="v2">
-      <lines>Słońce, księżycu wielbijcie Pana,<br/>gwiazdy świecące wielbijcie Pana,<br/>niebiosa niebios wielbijcie Pana, <br/>wody podniebne wielbijcie Pana!</lines>
+      <lines>Słońce, księżycu wielbijcie Pana,<br />gwiazdy świecące wielbijcie Pana,<br />niebiosa niebios wielbijcie Pana, <br />wody podniebne wielbijcie Pana!</lines>
     </verse>
     <verse name="v3">
-      <lines>Niech wszyscy wielbią Imię Pana, <br/>bo Jego Słowo stwarza wciąż wszystko, <br/>bo tylko Jego Imię jest wzniosłe, <br/>niechaj na wieki brzmi Jego chwała!</lines>
+      <lines>Niech wszyscy wielbią Imię Pana, <br />bo Jego Słowo stwarza wciąż wszystko, <br />bo tylko Jego Imię jest wzniosłe, <br />niechaj na wieki brzmi Jego chwała!</lines>
     </verse>
     <verse name="v4">
-      <lines>On daje siłę swemu ludowi, <br/>z prochu podnosi swoich przyjaciół. <br/>Jest Bogiem bliskim dla Izraela, <br/>swoich wybranych On sam umacnia.</lines>
+      <lines>On daje siłę swemu ludowi, <br />z prochu podnosi swoich przyjaciół. <br />Jest Bogiem bliskim dla Izraela, <br />swoich wybranych On sam umacnia.</lines>
     </verse>
     <verse name="v5">
-      <lines>Niech zabrzmi chwała Ojcu, co stwarza,  <br/>Jego Synowi, który jest Panem, <br/>Duchowi, który w nas zamieszkuje, <br/>przez wszystkie wieki wieków.      Amen!</lines>
+      <lines>Niech zabrzmi chwała Ojcu, co stwarza,  <br />Jego Synowi, który jest Panem, <br />Duchowi, który w nas zamieszkuje, <br />przez wszystkie wieki wieków.      Amen!</lines>
     </verse>
   </lyrics>
 </song>

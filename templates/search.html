@@ -12,13 +12,13 @@
 
 
 {% block content %}
-<h1>Śpiewnik</h1>
+<a href="/spiewnik"><h1>Śpiewnik</h1></a>
 <input type="text" onchange="searchSong(this.value)" placeholder="Tytuł/Autor">
 <a id="submit" href="#" class="button">Wyszukaj</a>
 <h2>{{author}}</h2>
 <ul>
     {% for x in titles %}
-    <li> <a href="/spiewnik/song/{{x}}">{{x}}</a> </li>
+    <li> <a href="/spiewnik/song/{{x.split(' - ')[0]}}">{{x}}</a> </li>
     {% endfor %}
 
 </ul>

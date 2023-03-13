@@ -37,6 +37,11 @@
         </div>
         
     </div>
+    <h3 style="margin-bottom: 0px; margin-top: 5%;">Tagi:</h3>
+    {% for theme in song['themes'] %}
+        <a class="button" href="/spiewnik/theme/{{ theme }}">{{ theme }}</a>
+    {% endfor %}
+
     
 
 {% endblock %}

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,18 +5,18 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Hosanna! Hosanna! Hosanna na niebiosach /x2  <br/>Sławić chcemy Cię wciąż, z radością i czcią  <br/>Wywyższony bądź Boże nasz  <br/>Hosanna niechaj ciągle brzmi</lines>
+      <lines>Hosanna! Hosanna! Hosanna na niebiosach /x2  <br />Sławić chcemy Cię wciąż, z radością i czcią  <br />Wywyższony bądź Boże nasz  <br />Hosanna niechaj ciągle brzmi</lines>
     </verse>
     <verse name="v2">
-      <lines>Chwała, Chwała, Królowi królów chwała, cześć! /x2<br/>Sławić chcemy Cię wciąż, z radością i czcią <br/>Wywyższony bądź Boże nasz  <br/>Królowi królów chwała, cześć!</lines>
+      <lines>Chwała, Chwała, Królowi królów chwała, cześć! /x2<br />Sławić chcemy Cię wciąż, z radością i czcią <br />Wywyższony bądź Boże nasz  <br />Królowi królów chwała, cześć!</lines>
     </verse>
     <verse name="v3">
-      <lines>Jezus! Jezus! Jezus Królem królów jest! /x2<br/>Sławić chcemy Cię wciąż, z radością i czcią <br/>Wywyższony bądź Boże nasz  <br/>Jezus Królem królów jest!</lines>
+      <lines>Jezus! Jezus! Jezus Królem królów jest! /x2<br />Sławić chcemy Cię wciąż, z radością i czcią <br />Wywyższony bądź Boże nasz  <br />Jezus Królem królów jest!</lines>
     </verse>
   </lyrics>
 </song>

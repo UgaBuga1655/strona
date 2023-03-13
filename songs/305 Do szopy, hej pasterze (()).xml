@@ -1,25 +1,24 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Do szopy, hej pasterze</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme><theme>Bożonarodzeniowe</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Do szopy, hej pasterze,<br/>Do szopy, bo tam cud,<br/>Syn Boży w żłobie leży,<br/>By zbawić ludzki ród.</lines>
+      <lines>Do szopy, hej pasterze,<br />Do szopy, bo tam cud,<br />Syn Boży w żłobie leży,<br />By zbawić ludzki ród.</lines>
     </verse>
     <verse name="c1">
-      <lines>Śpiewajcie Aniołowie,<br/>Pasterze grajcie Mu,<br/>Kłaniajcie się Królowie,<br/>Nie zbudźcie Go ze snu!</lines>
+      <lines>Śpiewajcie Aniołowie,<br />Pasterze grajcie Mu,<br />Kłaniajcie się Królowie,<br />Nie zbudźcie Go ze snu!</lines>
     </verse>
     <verse name="v2">
-      <lines>Padnijmy na kolana,<br/>To Dziecię to nasz Bóg,<br/>Uczcijmy niebios Pana,<br/>Miłości złóżmy dług!	</lines>
+      <lines>Padnijmy na kolana,<br />To Dziecię to nasz Bóg,<br />Uczcijmy niebios Pana,<br />Miłości złóżmy dług!	</lines>
     </verse>
     <verse name="v3">
-      <lines>O Boże niepojęty,<br/>Któż pojmie miłość Twą?<br/>Na sianie wśród bydlęty<br/>Masz tron i służbę swą.</lines>
+      <lines>O Boże niepojęty,<br />Któż pojmie miłość Twą?<br />Na sianie wśród bydlęty<br />Masz tron i służbę swą.</lines>
     </verse>
   </lyrics>
 </song>

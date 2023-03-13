@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,15 +5,15 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>Ofiaruję Panie Ci, cały mój świat, całe moje życie<br/>Ofiaruje to, co mam, więcej już Panie, <br/>dać nie umiem.</lines>
+      <lines>Ofiaruję Panie Ci, cały mój świat, całe moje życie<br />Ofiaruje to, co mam, więcej już Panie, <br />dać nie umiem.</lines>
     </verse>
     <verse name="v1b">
-      <lines>Weź o Panie duszę mą, Weź o Panie serce me<br/>Weź o Panie wszystko, co mam<br/>Przecież Panie ja kocham Cię</lines>
+      <lines>Weź o Panie duszę mą, Weź o Panie serce me<br />Weź o Panie wszystko, co mam<br />Przecież Panie ja kocham Cię</lines>
     </verse>
   </lyrics>
 </song>

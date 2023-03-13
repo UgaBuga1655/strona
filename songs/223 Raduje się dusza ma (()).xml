@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Raduje się dusza ma</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Raduje się dusza ma wielbi Pana swego<br/>Będę Ci śpiewał z całej siły<br/>Sławić Cię będę za twe dzieła<br/>Będę Ci śpiewał z całej siły<br/>Błogosławić będę Twoje imię<br/>Jest miłosierny Pan zastępów<br/>Moc Jego ramienia nad swym ludem<br/>Pan, mój zbawca!</lines>
+      <lines>Raduje się dusza ma wielbi Pana swego<br />Będę Ci śpiewał z całej siły<br />Sławić Cię będę za twe dzieła<br />Będę Ci śpiewał z całej siły<br />Błogosławić będę Twoje imię<br />Jest miłosierny Pan zastępów<br />Moc Jego ramienia nad swym ludem<br />Pan, mój zbawca!</lines>
     </verse>
   </lyrics>
 </song>

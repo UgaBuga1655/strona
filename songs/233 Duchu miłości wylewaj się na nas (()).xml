@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Duchu miłości wylewaj się na nas</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Duchu miłości wylewaj się na nas,<br/>Z przebitego serca Jezusa, Jezusa.</lines>
+      <lines>Duchu miłości wylewaj się na nas,<br />Z przebitego serca Jezusa, Jezusa.</lines>
     </verse>
   </lyrics>
 </song>

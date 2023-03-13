@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="c1">
-      <lines>Chcę uwielbiać Twoje Imię<br/>pośród ludów Twych,<br/>Bo Ty sam jesteś Święty, wysławia Cię Izraela hymn!<br/>Dziś uwielbiam Twoją dobroć,<br/>Twoją Świętą moc!<br/>Chwała Twemu Imieniu w niebie na ziemi, w sercu mym<br/>Laj laj la la la la laj laj         Laj laj laj laj laj</lines>
+      <lines>Chcę uwielbiać Twoje Imię<br />pośród ludów Twych,<br />Bo Ty sam jesteś Święty, wysławia Cię Izraela hymn!<br />Dziś uwielbiam Twoją dobroć,<br />Twoją Świętą moc!<br />Chwała Twemu Imieniu w niebie na ziemi, w sercu mym<br />Laj laj la la la la laj laj         Laj laj laj laj laj</lines>
     </verse>
   </lyrics>
 </song>

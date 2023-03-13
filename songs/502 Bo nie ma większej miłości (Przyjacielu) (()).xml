@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,18 +5,18 @@
     </titles>
     <verseOrder>v1 c1 v1 c1</verseOrder>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Przyjacielu, chcę zostać z tobą,<br/>Przy tobie chcę być. <br/>I nie trzeba, byś mówił coś, <br/>Wystarczy byś był. (x2)</lines>
+      <lines>Przyjacielu, chcę zostać z tobą,<br />Przy tobie chcę być. <br />I nie trzeba, byś mówił coś, <br />Wystarczy byś był. (x2)</lines>
     </verse>
     <verse name="c1">
-      <lines>Ref: Bo nie ma większej miłości niż ta, <br/>Gdy ktoś życie oddaje, bym ja mógł żyć </lines>
+      <lines>Ref: Bo nie ma większej miłości niż ta, <br />Gdy ktoś życie oddaje, bym ja mógł żyć </lines>
     </verse>
     <verse name="v2">
-      <lines>2.Chcę być z Tobą, gdy jest mi dobrze, <br/>I kiedy mi źle. <br/>Przyjacielu, otwieram przed Tobą<br/>serce me. (2x)</lines>
+      <lines>2.Chcę być z Tobą, gdy jest mi dobrze, <br />I kiedy mi źle. <br />Przyjacielu, otwieram przed Tobą<br />serce me. (2x)</lines>
     </verse>
   </lyrics>
 </song>

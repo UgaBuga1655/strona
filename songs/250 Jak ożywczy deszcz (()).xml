@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Jak ożywczy deszcz</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Jak ożywczy deszcz, Duchu Święty przyjdź<br/>Dotknij naszych serc, rozpal ognia żar<br/>Dziś przenikaj nas tchnieniem mocy swej<br/>Bądź nam światłem dnia i nadzieją serc.</lines>
+      <lines>Jak ożywczy deszcz, Duchu Święty przyjdź<br />Dotknij naszych serc, rozpal ognia żar<br />Dziś przenikaj nas tchnieniem mocy swej<br />Bądź nam światłem dnia i nadzieją serc.</lines>
     </verse>
   </lyrics>
 </song>

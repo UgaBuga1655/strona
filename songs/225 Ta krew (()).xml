@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Ta krew</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Ta krew z grzechu obmywa mnie<br/>Ta krew czyni mnie bielszym od śniegu<br/>Ta krew z grzechu obmywa mnie<br/>To jest Baranka święta krew</lines>
+      <lines>Ta krew z grzechu obmywa mnie<br />Ta krew czyni mnie bielszym od śniegu<br />Ta krew z grzechu obmywa mnie<br />To jest Baranka święta krew</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>W Tobie jest światło</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>W Tobie jest światło<br/>każdy mrok rozjaśnia<br/>W Tobie jest życie<br/>Ono śmierć zwycięża<br/>Ufam Tobie, miłosierny<br/>Jezu wybaw nas</lines>
+      <lines>W Tobie jest światło<br />każdy mrok rozjaśnia<br />W Tobie jest życie<br />Ono śmierć zwycięża<br />Ufam Tobie, miłosierny<br />Jezu wybaw nas</lines>
     </verse>
   </lyrics>
 </song>

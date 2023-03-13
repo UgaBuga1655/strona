@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Nie musisz mówić nic</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Nic nie musisz mówić nic<br/><br/>Nic nie musisz mówić nic <br/>Odpocznij we mnie <br/>Czuj się bezpiecznie<br/><br/>Pozwól kochać się <br/>Miłość pragnie Ciebie.</lines>
+      <lines>Nic nie musisz mówić nic<br /><br />Nic nie musisz mówić nic <br />Odpocznij we mnie <br />Czuj się bezpiecznie<br /><br />Pozwól kochać się <br />Miłość pragnie Ciebie.</lines>
     </verse>
   </lyrics>
 </song>

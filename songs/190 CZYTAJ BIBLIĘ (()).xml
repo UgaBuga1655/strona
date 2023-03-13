@@ -1,19 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Czytaj Biblię</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>Czytaj Biblię, módl się co dzień,<br/>módl się co dzień, módl się co dzień,<br/>Czytaj Biblię, módl się co dzień,<br/>Jeśli wzrastać chcesz.</lines>
+      <lines>Czytaj Biblię, módl się co dzień,<br />módl się co dzień, módl się co dzień,<br />Czytaj Biblię, módl się co dzień,<br />Jeśli wzrastać chcesz.</lines>
     </verse>
     <verse name="v1b">
-      <lines>Zrobię z ciebie rybaka dusz...<br/>Nieprzyjaciół pozdrawiaj też...</lines>
+      <lines>Zrobię z ciebie rybaka dusz...<br />Nieprzyjaciół pozdrawiaj też...</lines>
     </verse>
   </lyrics>
 </song>

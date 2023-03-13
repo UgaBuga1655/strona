@@ -1,19 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Chcę przestąpić Jego próg</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>Chcę przestąpić Jego próg<br/>Z dziękczynieniem w sercu mym<br/>I w przedsionki Pana wejść chwaląc Go,<br/>Bo kolejny nadszedł dzień,<br/>Który dał dla mnie Bóg,<br/>Chcę śpiewać Mu, bo Pan radością mą.</lines>
+      <lines>Chcę przestąpić Jego próg<br />Z dziękczynieniem w sercu mym<br />I w przedsionki Pana wejść chwaląc Go,<br />Bo kolejny nadszedł dzień,<br />Który dał dla mnie Bóg,<br />Chcę śpiewać Mu, bo Pan radością mą.</lines>
     </verse>
     <verse name="v1b">
-      <lines>Pan radością mą! Pan radością mą!<br/>Chcę śpiewać Mu, bo pan radością mą.</lines>
+      <lines>Pan radością mą! Pan radością mą!<br />Chcę śpiewać Mu, bo pan radością mą.</lines>
     </verse>
   </lyrics>
 </song>

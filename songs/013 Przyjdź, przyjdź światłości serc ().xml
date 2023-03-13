@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Przyjdź, przyjdź światłości serc.<br/>Przyjdź i zamieszkaj w nas, przeniknij nas.<br/>Przyjdź i napełnij zdrojem swoich łask.<br/>Przyjdź Duchu Święty, przyjdź.</lines>
+      <lines>Przyjdź, przyjdź światłości serc.<br />Przyjdź i zamieszkaj w nas, przeniknij nas.<br />Przyjdź i napełnij zdrojem swoich łask.<br />Przyjdź Duchu Święty, przyjdź.</lines>
     </verse>
   </lyrics>
 </song>

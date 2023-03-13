@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,15 +5,15 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Jezus, Najwyższe Imię, <br/>Nasz Zbawiciel, Książę Pokoju, <br/>Emanuel, Bóg jest z nami,<br/>Odkupiciel, Słowo żywota.</lines>
+      <lines>Jezus, Najwyższe Imię, <br />Nasz Zbawiciel, Książę Pokoju, <br />Emanuel, Bóg jest z nami,<br />Odkupiciel, Słowo żywota.</lines>
     </verse>
     <verse name="v2">
-      <lines>Święty Bóg, Mesjasz prawdziwy,<br/>Jedyny Ojca Syn umiłowany.<br/>Zgładził grzech Baranek na wieki,<br/>Królów Król i panów Pan.</lines>
+      <lines>Święty Bóg, Mesjasz prawdziwy,<br />Jedyny Ojca Syn umiłowany.<br />Zgładził grzech Baranek na wieki,<br />Królów Król i panów Pan.</lines>
     </verse>
   </lyrics>
 </song>

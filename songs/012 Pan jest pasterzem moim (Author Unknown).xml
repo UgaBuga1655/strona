@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <ccliNo>No.</ccliNo>
     <authors>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Pan jest pasterzem moim, niczego mi nie braknie. <br/>Na niwach zielonych pasie mnie,<br/>nad wody spokojne prowadzi mnie</lines>
+      <lines>Pan jest pasterzem moim, niczego mi nie braknie. <br />Na niwach zielonych pasie mnie,<br />nad wody spokojne prowadzi mnie</lines>
     </verse>
   </lyrics>
 </song>

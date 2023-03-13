@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,15 +5,15 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Jak łania pragnie wody ze strumieni,<br/>Moja dusza pragnie Cię.<br/>Tylko Ty jesteś moim pragnieniem,<br/>Zawsze chcę uwielbiać Cię.</lines>
+      <lines>Jak łania pragnie wody ze strumieni,<br />Moja dusza pragnie Cię.<br />Tylko Ty jesteś moim pragnieniem,<br />Zawsze chcę uwielbiać Cię.</lines>
     </verse>
     <verse name="o1">
-      <lines>Tylko Ty jesteś mocą mą,<br/>Twoja wola wolą mą.<br/>Tylko Ty jesteś moim pragnieniem<br/>Zawsze chcę uwielbiać Cię.</lines>
+      <lines>Tylko Ty jesteś mocą mą,<br />Twoja wola wolą mą.<br />Tylko Ty jesteś moim pragnieniem<br />Zawsze chcę uwielbiać Cię.</lines>
     </verse>
   </lyrics>
 </song>

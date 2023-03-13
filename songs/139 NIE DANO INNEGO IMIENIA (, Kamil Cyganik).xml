@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -9,19 +8,19 @@
     <authors>
       <author>Kamil Cyganik</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="c1">
-      <lines>Nie, nie dano, nie dano innego Imienia<br/>I nie dano innego na ziemi zbawienia,<br/>Tak nie dano innego Imienia na ziemi,<br/>W którym moglibyśmy, mogli wszyscy<br/>być zbawieni.</lines>
+      <lines>Nie, nie dano, nie dano innego Imienia<br />I nie dano innego na ziemi zbawienia,<br />Tak nie dano innego Imienia na ziemi,<br />W którym moglibyśmy, mogli wszyscy<br />być zbawieni.</lines>
     </verse>
     <verse name="v1">
-      <lines>Nie skorzystał ze sposobu, <br/>aby równym być Bogu.<br/>Stał się sługą tak posłusznym, <br/>tak posłusznym, że do grobu.<br/>Choć koronę ma na skroniach, <br/>ta korona jest cierniowa.<br/>Jest posłuszny aż do śmierci, <br/>a ta śmierć jest krzyżowa.</lines>
+      <lines>Nie skorzystał ze sposobu, <br />aby równym być Bogu.<br />Stał się sługą tak posłusznym, <br />tak posłusznym, że do grobu.<br />Choć koronę ma na skroniach, <br />ta korona jest cierniowa.<br />Jest posłuszny aż do śmierci, <br />a ta śmierć jest krzyżowa.</lines>
     </verse>
     <verse name="c2">
-      <lines>Bo nie dano, nie dano innego Imienia<br/>I nie dano innego na ziemi zbawienia,<br/>Tak nie dano innego Imienia na ziemi,<br/>W którym moglibyśmy, mogli wszyscy<br/>być zbawieni.</lines>
+      <lines>Bo nie dano, nie dano innego Imienia<br />I nie dano innego na ziemi zbawienia,<br />Tak nie dano innego Imienia na ziemi,<br />W którym moglibyśmy, mogli wszyscy<br />być zbawieni.</lines>
     </verse>
     <verse name="v2">
-      <lines>Teraz Ojciec dał Mu Imię <br/>ponad wszelkie inne imię<br/>Aby każde kolano, <br/>każde zgięło się przed Synem,<br/>Wszystkie trony i zwierzchności, <br/>to co znane i nieznane<br/>Każdy język, aby wyznał, <br/>ŻE JEZUS JEST PANEM!</lines>
+      <lines>Teraz Ojciec dał Mu Imię <br />ponad wszelkie inne imię<br />Aby każde kolano, <br />każde zgięło się przed Synem,<br />Wszystkie trony i zwierzchności, <br />to co znane i nieznane<br />Każdy język, aby wyznał, <br />ŻE JEZUS JEST PANEM!</lines>
     </verse>
   </lyrics>
 </song>

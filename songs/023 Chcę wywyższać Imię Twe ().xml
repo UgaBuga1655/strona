@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,15 +5,15 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Chcę wywyższać Imię Twe,<br/>Chcę zaśpiewać Tobie chwałę,<br/>Panie dziś raduję się,<br/>Bo przyszedłeś by mnie zbawić.</lines>
+      <lines>Chcę wywyższać Imię Twe,<br />Chcę zaśpiewać Tobie chwałę,<br />Panie dziś raduję się,<br />Bo przyszedłeś by mnie zbawić.</lines>
     </verse>
     <verse name="o1">
-      <lines>Z nieba zstąpiłeś chcesz prowadzić mnie<br/>Na krzyżu zmarłeś, by mój zapłacić dług,<br/>Z grobu wstałeś i dziś, <br/>Nieba Królem jesteś Ty,<br/>Chcę wywyższać Imię Twe</lines>
+      <lines>Z nieba zstąpiłeś chcesz prowadzić mnie<br />Na krzyżu zmarłeś, by mój zapłacić dług,<br />Z grobu wstałeś i dziś, <br />Nieba Królem jesteś Ty,<br />Chcę wywyższać Imię Twe</lines>
     </verse>
   </lyrics>
 </song>

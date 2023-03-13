@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,7 +6,7 @@
     <ccliNo>No.</ccliNo>
     <authors>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -18,7 +17,7 @@
   </format>
   <lyrics>
     <verse name="v1">
-      <lines>Gdy schodzimy się, <br/>niech Święty Duch w nas działa <br/>Gdy schodzimy się, by wielbić Imię Twe. <br/>Wiemy dobrze, że gdy serca są otwarte,<br/><br/>Błogosławisz mocą swą <br/>Błogosławisz, boś obiecał to <br/>Błogosławisz mocą swą.</lines>
+      <lines>Gdy schodzimy się, <br />niech Święty Duch w nas działa <br />Gdy schodzimy się, by wielbić Imię Twe. <br />Wiemy dobrze, że gdy serca są otwarte,<br /><br />Błogosławisz mocą swą <br />Błogosławisz, boś obiecał to <br />Błogosławisz mocą swą.</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,9 +5,9 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -19,7 +18,7 @@
   </format>
   <lyrics>
     <verse name="v1">
-      <lines>Duchu Święty wołam przyjdź,<br/>bądź jak ogień duszy mej, <br/>bądź jak ogień w ciele mym, rozpal mnie.<br/><br/>Wszechmogący Bóg jest pośród nas,<br/>miłosierdzie jego wielkie jest.<br/>Okazuje dobroć swoją dziś<br/>dla tych, którzy chcą miłować Go.</lines>
+      <lines>Duchu Święty wołam przyjdź,<br />bądź jak ogień duszy mej, <br />bądź jak ogień w ciele mym, rozpal mnie.<br /><br />Wszechmogący Bóg jest pośród nas,<br />miłosierdzie jego wielkie jest.<br />Okazuje dobroć swoją dziś<br />dla tych, którzy chcą miłować Go.</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,9 +5,9 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -19,13 +18,13 @@
   </format>
   <lyrics>
     <verse name="v1">
-      <lines>Amen, amen, amen, uwielbiajmy dzisiaj Go. / 2x  <br/><br/>Dziękujmy Bogu naszemu 	<br/>Jego łaska wiecznie trwa  x2 <br/>On sam jeden czyni wielkie cuda. Jego łaska…<br/>On w mądrości niebiosa uczynił. Jego łaska…</lines>
+      <lines>Amen, amen, amen, uwielbiajmy dzisiaj Go. / 2x  <br /><br />Dziękujmy Bogu naszemu 	<br />Jego łaska wiecznie trwa  x2 <br />On sam jeden czyni wielkie cuda. Jego łaska…<br />On w mądrości niebiosa uczynił. Jego łaska…</lines>
     </verse>
     <verse name="v2">
-      <lines>Amen, amen, amen, uwielbiajmy dzisiaj Go. / 2x  <br/><br/>On Egipcjanom pobił pierworodnych. <br/>Jego łaska wiecznie trwa  x2 <br/>I wyprowadził z niewoli Izraela. Jego łaska... <br/>On otworzył Morze Czerwone. Jego łaska...</lines>
+      <lines>Amen, amen, amen, uwielbiajmy dzisiaj Go. / 2x  <br /><br />On Egipcjanom pobił pierworodnych. <br />Jego łaska wiecznie trwa  x2 <br />I wyprowadził z niewoli Izraela. Jego łaska... <br />On otworzył Morze Czerwone. Jego łaska...</lines>
     </verse>
     <verse name="v3">
-      <lines>Amen, amen, amen, uwielbiajmy dzisiaj Go. / 2x  <br/><br/>On prowadził lud swój przez pustynię.<br/>Jego łaska wiecznie trwa  x2 <br/>W ziemię płynącą mlekiem i miodem. Jego łaska... <br/>On daje pokarm wszelkiemu stworzeniu. Jego łaska...</lines>
+      <lines>Amen, amen, amen, uwielbiajmy dzisiaj Go. / 2x  <br /><br />On prowadził lud swój przez pustynię.<br />Jego łaska wiecznie trwa  x2 <br />W ziemię płynącą mlekiem i miodem. Jego łaska... <br />On daje pokarm wszelkiemu stworzeniu. Jego łaska...</lines>
     </verse>
   </lyrics>
 </song>

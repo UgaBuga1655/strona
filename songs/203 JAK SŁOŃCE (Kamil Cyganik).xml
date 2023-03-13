@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <authors>
       <author>Kamil Cyganik</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Wschodzisz jak słońce nad ołtarzem<br/>w płonącej hostii Twej miłości.<br/>Rozpalaj dusze skute lodem,<br/>niech zmartwychwstaną martwe kości.</lines>
+      <lines>Wschodzisz jak słońce nad ołtarzem<br />w płonącej hostii Twej miłości.<br />Rozpalaj dusze skute lodem,<br />niech zmartwychwstaną martwe kości.</lines>
     </verse>
   </lyrics>
 </song>

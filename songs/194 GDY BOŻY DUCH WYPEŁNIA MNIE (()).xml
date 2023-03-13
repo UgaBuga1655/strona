@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Gdy Boży Duch wypełnia mnie</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Gdy Boży Duch wypełnia mnie,<br/>jak Dawid klaskać chcę.<br/><br/>Jak Dawid, jak Dawid, jak Dawid<br/>klaskać chcę.<br/><br/>(skakać, śmiać się, tupać)</lines>
+      <lines>Gdy Boży Duch wypełnia mnie,<br />jak Dawid klaskać chcę.<br /><br />Jak Dawid, jak Dawid, jak Dawid<br />klaskać chcę.<br /><br />(skakać, śmiać się, tupać)</lines>
     </verse>
   </lyrics>
 </song>

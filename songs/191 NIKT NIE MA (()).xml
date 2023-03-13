@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Nikt nie ma</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Bo nikt nie ma z nas tego,<br/>co mamy razem,<br/>każdy wnosi ze sobą to, co ma.<br/><br/>A zatem aby wszystko mieć,<br/>potrzebujemy siebie razem.<br/>Bracie, siotro, <br/>ręka w rękę z nami idź.</lines>
+      <lines>Bo nikt nie ma z nas tego,<br />co mamy razem,<br />każdy wnosi ze sobą to, co ma.<br /><br />A zatem aby wszystko mieć,<br />potrzebujemy siebie razem.<br />Bracie, siotro, <br />ręka w rękę z nami idź.</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <authors>
       <author>Zbory</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Uwielbiam Twoje imię,<br/>Uwielbiam Twoje serce,<br/>Uwielbiam święte rany<br/>Zadane w krwawej męce<br/>Uwielbiam Twoją drogę<br/>I z krzyża siedem słów<br/>Sławię Twoją miłość<br/>O! Zbawco mój.</lines>
+      <lines>Uwielbiam Twoje imię,<br />Uwielbiam Twoje serce,<br />Uwielbiam święte rany<br />Zadane w krwawej męce<br />Uwielbiam Twoją drogę<br />I z krzyża siedem słów<br />Sławię Twoją miłość<br />O! Zbawco mój.</lines>
     </verse>
   </lyrics>
 </song>

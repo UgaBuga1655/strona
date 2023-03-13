@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Miłość Bożą w sercu swym dzisiaj mam.<br/>Tą miłością coraz bardziej kocham Cię.<br/>W Tobie widzę też wspaniałość Króla chwał,<br/>Bo miłość Bożą w sercu swym dzisiaj mam.</lines>
+      <lines>Miłość Bożą w sercu swym dzisiaj mam.<br />Tą miłością coraz bardziej kocham Cię.<br />W Tobie widzę też wspaniałość Króla chwał,<br />Bo miłość Bożą w sercu swym dzisiaj mam.</lines>
     </verse>
   </lyrics>
 </song>

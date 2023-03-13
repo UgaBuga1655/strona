@@ -1,17 +1,16 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
-      <title>Kto nie miłuje, ten nie zna Boga,</title>
+      <title>Kto nie miłuje, ten nie zna Boga</title>
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Kto nie miłuje, ten nie zna Boga,<br/>Kto trwa w miłości, przebywa w Bogu <br/>Kto nie miłuje, ten nie zna Boga, Bóg miłością jest.</lines>
+      <lines>Kto nie miłuje, ten nie zna Boga,<br />Kto trwa w miłości, przebywa w Bogu <br />Kto nie miłuje, ten nie zna Boga, Bóg miłością jest.</lines>
     </verse>
   </lyrics>
 </song>

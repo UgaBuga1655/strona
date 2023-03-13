@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,9 +5,9 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -19,7 +18,7 @@
   </format>
   <lyrics>
     <verse name="o1">
-      <lines>Baruch ha szem na Meszijah Jeszua, <br/>baruch ha szem Adonai. <br/><br/>Uwielbiaj duszo Mesjasza Jezusa,		<br/>uwielbiaj swego Pana.	/x2</lines>
+      <lines>Baruch ha szem na Meszijah Jeszua, <br />baruch ha szem Adonai. <br /><br />Uwielbiaj duszo Mesjasza Jezusa,		<br />uwielbiaj swego Pana.	/x2</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,15 +5,15 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Święty jest nasz Pan - o Święty Pan Zastępów <br/>Prawy jest i słuszny każdy Jego czyn <br/>Fałsz nie wyjdzie z Jego ust <br/>bo Jego droga Prawdą jest <br/>Niebiosa z ziemią głoszą chwałę Mu <br/>Święty, o Święty <br/>zawsze był i jest i będzie wciąż ten sam <br/>choć grzeszny cały świat <br/>On czysty wciąż niewinny jest <br/>Święte Imię Twe</lines>
+      <lines>Święty jest nasz Pan - o Święty Pan Zastępów <br />Prawy jest i słuszny każdy Jego czyn <br />Fałsz nie wyjdzie z Jego ust <br />bo Jego droga Prawdą jest <br />Niebiosa z ziemią głoszą chwałę Mu <br />Święty, o Święty <br />zawsze był i jest i będzie wciąż ten sam <br />choć grzeszny cały świat <br />On czysty wciąż niewinny jest <br />Święte Imię Twe</lines>
     </verse>
     <verse name="v2">
-      <lines>Godzien jest nasz Pan - o godzien Pan Zastępów <br/>Jego dobroć ciągle płynie poprzez świat <br/>Sprawiedliwością jest nasz Pan<br/>Lecz miłosierny będzie nam <br/>Niebiosa z ziemią głoszą chwałę Mu <br/>Godzien, o godzien<br/>zawsze był i jest i będzie wciąż ten sam , <br/>choć grzeszny cały świat<br/>On czysty wciąż niewinny jest <br/>Godne Imię Twe</lines>
+      <lines>Godzien jest nasz Pan - o godzien Pan Zastępów <br />Jego dobroć ciągle płynie poprzez świat <br />Sprawiedliwością jest nasz Pan<br />Lecz miłosierny będzie nam <br />Niebiosa z ziemią głoszą chwałę Mu <br />Godzien, o godzien<br />zawsze był i jest i będzie wciąż ten sam , <br />choć grzeszny cały świat<br />On czysty wciąż niewinny jest <br />Godne Imię Twe</lines>
     </verse>
   </lyrics>
 </song>

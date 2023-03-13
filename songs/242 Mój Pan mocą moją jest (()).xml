@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,18 +5,18 @@
     </titles>
     <verseOrder>v1 c1 v2 c1</verseOrder>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>1.Mój Pan mocą moją jest,<br/>Pieśnią i zbawieniem, On Bogiem mym. /2x</lines>
+      <lines>1.Mój Pan mocą moją jest,<br />Pieśnią i zbawieniem, On Bogiem mym. /2x</lines>
     </verse>
     <verse name="c1">
       <lines>Ref. Dla Ciebie otwieram serce swe. /3x</lines>
     </verse>
     <verse name="v2">
-      <lines>2.Mój Pan Królem był i jest, <br/>Na zawsze i na wieki. Amen.</lines>
+      <lines>2.Mój Pan Królem był i jest, <br />Na zawsze i na wieki. Amen.</lines>
     </verse>
   </lyrics>
 </song>

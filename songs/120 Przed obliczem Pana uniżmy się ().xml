@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,18 +5,18 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Przed obliczem Pana uniżmy się <br/>Pan sam wywyższy nas <br/>Jego jest ziemia i czas <br/>Pan sam wywyższy nas.</lines>
+      <lines>Przed obliczem Pana uniżmy się <br />Pan sam wywyższy nas <br />Jego jest ziemia i czas <br />Pan sam wywyższy nas.</lines>
     </verse>
     <verse name="v2">
-      <lines>Z pokorą stań przed Panem swym<br/>Pan sam wywyższy nas <br/>Jego jest ziemia i czas <br/>Pan sam wywyższy nas.</lines>
+      <lines>Z pokorą stań przed Panem swym<br />Pan sam wywyższy nas <br />Jego jest ziemia i czas <br />Pan sam wywyższy nas.</lines>
     </verse>
     <verse name="v3">
-      <lines>Wszystkie swoje troski oddajmy Mu.<br/>Pan sam wywyższy nas <br/>Jego jest ziemia i czas <br/>Pan sam wywyższy nas.</lines>
+      <lines>Wszystkie swoje troski oddajmy Mu.<br />Pan sam wywyższy nas <br />Jego jest ziemia i czas <br />Pan sam wywyższy nas.</lines>
     </verse>
   </lyrics>
 </song>

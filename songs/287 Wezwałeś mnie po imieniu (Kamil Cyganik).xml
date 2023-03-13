@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <authors>
       <author>Kamil Cyganik</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Wezwałeś mnie po imieniu<br/>Bo znasz mnie lepiej niż ja sam /x2<br/>Siebie znam</lines>
+      <lines>Wezwałeś mnie po imieniu<br />Bo znasz mnie lepiej niż ja sam /x2<br />Siebie znam</lines>
     </verse>
   </lyrics>
 </song>

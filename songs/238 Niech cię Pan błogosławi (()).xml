@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Niech cię Pan błogosławi</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Niech cię Pan błogosławi i strzeże, <br/>niechaj Pan daje pokój ci. <br/>On miłością napełnia serce twe, <br/>zawsze z tobą jest</lines>
+      <lines>Niech cię Pan błogosławi i strzeże, <br />niechaj Pan daje pokój ci. <br />On miłością napełnia serce twe, <br />zawsze z tobą jest</lines>
     </verse>
   </lyrics>
 </song>

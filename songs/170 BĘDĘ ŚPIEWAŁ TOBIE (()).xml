@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Będę śpiewał Tobie</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Będę śpiewał Tobie, mocy moja<br/>Ty Boże jesteś mą nadzieją,<br/>Tobie ufam i bać się nie będę.</lines>
+      <lines>Będę śpiewał Tobie, mocy moja<br />Ty Boże jesteś mą nadzieją,<br />Tobie ufam i bać się nie będę.</lines>
     </verse>
   </lyrics>
 </song>

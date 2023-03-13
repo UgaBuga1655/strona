@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,13 +6,13 @@
     <ccliNo>No.</ccliNo>
     <authors>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Ja wierzę, że to Jezus.<br/>Wierzę, że On Synem Boga jest.<br/>On zmarł i powstał, aby żyć<br/>I za cenę śmierci życie dał.</lines>
+      <lines>Ja wierzę, że to Jezus.<br />Wierzę, że On Synem Boga jest.<br />On zmarł i powstał, aby żyć<br />I za cenę śmierci życie dał.</lines>
     </verse>
     <verse name="o1">
-      <lines>Wierzę, że jest tu teraz (On tu teraz jest).<br/>Stoi pośród nas,<br/>Ma moc nas teraz uzdrawiać (Uzdrowienia moc)<br/>Ma przebaczenia dar.</lines>
+      <lines>Wierzę, że jest tu teraz (On tu teraz jest).<br />Stoi pośród nas,<br />Ma moc nas teraz uzdrawiać (Uzdrowienia moc)<br />Ma przebaczenia dar.</lines>
     </verse>
   </lyrics>
 </song>

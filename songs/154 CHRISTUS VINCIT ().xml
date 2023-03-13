@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,9 +5,9 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -19,7 +18,7 @@
   </format>
   <lyrics>
     <verse name="v1">
-      <lines>Christus Vincit<br/>Christus Regnat<br/>Christus, Christus Imperat	<br/><br/>Chrystus Wodzem<br/>Chrystus Królem<br/>Chrystus, Chrystus Władcą nam.</lines>
+      <lines>Christus Vincit<br />Christus Regnat<br />Christus, Christus Imperat	<br /><br />Chrystus Wodzem<br />Chrystus Królem<br />Chrystus, Chrystus Władcą nam.</lines>
     </verse>
   </lyrics>
 </song>

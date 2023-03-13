@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Ukaż mi Panie swą twarz <br/>Daj mi usłyszeć Twój głos<br/>Naucz mnie szukać Ciebie<br/>wskaż mi cień Twego oblicza</lines>
+      <lines>Ukaż mi Panie swą twarz <br />Daj mi usłyszeć Twój głos<br />Naucz mnie szukać Ciebie<br />wskaż mi cień Twego oblicza</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,9 +5,9 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme><theme>Bożonarodzeniowe</theme></themes></properties>
   <format>
     <tags application="OpenLP">
       <tag name="p">
@@ -19,16 +18,16 @@
   </format>
   <lyrics>
     <verse name="v1">
-      <lines>Gwiazdy tańczyły w noc, gdy przyszedł Pan. <br/>Ziema śpiewała w takt niebiańskich gam.<br/><br/>Ref.: Raduj się, śpiewaj pieśń<br/>Oto Król narodził się, Jemu cześć.</lines>
+      <lines>Gwiazdy tańczyły w noc, gdy przyszedł Pan. <br />Ziema śpiewała w takt niebiańskich gam.<br /><br />Ref.: Raduj się, śpiewaj pieśń<br />Oto Król narodził się, Jemu cześć.</lines>
     </verse>
     <verse name="v2">
-      <lines>Marja cieszyła się, widząc Króla ziem.<br/>Pasterze w pokłonie chylili głowy swe.<br/><br/>Ref.: Raduj się, śpiewaj pieśń<br/>Oto Król narodził się, Jemu cześć.</lines>
+      <lines>Marja cieszyła się, widząc Króla ziem.<br />Pasterze w pokłonie chylili głowy swe.<br /><br />Ref.: Raduj się, śpiewaj pieśń<br />Oto Król narodził się, Jemu cześć.</lines>
     </verse>
     <verse name="v3">
-      <lines>Mędrcy przybyli, znając miejsce to.<br/>Złożyli dary, uwielbiając Go.<br/><br/>Ref.: Raduj się, śpiewaj pieśń<br/>Oto Król narodził się, Jemu cześć.</lines>
+      <lines>Mędrcy przybyli, znając miejsce to.<br />Złożyli dary, uwielbiając Go.<br /><br />Ref.: Raduj się, śpiewaj pieśń<br />Oto Król narodził się, Jemu cześć.</lines>
     </verse>
     <verse name="v4">
-      <lines>Śpiewam o Panie sławiąc imię Twe.<br/>U Twego żłóbka składam serce swe.<br/><br/>Ref.: Raduj się, śpiewaj pieśń<br/>Oto Król narodził się, Jemu cześć.</lines>
+      <lines>Śpiewam o Panie sławiąc imię Twe.<br />U Twego żłóbka składam serce swe.<br /><br />Ref.: Raduj się, śpiewaj pieśń<br />Oto Król narodził się, Jemu cześć.</lines>
     </verse>
   </lyrics>
 </song>

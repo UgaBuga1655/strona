@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,13 +6,13 @@
     <authors>
       <author>WMU</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>W moim sercu wyrósł krzyż,<br/>Który życie daje mi,<br/>On przyprowadził mnie do Ciebie<br/>O Panie tylko Ty<br/>Możesz odbudować mój dom</lines>
+      <lines>W moim sercu wyrósł krzyż,<br />Który życie daje mi,<br />On przyprowadził mnie do Ciebie<br />O Panie tylko Ty<br />Możesz odbudować mój dom</lines>
     </verse>
     <verse name="v1b">
-      <lines>Maryjo weź mnie za rękę<br/>Podprowadź pod Twego syna,<br/>Przyciśnij mnie do drewna,<br/>Niech spłynie Krew i mnie oczyści.</lines>
+      <lines>Maryjo weź mnie za rękę<br />Podprowadź pod Twego syna,<br />Przyciśnij mnie do drewna,<br />Niech spłynie Krew i mnie oczyści.</lines>
     </verse>
   </lyrics>
 </song>

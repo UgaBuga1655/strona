@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,18 +5,18 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Jesteś radością mojego życia.<br/>O, O - O! Panie mój. (x2)<br/>Ty jesteś moim Panem. x3<br/>Na zawsze jesteś Panem mym.</lines>
+      <lines>Jesteś radością mojego życia.<br />O, O - O! Panie mój. (x2)<br />Ty jesteś moim Panem. x3<br />Na zawsze jesteś Panem mym.</lines>
     </verse>
     <verse name="v2">
-      <lines>Jesteś pokojem mojego życia.<br/>O, O - O! Panie mój. (x2)<br/>Ty jesteś moim Panem. x3<br/>Na zawsze jesteś Panem mym.</lines>
+      <lines>Jesteś pokojem mojego życia.<br />O, O - O! Panie mój. (x2)<br />Ty jesteś moim Panem. x3<br />Na zawsze jesteś Panem mym.</lines>
     </verse>
     <verse name="v3">
-      <lines>Jesteś miłością mojego życia.<br/>O, O - O! Panie mój. (x2)<br/>Ty jesteś moim Panem. x3<br/>Na zawsze jesteś Panem mym.</lines>
+      <lines>Jesteś miłością mojego życia.<br />O, O - O! Panie mój. (x2)<br />Ty jesteś moim Panem. x3<br />Na zawsze jesteś Panem mym.</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,19 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Nie chcę w innym miejscu być</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Nie chcę w innym miejscu być, /3x<br/>Lecz w miłości Twej, w miłości Twej.</lines>
+      <lines>Nie chcę w innym miejscu być, /3x<br />Lecz w miłości Twej, w miłości Twej.</lines>
     </verse>
     <verse name="v2">
-      <lines>Więc rozpal ogień w duszy mej, <br/>niech płonie, niech pochłonie mnie.<br/>Boże, więcej Ciebie chcę! <br/>Boże, więcej Ciebie chcę!</lines>
+      <lines>Więc rozpal ogień w duszy mej, <br />niech płonie, niech pochłonie mnie.<br />Boże, więcej Ciebie chcę! <br />Boże, więcej Ciebie chcę!</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Bądź z nami w kontakcie</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Bądź z nami w kontakcie<br/>Panie Boże<br/>Choć diabeł robi nam zwarcie.<br/>Niech iskra miłości<br/>między nami przeskoczy,<br/>Niech zapalą się nasze latarnie.</lines>
+      <lines>Bądź z nami w kontakcie<br />Panie Boże<br />Choć diabeł robi nam zwarcie.<br />Niech iskra miłości<br />między nami przeskoczy,<br />Niech zapalą się nasze latarnie.</lines>
     </verse>
   </lyrics>
 </song>

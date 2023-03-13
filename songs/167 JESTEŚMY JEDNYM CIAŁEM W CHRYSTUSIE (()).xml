@@ -1,19 +1,18 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Jesteśmy jednym Ciałem w Chrystusie</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>Jesteśmy jednym Ciałem w Chrystusie<br/>Chociaż tak wielu nas jest.<br/>/X4</lines>
+      <lines>Jesteśmy jednym Ciałem w Chrystusie<br />Chociaż tak wielu nas jest.<br />/X4</lines>
     </verse>
     <verse name="v1b">
-      <lines>Jezus jedną wiarę daje nam<br/>I w niej łączy wszystkich nas.<br/>Jedną nadzieję daje nam,<br/>Jedyny Ojciec Bóg.</lines>
+      <lines>Jezus jedną wiarę daje nam<br />I w niej łączy wszystkich nas.<br />Jedną nadzieję daje nam,<br />Jedyny Ojciec Bóg.</lines>
     </verse>
   </lyrics>
 </song>

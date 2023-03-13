@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Jak dobrze jest dziękować Ci, Panie<br/>i śpiewać psalm Twojemu Imieniu,<br/>i opowiadać rano Twoje miłosierdzie, <br/>a w nocy wierność Twoją <br/>przy dziesięciostrunnej harfie i lutni<br/>i dźwięcznej cytrze.</lines>
+      <lines>Jak dobrze jest dziękować Ci, Panie<br />i śpiewać psalm Twojemu Imieniu,<br />i opowiadać rano Twoje miłosierdzie, <br />a w nocy wierność Twoją <br />przy dziesięciostrunnej harfie i lutni<br />i dźwięcznej cytrze.</lines>
     </verse>
   </lyrics>
 </song>

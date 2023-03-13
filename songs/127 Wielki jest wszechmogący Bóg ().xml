@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Wielki jest wszechmogący Bóg <br/>Któż jest mistrzem takim jak On <br/>Sławić chcę Jego dzieła, Gdy śpiewam tę pieśń <br/>Wielki Pan, choć nieznany jest</lines>
+      <lines>Wielki jest wszechmogący Bóg <br />Któż jest mistrzem takim jak On <br />Sławić chcę Jego dzieła, Gdy śpiewam tę pieśń <br />Wielki Pan, choć nieznany jest</lines>
     </verse>
   </lyrics>
 </song>

@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <authors>
       <author>WMU</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Panie moje serce małe jest<br/>I oczy me nie są wyniosłe<br/>Nie gonię za tym co jest wielkie<br/>Albo co przerasta moje siły<br/>Wprowadziłem ład i pokój do mojej duszy<br/>Jak niemowlę u swej matki<br/>Tak we mnie jest dusza moja<br/>Me serce małym stało się</lines>
+      <lines>Panie moje serce małe jest<br />I oczy me nie są wyniosłe<br />Nie gonię za tym co jest wielkie<br />Albo co przerasta moje siły<br />Wprowadziłem ład i pokój do mojej duszy<br />Jak niemowlę u swej matki<br />Tak we mnie jest dusza moja<br />Me serce małym stało się</lines>
     </verse>
   </lyrics>
 </song>

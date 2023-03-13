@@ -1,31 +1,30 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Śpiewam Tobie Magnificat</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>Śpiewam Tobie, śpiewam Panie, śpiewam<br/>Imieniu Twemu.<br/>/X4</lines>
+      <lines>Śpiewam Tobie, śpiewam Panie, śpiewam<br />Imieniu Twemu.<br />/X4</lines>
     </verse>
     <verse name="v1b">
-      <lines>Wielbi ma dusza Pana<br/>Raduje się duch mój w Bogu<br/>On wejrzał na mą małość<br/>Pan dotknął sługę swoją<br/><br/>Śpiewam Tobie, śpiewam Panie, śpiewam<br/>Imieniu Twemu.<br/>/X2</lines>
+      <lines>Wielbi ma dusza Pana<br />Raduje się duch mój w Bogu<br />On wejrzał na mą małość<br />Pan dotknął sługę swoją<br /><br />Śpiewam Tobie, śpiewam Panie, śpiewam<br />Imieniu Twemu.<br />/X2</lines>
     </verse>
     <verse name="v1c">
-      <lines>Pokolenia sławić mnie będą<br/>Wielkie rzeczy mi Pan uczynił<br/>Święte jest Imię Jego<br/>Chwalmy Najwyższego<br/><br/>Śpiewam Tobie, śpiewam Panie, śpiewam<br/>Imieniu Twemu.<br/>/X2</lines>
+      <lines>Pokolenia sławić mnie będą<br />Wielkie rzeczy mi Pan uczynił<br />Święte jest Imię Jego<br />Chwalmy Najwyższego<br /><br />Śpiewam Tobie, śpiewam Panie, śpiewam<br />Imieniu Twemu.<br />/X2</lines>
     </verse>
     <verse name="v1d">
-      <lines>Darzy miłosierdziem ludzi<br/>Pokolenia żyjące w bojaźni<br/>Okazuje moc swojej ręki<br/>Rozprasza pyszniących się w sercach<br/><br/>Śpiewam Tobie, śpiewam Panie, śpiewam<br/>Imieniu Twemu.<br/>/X2</lines>
+      <lines>Darzy miłosierdziem ludzi<br />Pokolenia żyjące w bojaźni<br />Okazuje moc swojej ręki<br />Rozprasza pyszniących się w sercach<br /><br />Śpiewam Tobie, śpiewam Panie, śpiewam<br />Imieniu Twemu.<br />/X2</lines>
     </verse>
     <verse name="v1e">
-      <lines>Pan strąca władców z tronu<br/>Wywyższa pokornych, ubogich<br/>Głodnych nasyca dobrami<br/>Bogatych odprawia z niczym<br/><br/>Śpiewam Tobie, śpiewam Panie, śpiewam<br/>Imieniu Twemu.<br/>/X2</lines>
+      <lines>Pan strąca władców z tronu<br />Wywyższa pokornych, ubogich<br />Głodnych nasyca dobrami<br />Bogatych odprawia z niczym<br /><br />Śpiewam Tobie, śpiewam Panie, śpiewam<br />Imieniu Twemu.<br />/X2</lines>
     </verse>
     <verse name="v1f">
-      <lines>Ujął się za sługą swoim<br/>Izraelem swoim dziedzictwem<br/>Pamiętając o swym miłosierdziu<br/>Obietnicy dla Abrahama	<br/><br/>Śpiewam Tobie, śpiewam Panie, śpiewam<br/>Imieniu Twemu.<br/>/X4</lines>
+      <lines>Ujął się za sługą swoim<br />Izraelem swoim dziedzictwem<br />Pamiętając o swym miłosierdziu<br />Obietnicy dla Abrahama	<br /><br />Śpiewam Tobie, śpiewam Panie, śpiewam<br />Imieniu Twemu.<br />/X4</lines>
     </verse>
   </lyrics>
 </song>

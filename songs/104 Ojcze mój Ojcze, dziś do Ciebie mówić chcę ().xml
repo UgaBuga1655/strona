@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,21 +5,21 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Ojcze mój Ojcze, dziś do Ciebie mówić chcę. <br/>Ty mi dajesz Swojego Syna, uwielbiam Cię.</lines>
+      <lines>Ojcze mój Ojcze, dziś do Ciebie mówić chcę. <br />Ty mi dajesz Swojego Syna, uwielbiam Cię.</lines>
     </verse>
     <verse name="v2">
-      <lines>Jezu, mój Jezu, dziś do Ciebie mówić chcę. <br/>Ty mi dajesz Swojego Ducha uwielbiam Cię.</lines>
+      <lines>Jezu, mój Jezu, dziś do Ciebie mówić chcę. <br />Ty mi dajesz Swojego Ducha uwielbiam Cię.</lines>
     </verse>
     <verse name="v3">
-      <lines>Duchu, mój Duchu, dziś do Ciebie mówić chcę. <br/>Ty mi dajesz Swoją miłość, uwielbiam Cię.</lines>
+      <lines>Duchu, mój Duchu, dziś do Ciebie mówić chcę. <br />Ty mi dajesz Swoją miłość, uwielbiam Cię.</lines>
     </verse>
     <verse name="v4">
-      <lines>Miłość, Miłość, Miłość jest pieśnią całego świata. <br/>Kochaj bliźniego, swojego brata.</lines>
+      <lines>Miłość, Miłość, Miłość jest pieśnią całego świata. <br />Kochaj bliźniego, swojego brata.</lines>
     </verse>
   </lyrics>
 </song>

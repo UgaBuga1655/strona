@@ -1,25 +1,24 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Duchu Pański na mnie zstąp</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1a">
-      <lines>Duchu Pański na mnie zstąp<br/>Duchu Pański na mnie zstąp<br/>Abym dzisiaj wyznał, że<br/>Tylko Jezus Panem jest,<br/>Moim Panem jest.</lines>
+      <lines>Duchu Pański na mnie zstąp<br />Duchu Pański na mnie zstąp<br />Abym dzisiaj wyznał, że<br />Tylko Jezus Panem jest,<br />Moim Panem jest.</lines>
     </verse>
     <verse name="v1b">
-      <lines>Dotknij mnie, przemień mnie,<br/>Z ciała serce daj	<br/>Dotknij mnie, przemień mnie,<br/>Ducha swego daj.</lines>
+      <lines>Dotknij mnie, przemień mnie,<br />Z ciała serce daj	<br />Dotknij mnie, przemień mnie,<br />Ducha swego daj.</lines>
     </verse>
     <verse name="v1c">
-      <lines>Duchu Pański na mnie zstąp<br/>Duchu Pański na mnie zstąp<br/>Abym dzisiaj wyznał, że<br/>Tylko Jezus Panem jest,<br/>Moim Panem jest.</lines>
+      <lines>Duchu Pański na mnie zstąp<br />Duchu Pański na mnie zstąp<br />Abym dzisiaj wyznał, że<br />Tylko Jezus Panem jest,<br />Moim Panem jest.</lines>
     </verse>
     <verse name="v1d">
-      <lines>Dotknij nas, przemień nas, <br/>z ciała serca daj<br/>Dotknij nas, przemień nas, <br/>Ducha swego daj<br/></lines>
+      <lines>Dotknij nas, przemień nas, <br />z ciała serca daj<br />Dotknij nas, przemień nas, <br />Ducha swego daj<br /></lines>
     </verse>
   </lyrics>
 </song>

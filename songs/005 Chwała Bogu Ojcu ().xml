@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Chwała Bogu Ojcu, W chwale jego Syn, <br/>Chwała Tobie Duchu, Tworzysz jedno w Nich. <br/>Śpiewajmy Alleluja Panu, <br/>Alleluja, Alleluja /x2</lines>
+      <lines>Chwała Bogu Ojcu, W chwale jego Syn, <br />Chwała Tobie Duchu, Tworzysz jedno w Nich. <br />Śpiewajmy Alleluja Panu, <br />Alleluja, Alleluja /x2</lines>
     </verse>
   </lyrics>
 </song>

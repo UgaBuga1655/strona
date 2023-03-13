@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <authors>
       <author>WMU</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Panie zmiłuj się nad nami	/X4<br/>Chryste zmiłuj się nad nami	/X4<br/><br/>To jest Baranek, który oddał swoje życie <br/>Miłość wcielona, ratująca swoje dzieci<br/><br/>Baranku bez zmazy, który gładzisz nasze grzechy<br/>Wlej pokój w serca, racz przemienić nasze życie<br/></lines>
+      <lines>Panie zmiłuj się nad nami	/X4<br />Chryste zmiłuj się nad nami	/X4<br /><br />To jest Baranek, który oddał swoje życie <br />Miłość wcielona, ratująca swoje dzieci<br /><br />Baranku bez zmazy, który gładzisz nasze grzechy<br />Wlej pokój w serca, racz przemienić nasze życie<br /></lines>
     </verse>
   </lyrics>
 </song>

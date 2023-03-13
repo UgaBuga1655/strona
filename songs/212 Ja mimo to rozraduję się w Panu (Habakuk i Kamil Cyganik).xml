@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -8,19 +7,19 @@
       <author>Habakuk</author>
       <author>Kamil Cyganik</author>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Chociaż figowiec pąków nie rozwija,<br/>Chociaż winnice plonów nie przynoszą,<br/>Chociaż  nie dają żywności moje pola,<br/>Chociaż są puste wszystkie me zagrody,</lines>
+      <lines>Chociaż figowiec pąków nie rozwija,<br />Chociaż winnice plonów nie przynoszą,<br />Chociaż  nie dają żywności moje pola,<br />Chociaż są puste wszystkie me zagrody,</lines>
     </verse>
     <verse name="v2">
-      <lines>Ja mimo to rozraduję się w Panu,	<br/>Weselić się będę w Bogu, moim Zbawcy,<br/>Ja mimo to rozraduję się w Panu,	<br/>Weselić się będę w Bogu</lines>
+      <lines>Ja mimo to rozraduję się w Panu,	<br />Weselić się będę w Bogu, moim Zbawcy,<br />Ja mimo to rozraduję się w Panu,	<br />Weselić się będę w Bogu</lines>
     </verse>
     <verse name="v3">
-      <lines>Bo Bóg moją siłą,<br/>On wyprowadzi mnie<br/>On wyprowadzi mnie<br/>Na wyżyny!</lines>
+      <lines>Bo Bóg moją siłą,<br />On wyprowadzi mnie<br />On wyprowadzi mnie<br />Na wyżyny!</lines>
     </verse>
     <verse name="v4">
-      <lines>Dlatego ja rozraduję się w Panu,<br/>Weselić się będę w Bogu, moim Zbawcy,<br/>Dlatego ja rozraduję się w Panu<br/>Weselić się będę w Bogu…/ x2<br/>/…moim Zbawcy/</lines>
+      <lines>Dlatego ja rozraduję się w Panu,<br />Weselić się będę w Bogu, moim Zbawcy,<br />Dlatego ja rozraduję się w Panu<br />Weselić się będę w Bogu…/ x2<br />/…moim Zbawcy/</lines>
     </verse>
   </lyrics>
 </song>

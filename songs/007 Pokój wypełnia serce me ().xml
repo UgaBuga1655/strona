@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -6,12 +5,12 @@
     </titles>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Pokój wypełnia serce me i radość śpiewa mi pieśń, <br/>bo mój Pan kocha mnie Alleluja, Alleluja, kocha mnie<br/>On swym krzyżem i śmiercią przynosi mi dar,<br/>Ojca dar, życiem mi. Alleluja, Alleluja, życiem mi</lines>
+      <lines>Pokój wypełnia serce me i radość śpiewa mi pieśń, <br />bo mój Pan kocha mnie Alleluja, Alleluja, kocha mnie<br />On swym krzyżem i śmiercią przynosi mi dar,<br />Ojca dar, życiem mi. Alleluja, Alleluja, życiem mi</lines>
     </verse>
   </lyrics>
 </song>

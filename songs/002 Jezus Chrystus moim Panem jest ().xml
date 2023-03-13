@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,10 +6,10 @@
     <ccliNo>No.</ccliNo>
     <authors>
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Jezus Chrystus moim Panem jest, Alleluja. /x2 <br/>On kocha mnie, On kocha mnie, Alleluja. /x2</lines>
+      <lines>Jezus Chrystus moim Panem jest, Alleluja. /x2 <br />On kocha mnie, On kocha mnie, Alleluja. /x2</lines>
     </verse>
   </lyrics>
 </song>

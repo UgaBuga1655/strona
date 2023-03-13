@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Niech nas ogarnie</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Niech nas ogarnie łaska Panie Twa<br/>Duch Twój Święty niech dotknie nas</lines>
+      <lines>Niech nas ogarnie łaska Panie Twa<br />Duch Twój Święty niech dotknie nas</lines>
     </verse>
   </lyrics>
 </song>

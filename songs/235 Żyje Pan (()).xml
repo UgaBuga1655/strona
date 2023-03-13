@@ -1,16 +1,15 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
       <title>Żyje Pan</title>
     </titles>
     <authors>
-      <author></author>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="v1">
-      <lines>Żyje Pan - śmierć i piekło On pokonał<br/>Żyje Pan - grób już nie pochłonie nas<br/>Żyje Pan - grzech nad nami nie panuje<br/>Już na wieki powstał Jezus żywy jest</lines>
+      <lines>Żyje Pan - śmierć i piekło On pokonał<br />Żyje Pan - grób już nie pochłonie nas<br />Żyje Pan - grzech nad nami nie panuje<br />Już na wieki powstał Jezus żywy jest</lines>
     </verse>
   </lyrics>
 </song>

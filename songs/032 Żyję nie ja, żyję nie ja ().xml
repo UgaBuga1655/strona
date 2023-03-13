@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
 <song version="0.9">
   <properties>
     <titles>
@@ -7,21 +6,21 @@
     <verseOrder>o1 v1 o1 v2 o1 v3 o1</verseOrder>
     <ccliNo>No.</ccliNo>
     <authors>
-      <author/>
+
     </authors>
-  </properties>
+  <themes><theme>Religijne</theme></themes></properties>
   <lyrics>
     <verse name="o1">
-      <lines>Żyję nie ja, żyję nie ja <br/>Żyję nie ja, lecz mój Pan. x2</lines>
+      <lines>Żyję nie ja, żyję nie ja <br />Żyję nie ja, lecz mój Pan. x2</lines>
     </verse>
     <verse name="v1">
-      <lines>Serce me znalazło coś, <br/>Co szczęściem zowie się <br/>Precz odrzuciłem troski swe bo…</lines>
+      <lines>Serce me znalazło coś, <br />Co szczęściem zowie się <br />Precz odrzuciłem troski swe bo…</lines>
     </verse>
     <verse name="v2">
-      <lines>Życie me pokojem tchnie,<br/>A w sercu radość trwa<br/>Już się nie martwię o swój los, bo…</lines>
+      <lines>Życie me pokojem tchnie,<br />A w sercu radość trwa<br />Już się nie martwię o swój los, bo…</lines>
     </verse>
     <verse name="v3">
-      <lines>Pytasz, kto jest Panem mym,<br/>Kto zmienił życie me.<br/>Jezus, mój Zbawca sprawił to, że…</lines>
+      <lines>Pytasz, kto jest Panem mym,<br />Kto zmienił życie me.<br />Jezus, mój Zbawca sprawił to, że…</lines>
     </verse>
   </lyrics>
 </song>

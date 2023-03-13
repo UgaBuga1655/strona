@@ -88,6 +88,11 @@ def render_html(song):
             verse["class"] = "indent"
         html["verses"].append(verse)
 
+    # tagi
+    themes = song.findall("./properties/themes/theme")
+    html["themes"] = serialize_node_group(themes)
+
+
     
     return html
 
@@ -97,7 +102,11 @@ active_tab="spiewnik"
 
 @spiewnik.route('/')
 def spiewnik_index():
-    return render_template("spiewnik.html", active_tab=active_tab)
+    themes = [
+        'Maryjne', 'Religijne', 'Patriotyczne', 'Ludowe', 'Harcerskie', 'Bożonarodzeniowe'
+    ]
+    themes.sort()
+    return render_template("spiewnik.html", themes=themes, active_tab=active_tab)
 
 @spiewnik.route('/search/<title>', methods=["POST", "GET"])
 def search_song(title):
@@ -106,11 +115,22 @@ def search_song(title):
     session = start_session()
     try:
         session.execute("open songs")
-        titles = session.execute(f"xquery for $x in song/properties/titles/title[matches(upper-case(.) ,upper-case('{title}'))] \
-                               order by $x return concat(data($x), '<br>')").split("<br>")[:-1:] \
-                            + \
-        session.execute(f"xquery for $x in song/properties where $x/authors/author[matches(upper-case(.), upper-case('{title}'))] \
-                        order by $x/titles/*[1] return concat(data($x/titles/*[1]), '<br>')").split("<br>")[:-1:]
+        query = f"xquery for $x in song/properties \
+                let $title := $x/titles/title[matches(upper-case(.), upper-case('{title}'))] \
+                let $authors := for $author in $x/authors return 'w'   \
+                where $title \
+                or $x/authors/author[matches(upper-case(.), upper-case('{title}'))] \
+                return if(not($x/authors/author)) then ( \
+                    concat(data($title), '<br>') \
+                )   \
+                else ( \
+                    concat(data($x/titles/title), ' - ', string-join(($x/authors/author), ', '), '<br>') \
+                )"
+                # znajduje piosenki
+
+        titles = session.execute(query).split("<br>")[:-1:]
+        titles.sort()
+
     finally:
         if session:
             session.close()
@@ -118,7 +138,7 @@ def search_song(title):
 
     # redirect directly to the song if only one matches the search term
     if len(titles)==1:
-        return redirect(f"/spiewnik/song/{titles[0]}")
+        return redirect(f"/spiewnik/song/{titles[0].split(' - ')[0]}")
     
     if request.method == "POST":
         return titles
@@ -138,7 +158,7 @@ def show_song(title):
             session.close()
 
     if not song:
-            song = "Nie znaleziono takiego utworu..."
+            return "Nie znaleziono takiego utworu..."
 
     return render_template("song.html", song=render_html(song), title=title, active_tab=active_tab)
     
@@ -167,18 +187,36 @@ def author(name):
     session = start_session()
     try:
         session.execute("open songs")
-        query = f"xquery for $x in song/properties[authors/author='{name}'] order by $x/titles/*[1] return concat(data($x/titles/*[1]), '<br>')"
+        query = f"xquery for $x in song/properties[authors/author='{name}']\
+                order by $x/titles/*[1] \
+                return concat(data($x/titles/*[1]), ' - ', string-join(($x/authors/author), ', '), '<br>')"
         print(query)
         titles = session.execute(query).split("<br>")[:-1:]
     finally:
         if session:
             session.close()
 
+    return render_template("search.html", titles=titles, author=name, active_tab=active_tab)
 
-    # redirect directly to the song if only one matches the search term
+@spiewnik.route('/theme/<theme>')
+def theme(theme):
+    theme = escape(theme)
+    session = start_session()
+    try:
+        session.execute("open songs")
+        query = f"xquery for $x in song/properties[themes/theme='{theme}'] \
+                let $title := $x/titles/*[1]\
+                order by $title \
+                return if(not($x/authors/author)) then ( \
+                    concat(data($title), '<br>') \
+                )   \
+                else ( \
+                    concat(data($title), ' - ', string-join(($x/authors/author), ', '), '<br>') \
+                )"
+        print(query)
+        titles = session.execute(query).split("<br>")[:-1:]
+    finally:
+        if session:
+            session.close()
 
-    
-    if request.method == "POST":
-        return titles
-    else:
-        return render_template("search.html", titles=titles, author=name, active_tab=active_tab)
+    return render_template("search.html", titles=titles, author=theme, active_tab=active_tab)
