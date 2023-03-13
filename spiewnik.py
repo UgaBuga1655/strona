@@ -213,7 +213,7 @@ def theme(theme):
                 let $title := $x/titles/*[1]\
                 order by $title \
                 return concat( \
-                    data($title). \
+                    data($title), \
                     if(($x/authors/author)) then ( \
                         concat(' - ', string-join(($x/authors/author), ', ')) \
                     ) else () )"
