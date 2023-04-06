@@ -41,6 +41,45 @@ def setup():
 def serialize_node_group(group):
     return [element.text for element in group]
 
+# def render_chord(root, structure):
+#     german_notes = {"A#":"B", "Bd":"B", "B":"H"}
+#     if root in german_notes.keys():
+#         root = german_notes[root]
+#     root = re.sub("#", "is", root)
+#     root = re.sub("b", "es", root)
+#     if "min" in structure:
+#         root = root.lower()
+#     if "7" in structure:
+#         root += "7"
+#     return root
+
+
+# def extract_chords(line):
+#     chords = re.findall("<chord.*?>", line)
+#     print(chords)
+#     rendered_chords =[]
+#     for chord in chords:
+#         root = re.findall('root="."', chord)
+#         if root:
+#             root = root[0][6:-1]
+#         structure = re.findall('structure=".+?"', chord)
+#         structure = structure[0][11:-1] if structure else ""
+#         # print(root, structure)
+#         rendered_chords.append(render_chord(root, structure))
+#     return (re.sub("</*chord.*?>", " ", line), ' '.join(rendered_chords))
+
+def extract_chords(line):
+    chords = re.findall("<chords.*?chords>", line)
+    if chords:
+        chords = chords[0]
+        chords = re.sub("<.?chords>", "", chords)
+        chords = re.sub(" ", " ", chords)
+    else:
+        chords = ""
+
+    line = re.sub("<chords.*?chords>", "", line)
+    return (line, chords)
+
 def render_html(song):
     html = {}
     song = ET.fromstring(song)
@@ -81,6 +120,7 @@ def render_html(song):
         # dzielenie na linijki
         verse_text = re.sub('</*lines>', '', verse_text)
         verse_text = verse_text.strip().split("<br />")
+        verse_text = [extract_chords(line) for line in verse_text]
         verse = {}
         verse["text"] = verse_text
         # wcięcie dla nie-zwrotek
@@ -180,7 +220,9 @@ def download_song(title):
             session.close()
 
     # o co biega? Kiedy atrybut xmlns z jakiegoś powodu totalnie wykrzacza BaseX, a bez niego wykrzacza się OpenLP, dlatego w bazie danych pliki go nie mają, a jest dodawany przy pobieraniu... 😒
+    # poza tym, OpenLP nie obsługuje akordów, dlatego się ich pozbywam
     # HACK
+    song = re.sub("<chords.*chords>", "", song)
     song = ET.fromstring(song)
     song.set("xmlns", "http://openlyrics.info/namespace/2009/song")
     song = ET.tostring(song, encoding='unicode')

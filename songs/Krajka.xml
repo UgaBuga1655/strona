@@ -12,16 +12,36 @@
     </properties>
     <lyrics>
         <verse name="v1">
-            <lines>Chorałem dzwonków dzień rozkwita<br/>jeszcze od rosy rzęsy mokre<br/>we mgle turkoce pierwsza bryka.<br />słońce wyrusza na włóczęgę.</lines>
+            <lines>
+                Chorałem dzwonków dzień rozkwita <chords>a G</chords><br/>
+                jeszcze od rosy rzęsy mokre <chords>a d</chords><br/>
+                we mgle turkoce pierwsza bryka. <chords>C d</chords><br />
+                słońce wyrusza na włóczęgę. <chords>E E7</chords>
+            </lines>
         </verse>
         <verse name="p1">
-            <lines>Drogą pylistą, drogą polną,<br/>jak kolorowej panny krajka.<br />Słońce się wznosi nad stodołą,<br />będziemy tańczyć walca.</lines>
+            <lines>
+                Drogą pylistą, drogą polną,<br/>
+                jak kolorowej panny krajka.<br />
+                Słońce się wznosi nad stodołą,<br />
+                będziemy tańczyć walca.
+            </lines>
         </verse>
         <verse name="c1">
-            <lines>A ja mam swoją gitarę, spodnie wytarte i buty stare.<br/>Wiatry niosą mnie. (Na skrzydłach)<br />A ja mam swoją gitarę, spodnie wytarte i buty stare.<br/>Wiatry niosą mnie.</lines>
+            <lines>
+                A ja mam swoją gitarę, spodnie wytarte i buty stare. <chords>d G C a</chords><br/>
+                Wiatry niosą mnie. (Na skrzydłach)<chords>d E a A</chords><br />
+                A ja mam swoją gitarę, spodnie wytarte i buty stare.<br/>
+                Wiatry niosą mnie.
+            </lines>
         </verse>
         <verse name="v2">
-            <lines>Zmoknięte świersze stroją skrzypce,<br/>żuraw się wsparł o cembrowinę.<br />Wiele nanosi wody jeszcze,<br />wielu się ludzi z niej napije.</lines>
+            <lines>
+                Zmoknięte świersze stroją skrzypce,<br/>
+                żuraw się wsparł o cembrowinę.<br />
+                Wiele nanosi wody jeszcze,<br />
+                wielu się ludzi z niej napije.
+            </lines>
         </verse>
     </lyrics>
 </song>

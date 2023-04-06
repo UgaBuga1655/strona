@@ -26,12 +26,16 @@
     <!-- <p>{{ song["verse_order"] }}</p> -->
         <div id="songtext" class="songtext" style="font-size: 18px;">
             {% for element in song["verses"] %}
-                    <p class="{{element['class']}}">
+                    <table style="margin-top: 15px; margin-bottom: 15px;"  class="{{element['class']}}">
                         {% for line in element['text'] %}
-                                {{ line }} <br>
+                            <tr>
+                                <td style="margin-right: 2%;">{{ line[0] }}</td>
+                                <td>    </td>
+                                <td>{{ line[1] }}</td>
+                            </tr>
                         {% endfor %}
                         
-                    </p> 
+                    </table> 
             {% endfor %}
             
         </div>
