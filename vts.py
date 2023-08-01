@@ -102,7 +102,8 @@ def file_submit():
     if request.method == "POST":
         file = request.form.get('dane')
         try:
-            response = vts.main(file)
+            response = main(file)
+            print(response)
         except:
             response = ["Niewłaściwy plik"]
         return render_template("file-submit.html", response = response, active_tab=active_tab)
