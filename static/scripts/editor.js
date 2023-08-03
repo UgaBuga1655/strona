@@ -300,7 +300,7 @@ function showResponse(resp){
         let new_row = document.createElement("tr")
         row.forEach(group =>{
             let button = document.createElement("button")
-            button.innerHTML = group
+            button.innerHTML = group.replace("_", " ")
             new_row.appendChild(button)
         })
         response_card.appendChild(new_row)
@@ -310,6 +310,7 @@ function showResponse(resp){
 function createFilters(){
     let groups = Array.from(document.getElementById("groups").children)
     let filters = document.getElementById("filters")
+    filters.innerHTML = ""
     groups.forEach(group => {
         let filter = document.createElement("button")
         filter.innerHTML = group.innerHTML
@@ -330,6 +331,7 @@ function filterWith(filters){
             if (!groups.includes(filter))
             visible = false
         })
+        
         row.style.display = (visible ? "block" : "none")
     }
     
@@ -351,7 +353,7 @@ function updateFilters(filter){
 
 var editorInputFile = document.getElementById("file-form")
 editorInputFile.onchange = (e) => {
-    const file = editorInputFile.files[0]
+    var file = editorInputFile.files[0]
     if (!file) return
     const reader = new FileReader()
     reader.onload = (e) => {
@@ -366,4 +368,5 @@ editorInputFile.onchange = (e) => {
         console.error(`Error occured while reading ${file.name}`, error)
     }
     reader.readAsText(file)
+    editorInputFile.value = null;
 }
