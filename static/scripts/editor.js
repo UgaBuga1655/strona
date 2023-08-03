@@ -184,6 +184,7 @@ function addStudent(){
 }
 
 function populateTable(){
+    textContent = textContent.trim()
     dane = textContent.split('\n')
     dane.forEach((element, index) => {
         dane[index] = element.split(' ')
@@ -257,19 +258,100 @@ function generateFileFromTable(){
     }
     dane = dane.replace(/ +$/gm, "")
 
-    if (dane == "") { return false }
-    document.getElementById("text-field").innerHTML=dane
-    var myFile = new File([dane], "dane.vts", {type: "text/plain;charset=utf-8"});
-    saveAs(myFile);
+    return dane 
+    
 
     // console.log(dane)
 }
 
+function saveFileFromTable(){
+    dane = generateFileFromTable()
+    var myFile = new File([dane], "dane.vts", {type: "text/plain;charset=utf-8"});
+    saveAs(myFile);
+}
+
+function processData(){
+    var data = generateFileFromTable()
+    fetch("/vts", {
+        "body" : JSON.stringify({"data" : data}),
+        "headers" : {"Content-Type" : "application/json"},
+        "method": "POST"
+    })
+    .then((res) => {
+        return res.json()
+    })
+    .then(
+        data => {
+            // console.log(data)
+            let solution_wrapper = document.getElementById("solution_wrapper")
+            solution_wrapper.style.display = "block";
+            createFilters()
+            showResponse(data)
+        }
+    )
+    .catch((err) => console.log(err))
+}
+
+function showResponse(resp){
+    
+    let response_card = document.getElementById('answers');
+    response_card.innerHTML = "";
+    resp.forEach(row => {
+        let new_row = document.createElement("tr")
+        row.forEach(group =>{
+            let button = document.createElement("button")
+            button.innerHTML = group
+            new_row.appendChild(button)
+        })
+        response_card.appendChild(new_row)
+    })
+}
+
+function createFilters(){
+    let groups = Array.from(document.getElementById("groups").children)
+    let filters = document.getElementById("filters")
+    groups.forEach(group => {
+        let filter = document.createElement("button")
+        filter.innerHTML = group.innerHTML
+        filter.setAttribute("onclick", "updateFilters(this)")
+        filters.appendChild(filter)
+    })
+}
+
+function filterWith(filters){
+    let answers = document.getElementById("answers").childNodes
+    for (var row of answers) {
+        var visible = true;
+        var groups = [];
+        for (const group of row.childNodes){
+            groups.push(group.innerHTML)
+        }
+        filters.forEach(filter => {
+            if (!groups.includes(filter))
+            visible = false
+        })
+        row.style.display = (visible ? "block" : "none")
+    }
+    
+}
+
+function updateFilters(filter){
+    filter.classList.toggle("inset")
+    var active_filters = [];
+    const filters = document.getElementById("filters").childNodes
+    for (var filter of filters) {
+        if (filter.classList.contains("inset")) {
+            active_filters.push(filter.innerHTML)
+        }
+    }
+    console.log(active_filters)
+    filterWith(active_filters)
+}
 
 
-const inputFile = document.getElementById("file-form")
-inputFile.onchange = (e) => {
-    const file = inputFile.files[0]
+var editorInputFile = document.getElementById("file-form")
+editorInputFile.onchange = (e) => {
+    const file = editorInputFile.files[0]
     if (!file) return
     const reader = new FileReader()
     reader.onload = (e) => {

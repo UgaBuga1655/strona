@@ -38,8 +38,8 @@ def print_cliques(graph):
     for cliques in k_cliques(graph):
         for clique in cliques:
             clique = [Roz[i] for i in clique]
-            clique.sort()
-            clique = "\t".join(clique)
+            clique.sort(key=str.lower)
+            # clique = "\t".join(clique)
             Cliques.append(clique)
     return Cliques
             
@@ -91,9 +91,19 @@ def main(file):
 vts = Blueprint('vts', __name__, )
 active_tab = "vts"
 
-@vts.route('/')
+@vts.route('/', methods=["POST", "GET"])
 def vts_route():
-    return render_template("vts.html", active_tab=active_tab)
+    if request.method == "GET":
+        return render_template("vts.html", active_tab=active_tab)
+    if request.method == "POST":
+        req = request.get_json()
+        file = req["data"]
+        try:
+            response = main(file)
+        except:
+            response = ["Niewłaściwy plik"]
+        return response
+    # return render_template("vts.html", active_tab=active_tab)
 
 @vts.route("/file-submit", methods=["POST", "GET"])
 def file_submit():
@@ -105,7 +115,7 @@ def file_submit():
             response = main(file)
         except:
             response = ["Niewłaściwy plik"]
-        return render_template("file-submit.html", response = response, active_tab=active_tab)
+        return response
     
 @vts.route("/editor")
 def editor():

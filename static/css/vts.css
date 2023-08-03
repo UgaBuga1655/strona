@@ -61,3 +61,7 @@ input[type=button]:hover, input[type=submit]:hover, label:hover {
     color: antiquewhite;
 
 }
+
+.inset {
+    border-style: inset;
+}

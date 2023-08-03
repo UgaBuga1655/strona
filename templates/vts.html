@@ -2,22 +2,73 @@
 
 {% block title %}vts{% endblock %}
 
+{% block css %}
+<link rel="stylesheet" href="/static/css/vts.css">
+{% endblock %}
+
 {% block content %}
-    <h1>VTS</h1>
+<h1>VTS</h1>
 
-    <h2>Co to właściwie jest?</h2>
+<h2>Co to właściwie jest?</h2>
 
-    <p>Wyobraźcie sobie taką sytuację - mamy grupę ludzi, z których każdy należy do kilku podgrup (powiedzmy, kół zainteresowań). Koła chcą się spotykać, ale czasu jest mało, więc niektóre spotkania muszą odbywać się jednocześnie. <b>Jak ustawić harmonogram, żeby naraz spotkało się ich jak najwięcej i nie było sytuacji, że ktoś musi wybierać pomiędzy dwoma ze swoich zainteresowań?</b></p>
-    <p>VTS służy właśnie do tego. W edytorze można stworzyć koła i dodać do nich ludzi, a następnie zapisać te dane w specjalnym formacie, który potem można przesłać do serwera, który go przeanalizuje i zwróci rozwiązanie. W każdej linijce rozwiązania znajdują się koła zainteresowań, z których żadne dwa nie mają wspólnego członka i nie można "dopchać" do nich żadnego kolejnego koła.</p>
+<p>Wyobraźcie sobie taką sytuację - mamy grupę ludzi, z których każdy należy do kilku podgrup (powiedzmy, kół
+    zainteresowań). Koła chcą się spotykać, ale czasu jest mało, więc niektóre spotkania muszą odbywać się jednocześnie.
+    <b>Jak ustawić harmonogram, żeby naraz spotkało się ich jak najwięcej i nie było sytuacji, że ktoś musi wybierać
+        pomiędzy dwoma ze swoich zainteresowań?</b>
+</p>
+<p>VTS służy właśnie do tego. W edytorze można stworzyć koła i dodać do nich ludzi, a następnie zapisać te dane w
+    specjalnym formacie, który potem można przesłać do serwera, który go przeanalizuje i zwróci rozwiązanie. W każdej
+    linijce rozwiązania znajdują się koła zainteresowań, z których żadne dwa nie mają wspólnego członka i nie można
+    "dopchać" do nich żadnego kolejnego koła.</p>
 
-    <h2>Masz gotowy plik, czy chcesz skorzystać z edytora?</h2>
-    <header class="navbar">
-        <a href="/vts/editor">Chcę skorzystać z edytora</a>
-        <a href="/vts/file-submit">Mam gotowy plik</a>
-
-    </header>
+<h1 class="text-center">Edytor</h1>
 
 
+<p>Jeśli chcesz, możesz wgrać plik, aby go edytować.</p>
 
 
+<div>
+    <label for="file-form">
+        Wybierz plik
+    </label>
+    <input style="display: none;" type="file" id="file-form">
+</div>
+
+<div>
+    <input type="text" name="group" id="group-form" placeholder="Koło zainteresowań">
+    <input type="button" onclick="addGroup()" value="Dodaj koło">
+</div>
+
+<div id="groups" class="card"></div>
+
+<div class="input-group">
+    <input type="text" name="name" id="name-form" placeholder="Imię">
+    <input type="text" name="surname" id="surname-form" placeholder="Nazwisko">
+    <input type="button" onclick="addStudent()" value="Dodaj osobę">
+</div>
+
+<div id="table" class="card"></div>
+
+
+<input type="button" onclick="saveFileFromTable()" value="Zapisz">
+<input type="button" onclick="processData()" value="Znajdź rozwiązanie">
+
+<div id="solution_wrapper" style="display: none;">
+    <h1 class="text-center">Rozwiązanie</h1>
+    <h2>Filtry</h2>
+    <div class="card" id="filters"></div>
+    <h2>Rozwiązania</h2>
+    <div class="card" id="answers"></div>
+</div>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+<!-- (A) LOAD FILE SAVER -->
+<!-- https://cdnjs.com/libraries/FileSaver.js -->
+<!-- https://github.com/eligrey/FileSaver.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="/static/scripts/editor.js"></script>
 {% endblock %}
