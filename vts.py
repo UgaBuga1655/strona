@@ -65,7 +65,7 @@ def main(file):
     global Roz
     global graph
 
-    Students = [line.split() for line in file.strip().split("\n")]
+    Students = [line.split(",") for line in file.strip().split("\n")]
     # tworzy listę rozszerzeń
     Roz = Students.pop(0)
     # for student in Students:
@@ -80,6 +80,7 @@ def main(file):
     # print(Roz)
     # usuwa połączenia między przedmiotami, które mają wspólnego ucznia
     for student in Students:
+        print(student)
         add_student_to_graph(student)
     # print([e for e in graph.edges])    
     # pokazuje, co wykminił
@@ -114,7 +115,7 @@ def file_submit():
         try:
             response = main(file)
         except:
-            response = ["Niewłaściwy plik"]
+            response = [["Niewłaściwy plik"]]
         return response
     
 @vts.route("/editor")

@@ -19,7 +19,7 @@ function generateGroupLi(group_list, group) {
 
 function addGroup(){
     let group_list = document.getElementById("groups")
-    let group = document.getElementById("group-form").value
+    let group = document.getElementById("group-form").value.replace(",", "")
 
     if (group.trim() == ""){
         return false
@@ -152,7 +152,7 @@ function addStudent(){
     let student_name = document.getElementById("name-form").value
     let student_surname = document.getElementById("surname-form").value
     
-    if(checkIfStudentInTable(student_name, student_surname)){
+    if(checkIfStudentInTable(student_name, student_surname) || student_name == "" || student_surname == ""){
         return false
     }
 
@@ -187,15 +187,11 @@ function populateTable(){
     textContent = textContent.trim()
     dane = textContent.split('\n')
     dane.forEach((element, index) => {
-        dane[index] = element.split(' ')
+        dane[index] = element.split(',')
     });
-    // wczytanie rozszerzeń
-    let roz = dane.shift()
-    let group_list = document.getElementById("groups")
-    group_list.innerHTML = ""
-    roz.forEach(group => {
-        generateGroupLi(group_list, group.replaceAll("_", " "))
-    })
+    // stworzenie nowej llisty rozszerzeń
+    let roz = []
+    
     // wczytanie wszystkich uczniów
     let table = document.getElementById("table")
     table.innerHTML = ""
@@ -220,41 +216,48 @@ function populateTable(){
         row.appendChild(surname)
 
         while (student.length>0) {
+            // dodaj kolejne kafelki z rozszerzeniami
             let group = document.createElement("button")
-            let value = student.shift().replaceAll("_", " ")
+            let value = student.shift().trim()
             group.setAttribute("id", "group-field")
             group.setAttribute("onclick", "removeFromGroup(this)")
             group.innerHTML = value
             row.appendChild(group)
+            // dodaj rozszerzenie do ogólnej listy
+            if (!roz.includes(value)) roz.push(value)
         }
 
         generateAddToGroupButton(row)
         table.appendChild(row)
     })
+
+    // wczytanie rozszerzeń
+    let group_list = document.getElementById("groups")
+    group_list.innerHTML = ""
+    roz.sort(Intl.Collator().compare)
+    roz.forEach(group => {
+        generateGroupLi(group_list, group)
+    })
     // console.log(dane)
 }
+
 
 function generateFileFromTable(){
     // generuje plik z danych z tabelki do zapisania przez użytkownika
     let dane = ""
 
-    let group_list = document.getElementById("groups")
-    let groups = []
-
-    for (const group of group_list.children) {
-        groups.push(group.id.replaceAll(" ", "_"))
-    }
-    dane = dane.concat(groups.join(" "))
-
     let table = document.getElementById("table")
 
     for (row of table.children){
         dane = dane.concat("\n")
+        // row.removeChild(row.children[0])
+        arr = []
         for (td of row.children) {
             if (td.id == "name" || td.id == "surname" || td.id == "group-field"){
-                dane = dane.concat(td.innerHTML.replaceAll(" ", "_"), " ")
+                    arr.push(td.innerHTML)
+                }
             }
-        }
+        dane = dane.concat(arr.join(","))
     }
     dane = dane.replace(/ +$/gm, "")
 
@@ -266,12 +269,20 @@ function generateFileFromTable(){
 
 function saveFileFromTable(){
     dane = generateFileFromTable()
-    var myFile = new File([dane], "dane.vts", {type: "text/plain;charset=utf-8"});
+    // pozbycie się lini z listą przedmiotów
+    var myFile = new File([dane], "dane.csv", {type: "text/plain;charset=utf-8"});
     saveAs(myFile);
 }
 
 function processData(){
-    var data = generateFileFromTable()
+    let group_list = document.getElementById("groups")
+    let groups = []
+
+    for (const group of group_list.children) {
+        groups.push(group.id)
+    }
+    var data = groups.join(",")
+    data = data.concat(generateFileFromTable())
     fetch("/vts", {
         "body" : JSON.stringify({"data" : data}),
         "headers" : {"Content-Type" : "application/json"},
@@ -293,7 +304,6 @@ function processData(){
 }
 
 function showResponse(resp){
-    
     let response_card = document.getElementById('answers');
     response_card.innerHTML = "";
     resp.forEach(row => {
@@ -331,7 +341,6 @@ function filterWith(filters){
             if (!groups.includes(filter))
             visible = false
         })
-        
         row.style.display = (visible ? "block" : "none")
     }
     
@@ -346,7 +355,6 @@ function updateFilters(filter){
             active_filters.push(filter.innerHTML)
         }
     }
-    console.log(active_filters)
     filterWith(active_filters)
 }
 

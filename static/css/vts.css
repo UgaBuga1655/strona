@@ -15,12 +15,11 @@ button:hover{
 tr:nth-child(even) td{
     background-color: dimgray;
 }
-tr:nth-child(odd) td, tr:nth-child(odd) button {
+#table tr:nth-child(odd) td, #table tr:nth-child(odd) button {
     background-color: gray;
 }
 
 #answers tr button  {
-    background-color: dimgray;
     margin-bottom: 3px;
 }
 input[type=text] {
