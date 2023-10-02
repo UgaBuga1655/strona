@@ -38,8 +38,8 @@ def print_cliques(graph):
     for cliques in k_cliques(graph):
         for clique in cliques:
             clique = [Roz[i] for i in clique]
-            clique.sort()
-            clique = "\t".join(clique)
+            clique.sort(key=str.lower)
+            # clique = "\t".join(clique)
             Cliques.append(clique)
     return Cliques
             
@@ -65,7 +65,7 @@ def main(file):
     global Roz
     global graph
 
-    Students = [line.split() for line in file.strip().split("\n")]
+    Students = [line.split(",") for line in file.strip().split("\n")]
     # tworzy listę rozszerzeń
     Roz = Students.pop(0)
     # for student in Students:
@@ -80,6 +80,7 @@ def main(file):
     # print(Roz)
     # usuwa połączenia między przedmiotami, które mają wspólnego ucznia
     for student in Students:
+        print(student)
         add_student_to_graph(student)
     # print([e for e in graph.edges])    
     # pokazuje, co wykminił
@@ -91,9 +92,19 @@ def main(file):
 vts = Blueprint('vts', __name__, )
 active_tab = "vts"
 
-@vts.route('/')
+@vts.route('/', methods=["POST", "GET"])
 def vts_route():
-    return render_template("vts.html", active_tab=active_tab)
+    if request.method == "GET":
+        return render_template("vts.html", active_tab=active_tab)
+    if request.method == "POST":
+        req = request.get_json()
+        file = req["data"]
+        try:
+            response = main(file)
+        except:
+            response = ["Niewłaściwy plik"]
+        return response
+    # return render_template("vts.html", active_tab=active_tab)
 
 @vts.route("/file-submit", methods=["POST", "GET"])
 def file_submit():
@@ -104,8 +115,8 @@ def file_submit():
         try:
             response = main(file)
         except:
-            response = ["Niewłaściwy plik"]
-        return render_template("file-submit.html", response = response, active_tab=active_tab)
+            response = [["Niewłaściwy plik"]]
+        return response
     
 @vts.route("/editor")
 def editor():

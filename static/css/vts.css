@@ -15,8 +15,12 @@ button:hover{
 tr:nth-child(even) td{
     background-color: dimgray;
 }
-tr:nth-child(odd) td, tr:nth-child(odd) button {
+#table tr:nth-child(odd) td, #table tr:nth-child(odd) button {
     background-color: gray;
+}
+
+#answers tr button  {
+    margin-bottom: 3px;
 }
 input[type=text] {
     font-family: 'Courier New', Courier, monospace;
@@ -60,4 +64,8 @@ input[type=button]:hover, input[type=submit]:hover, label:hover {
     font-family: 'Courier New', Courier, monospace;
     color: antiquewhite;
 
+}
+
+.inset {
+    border-style: inset;
 }
