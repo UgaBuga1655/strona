@@ -27,8 +27,9 @@ def setup():
             print("Refreshing current database...")
             session.execute("drop db songs")
 
-        session.execute("create db songs ./songs")
-
+        pwd = os.getcwd()
+        print("pwd: ", pwd)
+        session.execute("create db songs " + pwd + "/songs")
         # print(session.execute("xquery song[properties/titles/title[contains(. ,'Zmartwychwstał')]]"))
 
         print("Database loaded successfully!")

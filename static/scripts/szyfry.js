@@ -44,6 +44,30 @@ function processMorse() {
     .catch((err) => console.log(err))
 }
 
+function processRemDiac() {
+    let message = document.getElementById("rem-diac-message").value
+    if (message == '') {
+        return false
+    }
+    fetch("/szyfry/remove-diacritics", {
+        "body": JSON.stringify({"text" : message}),
+        "headers" : {"Content-Type" : "application/json"},
+        "method": "POST"
+    })
+    .then((res) => {
+        return res.json()
+    })
+    .then(
+        data => {
+            console.log(data)
+            let response_card = document.getElementById('rem-diac-response');
+            response_card.innerHTML = data
+            response_card.classList.remove('invisible')
+        }
+    )
+    .catch((err) => console.log(err))
+}
+
 function processCezar() {
     let message = document.getElementById("cezar-message").value
     if (message == '') {return false}

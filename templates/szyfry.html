@@ -17,6 +17,7 @@
     <span class="button" onclick="populateInputCard(this, 'cezar')">Cezar</span>
     <span class="button" onclick="populateInputCard(this, 'vigenere')">Vigenère</span>
     <span class="button" onclick="populateInputCard(this, 'sylabowy')">Sylabowy</span>
+    <span class="button" onclick="populateInputCard(this, 'remove-diacritics')">Usuń diakrytyki</span>
 </div>
 
 <div id="input" class="">
@@ -112,7 +113,15 @@
         <div id="sylabowy-response" class="card invisible">Twoja wiadomość</div>
     </div>
 
-    
+    <div id="remove-diacritics" class="invisible">
+        <h2>Usuń diakrytyki</h2>
+
+        <textarea id="rem-diac-message" placeholder="Twoja wiadomość" wrap="soft"></textarea>
+        <br>
+        <input type="button" value="Potwierdź" onclick="processRemDiac()">
+
+        <div id="rem-diac-response" class="card invisible">Twoja wiadomość</div>
+    </div>
 </div>
 
 

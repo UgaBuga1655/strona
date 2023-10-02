@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 import json
 from random import randint
+from unidecode import unidecode
 
 def morse_encrypt(text):
     morse = {
@@ -178,6 +179,8 @@ def vigenere_encrypt(message):
     response['key'] = ''.join(key)
     return response
 
+def remove_diacritics(message):
+    return unidecode(message['text'])
 
 
 
@@ -220,5 +223,12 @@ def sylabowy():
 def vigenere():
     message = request.get_json()
     message = vigenere_encrypt(message)
+    response = json.dumps(message)
+    return response
+
+@szyfry.route("/remove-diacritics", methods=["POST"])
+def diacritics():
+    message = request.get_json()
+    message = remove_diacritics(message)
     response = json.dumps(message)
     return response
