@@ -1,5 +1,5 @@
 from BaseXClient import BaseXClient
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, url_for
 from markupsafe import escape
 import xml.etree.ElementTree as ET
 import re
@@ -192,6 +192,9 @@ def search_song(title):
     else:
         return render_template("search.html", titles=titles, active_tab=active_tab)
     
+@spiewnik.route('/song/')
+def redirect_to_songbook():
+    return redirect("/spiewnik", code=303)
 
 @spiewnik.route('/song/<title>')
 def show_song(title):
