@@ -11,15 +11,14 @@
 
 <h2>Co to właściwie jest?</h2>
 
-<p>Wyobraźcie sobie taką sytuację - mamy grupę ludzi, z których każdy należy do kilku podgrup (powiedzmy, kół
-    zainteresowań). Koła chcą się spotykać, ale czasu jest mało, więc niektóre spotkania muszą odbywać się jednocześnie.
+<p>Wyobraźcie sobie taką sytuację - mamy grupę ludzi, z których każdy należy do kilku podgrup. Podgrupy chcą się spotykać, ale czasu jest mało, więc niektóre spotkania muszą odbywać się jednocześnie.
     <b>Jak ustawić harmonogram, żeby naraz spotkało się ich jak najwięcej i nie było sytuacji, że ktoś musi wybierać
-        pomiędzy dwoma ze swoich zainteresowań?</b>
+        pomiędzy dwoma ze swoich podgrup?</b>
 </p>
 <p>VTS służy właśnie do tego. W edytorze można stworzyć koła i dodać do nich ludzi, a następnie zapisać te dane w
     formacie <i>.csv</i>, który potem można przesłać do serwera, który go przeanalizuje i zwróci rozwiązanie. W każdej
-    linijce rozwiązania znajdują się koła zainteresowań, z których żadne dwa nie mają wspólnego członka i nie można
-    "dopchać" do nich żadnego kolejnego koła. Rozwiązania można filtrować zaznaczając, jakie koła nas insteresują.</p>
+    linijce rozwiązania znajdują się podgrupy, z których żadne dwa nie mają wspólnego członka i nie można
+    "dopchać" do nich żadnego kolejnej podgrupy. Rozwiązania można filtrować zaznaczając, jakie koła nas insteresują.</p>
 
 
 <h1 class="text-center">Edytor</h1>
@@ -36,8 +35,8 @@
 </div>
 
 <div>
-    <input type="text" name="group" id="group-form" placeholder="Koło zainteresowań">
-    <input type="button" onclick="addGroup()" value="Dodaj koło">
+    <input type="text" name="group" id="group-form" placeholder="Podgrupa">
+    <input type="button" onclick="addGroup()" value="Dodaj podgrupę">
 </div>
 
 <div id="groups" class="card"></div>
