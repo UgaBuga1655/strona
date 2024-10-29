@@ -34,7 +34,7 @@ def setup():
 
         print("Database loaded successfully!")
     finally:
-        # close session
+        # close sessionq
         if session:
             session.close()
 
