@@ -32,10 +32,10 @@ def song(id):
 def author(id):
     author = Author.query.filter_by(id=id).first()
     songs = author.songs
-    return render_template('search.html', songs=songs, form=SongSearchForm(), query=author.name)
+    return render_template('search.html', results=songs, form=SongSearchForm(), query=author.name)
 
 @spiewnik.route('/tag/<id>')
 def tag(id):
     tag = Tag.query.filter_by(id=id).first()
     songs = tag.songs
-    return render_template('search.html', songs=songs, form=SongSearchForm(), query=tag.name)
+    return render_template('search.html', results=songs, form=SongSearchForm(), query=tag.name)
