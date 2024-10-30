@@ -10,8 +10,10 @@ with app.app_context():
     db.create_all()
     for file in os.listdir(folder):
         file = folder + '/' + file
-        tree = ET.parse(file)
-        root = tree.getroot()
+        with open(file) as f:
+            content = f.read().strip().replace('\n', '').replace('\r', '')
+            root = ET.fromstring(content)
+        root
 
 
         properties = root.find('properties')
