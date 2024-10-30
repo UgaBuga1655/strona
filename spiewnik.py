@@ -1,273 +1,41 @@
-from BaseXClient import BaseXClient
 from flask import Blueprint, render_template, request, redirect, url_for
-from markupsafe import escape
-import xml.etree.ElementTree as ET
-import re
-import os
-
-def start_session():
-    # HACK YOLO
-    with open("./passwd")as file:
-        passwd = file.read().strip()
-    while True:
-        try:
-            session = BaseXClient.Session('localhost', 1984, 'admin', passwd)
-            break
-        except:
-            os.system("basexserver -S")
-            
-    return session
-
-def setup():
-    session = start_session()
-
-    try:
-        # create new database
-        if "songs" in session.execute("list"):
-            print("Refreshing current database...")
-            session.execute("drop db songs")
-
-        pwd = os.getcwd()
-        print("pwd: ", pwd)
-        session.execute("create db songs " + pwd + "/songs")
-        # print(session.execute("xquery song[properties/titles/title[contains(. ,'Zmartwychwstał')]]"))
-
-        print("Database loaded successfully!")
-    finally:
-        # close session
-        if session:
-            session.close()
-
-
-def serialize_node_group(group):
-    return [element.text for element in group]
-
-# def render_chord(root, structure):
-#     german_notes = {"A#":"B", "Bd":"B", "B":"H"}
-#     if root in german_notes.keys():
-#         root = german_notes[root]
-#     root = re.sub("#", "is", root)
-#     root = re.sub("b", "es", root)
-#     if "min" in structure:
-#         root = root.lower()
-#     if "7" in structure:
-#         root += "7"
-#     return root
-
-
-# def extract_chords(line):
-#     chords = re.findall("<chord.*?>", line)
-#     print(chords)
-#     rendered_chords =[]
-#     for chord in chords:
-#         root = re.findall('root="."', chord)
-#         if root:
-#             root = root[0][6:-1]
-#         structure = re.findall('structure=".+?"', chord)
-#         structure = structure[0][11:-1] if structure else ""
-#         # print(root, structure)
-#         rendered_chords.append(render_chord(root, structure))
-#     return (re.sub("</*chord.*?>", " ", line), ' '.join(rendered_chords))
-
-def extract_chords(line):
-    chords = re.findall("<chords.*?chords>", line)
-    if chords:
-        chords = chords[0]
-        chords = re.sub("<.?chords>", "", chords)
-        chords = re.sub(" ", " ", chords)
-    else:
-        chords = ""
-
-    line = re.sub("<chords.*?chords>", "", line)
-    return (line, chords)
-
-def render_html(song):
-    html = {}
-    song = ET.fromstring(song)
-
-    # tytuł
-    titles = song.findall("./properties/titles/title")
-    html["first_title"] = titles.pop(0).text
-    html["secondary_titles"] = serialize_node_group(titles)
-
-    # autorzy
-    authors = song.findall("./properties/authors/author")
-    authors = serialize_node_group(authors)
-    try:   
-        if authors[0] == None or authors[0] == "()":
-            html["authors"] = ""
-        else:
-            html["authors"] = authors 
-    except:
-        html["authors"] = ""
-
-    # kolejność zwrotek
-    verse_order = song.find("./properties/verseOrder")
-
-    try:
-        verse_order = verse_order.text.split(' ')
-    except:
-        verse_order = []
-        for verse in song.findall("./lyrics/"):
-            verse_order.append(verse.attrib['name'])
-
-
-    # tekst
-    html["verses"] = []
-    for verse_name in verse_order:
-        # znalezienie zwrotki i zamiana na stringa
-        verse_text = song.find(f"./lyrics/verse[@name='{verse_name}']/lines")
-        verse_text  = ET.tostring(verse_text, encoding='unicode')
-        # dzielenie na linijki
-        verse_text = re.sub('</*lines>', '', verse_text)
-        verse_text = verse_text.strip().split("<br />")
-        verse_text = [extract_chords(line) for line in verse_text]
-        verse = {}
-        verse["text"] = verse_text
-        # wcięcie dla nie-zwrotek
-        if not re.match("v", verse_name):
-            verse["class"] = "indent"
-        html["verses"].append(verse)
-
-    # tagi
-    themes = song.findall("./properties/themes/theme")
-    html["themes"] = serialize_node_group(themes)
-
-
-    
-    return html
-
+from forms import SongSearchForm
+from models import Tag, Song, Author
 
 spiewnik = Blueprint('spiewnik', __name__, )
 active_tab="spiewnik"
 
-@spiewnik.route('/')
+@spiewnik.route('/', methods=['GET', 'POST'])
 def spiewnik_index():
-    themes = [
-        'Maryjne', 'Religijne', 'Patriotyczne', 'Ludowe', 'Harcerskie', 'Bożonarodzeniowe'
-    ]
-    themes.sort()
-    return render_template("spiewnik.html", themes=themes, active_tab=active_tab)
-
-@spiewnik.route('/search/<title>', methods=["POST", "GET"])
-def search_song(title):
+    form = SongSearchForm()
+    if request.method == 'GET':
+        return render_template('spiewnik.html', tags=Tag.query.all(), form=form, active_tab=active_tab)
     
-    title = escape(title)
-    session = start_session()
-    try:
-        session.execute("open songs")
-        query = f"xquery for $x in song/properties \
-                let $title := $x/titles/title[matches(upper-case(.), upper-case('{title}'))] \
-                where $title or $x/authors/author[matches(upper-case(.), upper-case('{title}'))] \
-                return concat(\
-                    if (count($title)=1) then ( \
-                        data($title) \
-                    ) else ( \
-                        data($x/titles/title[1]) \
-                    ), \
-                    if ($x/authors/author) then (\
-                        concat(' - ', string-join(($x/authors/author), ', '))\
-                    ) else (''))"
+    # search for songs
+    query = f'%{form.query.data}%'
+    songs = Song.query.filter(Song.title.like(query)).order_by(Song.title).all()
+    authors = Author.query.filter(Author.name.like(query)).order_by(Author.name).all()
+    results = sorted(songs+authors, key = lambda x: x.Name())
 
-        
-                # znajduje piosenki, które mają tytuł lub autora zgodnego z wynikiem wyszukuwania
-                # bierze dopasowany tytuł, jeśli jest dokładnie jeden
-                # bierze pierwszy tytuł jeśli są więcej niż jeden dopasowane tytuły lub żaden (piosenka została dopasowana po autorze)
-                # dopisuje autora, jeśli piosenka go ma
-
-        titles = session.execute(query).split("\n")
-        titles.sort()
-
-    finally:
-        if session:
-            session.close()
-
-
-    # redirect directly to the song if only one matches the search term
-    if len(titles)==1:
-        return redirect(f"/spiewnik/song/{titles[0].split(' - ')[0]}")
+    # if only one result redirect directly to it
+    if len(results)==1:
+        return redirect(results[0].Link())
     
-    if request.method == "POST":
-        return titles
-    else:
-        return render_template("search.html", titles=titles, active_tab=active_tab)
-    
-@spiewnik.route('/song/')
-def redirect_to_songbook():
-    return redirect("/spiewnik", code=303)
+    return render_template('search.html', results = results, form=form, active_tab=active_tab)
 
-@spiewnik.route('/song/<title>')
-def show_song(title):
-    title = escape(title)
-    session = start_session()
-    try:
-        session.execute("open songs")
-        song = session.execute(f'xquery song[properties/titles[title = "{title}"]]')
-    finally:
-        if session:
-            session.close()
+@spiewnik.route('/song/<id>')
+def song(id):
+    song = Song.query.filter_by(id=id).first()
+    return render_template("song.html", song=song, active_tab=active_tab)
 
-    if not song:
-            return "Nie znaleziono takiego utworu..."
+@spiewnik.route('/author/<id>')
+def author(id):
+    author = Author.query.filter_by(id=id).first()
+    songs = author.songs
+    return render_template('search.html', songs=songs, form=SongSearchForm(), query=author.name)
 
-    return render_template("song.html", song=render_html(song), title=title, active_tab=active_tab)
-    
-@spiewnik.route('/download/<title>')
-def download_song(title):
-    title = escape(title)
-    session = start_session()
-    try:
-        session.execute("open songs")
-        song = session.execute(f'xquery song[properties/titles[title = "{title}"]]')
-    finally:
-        if session:
-            session.close()
-
-    # o co biega? Kiedy atrybut xmlns z jakiegoś powodu totalnie wykrzacza BaseX, a bez niego wykrzacza się OpenLP, dlatego w bazie danych pliki go nie mają, a jest dodawany przy pobieraniu... 😒
-    # poza tym, OpenLP nie obsługuje akordów, dlatego się ich pozbywam
-    # HACK
-    song = re.sub("<chords.*chords>", "", song)
-    song = ET.fromstring(song)
-    song.set("xmlns", "http://openlyrics.info/namespace/2009/song")
-    song = ET.tostring(song, encoding='unicode')
-
-    return song
-
-@spiewnik.route('/author/<name>')
-def author(name):
-    name = escape(name)
-    session = start_session()
-    try:
-        session.execute("open songs")
-        query = f"xquery for $x in song/properties[authors/author='{name}']\
-                order by $x/titles/*[1] \
-                return concat(data($x/titles/*[1]), ' - ', string-join(($x/authors/author), ', '))"
-        titles = session.execute(query).split("\n")
-    finally:
-        if session:
-            session.close()
-
-    return render_template("search.html", titles=titles, author=name, active_tab=active_tab)
-
-@spiewnik.route('/theme/<theme>')
-def theme(theme):
-    theme = escape(theme)
-    session = start_session()
-    try:
-        session.execute("open songs")
-        query = f"xquery for $x in song/properties[themes/theme='{theme}'] \
-                let $title := $x/titles/*[1]\
-                order by $title \
-                return concat( \
-                    data($title), \
-                    if(($x/authors/author)) then ( \
-                        concat(' - ', string-join(($x/authors/author), ', ')) \
-                    ) else () )"
-
-        print(query)
-        titles = session.execute(query).split("\n")
-    finally:
-        if session:
-            session.close()
-
-    return render_template("search.html", titles=titles, author=theme, active_tab=active_tab)
+@spiewnik.route('/tag/<id>')
+def tag(id):
+    tag = Tag.query.filter_by(id=id).first()
+    songs = tag.songs
+    return render_template('search.html', songs=songs, form=SongSearchForm(), query=tag.name)

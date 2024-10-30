@@ -56,6 +56,10 @@ input {
     border-style: solid;
 }
 
+input[type='submit']{
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: goldenrod;
@@ -125,7 +129,7 @@ div.songtext {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-div.songtext table.indent{
+div.songtext table.chorus{
     margin-left: 5%;
 }
 

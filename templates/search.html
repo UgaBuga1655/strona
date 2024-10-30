@@ -1,24 +1,18 @@
 {% extends "base.html" %}
 
-{% block css %}
-<link rel="stylesheet" href="/static/css/szyfry.css">
-{% endblock %}
-
-{% block javascript %}
-<script src="/static/scripts/spiewnik.js"></script>
-{% endblock %}
-
 {% block title %}Śpiewnik{% endblock %}
 
 
 {% block content %}
 <a href="/spiewnik"><h1>Śpiewnik</h1></a>
-<input type="text" onchange="searchSong(this.value)" placeholder="Tytuł/Autor">
-<a id="submit" href="#" class="button">Wyszukaj</a>
-<h2>{{author}}</h2>
+<form method="POST" action="/spiewnik">
+    {{ form.query(size=32) }} {{ form.submit() }}
+</form>
+<h2>{{query}}</h2>
 <ul>
-    {% for x in titles %}
-    <li> <a href="/spiewnik/song/{{x.split(' - ')[0]}}">{{x}}</a> </li>
+    {% for result in results %}
+
+    <li> <a href="{{result.Link()}}">{{result.Name()}}</a> </li>
     {% endfor %}
 
 </ul>
