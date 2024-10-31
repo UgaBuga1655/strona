@@ -39,7 +39,6 @@ def print_cliques(graph):
         for clique in cliques:
             clique = [Roz[i] for i in clique]
             clique.sort(key=str.lower)
-            # clique = "\t".join(clique)
             Cliques.append(clique)
     return Cliques
             
@@ -54,48 +53,37 @@ def add_student_to_graph(student):
             graph.remove_edge(*edge)
         except:
             pass
-            # print(f"Nie udało się usunąć krawędzi {edge}...")
 
 def main(file):
     # czyta podany plik w formacie:
     # IMIĘ NAZWISKO ROZSZERZENIE ROZSZERZENIE ROZSZERZENIE
     # IMIĘ NAZWISKO ROZSZERZENIE ROZSZERZENIE ROZSZERZENIE
     # oddzielone tabami lub spacjami, rozszerzenia opisane pełnymi nazwami lub kodami (byle jednolicie w całym pliku)
-    # input_file = sys.argv[1]
     global Roz
     global graph
 
     Students = [line.split(",") for line in file.strip().split("\n")]
     # tworzy listę rozszerzeń
     Roz = Students.pop(0)
-    # for student in Students:
-    #    for roz in student[2:]:
-    #        if roz not in Roz:
-    #            Roz.append(roz)
-
     # tworzy graf-klikę, w którym każdy przedmiot-wierzchołek jest połączony ze wszystkimi innymi
     nodes = len(Roz)
     graph = nx.Graph()
     graph.add_edges_from(list(combinations(range(nodes), 2)))
-    # print(Roz)
     # usuwa połączenia między przedmiotami, które mają wspólnego ucznia
     for student in Students:
-        print(student)
-        add_student_to_graph(student)
-    # print([e for e in graph.edges])    
+        # print(student)
+        add_student_to_graph(student)   
     # pokazuje, co wykminił
     response = print_cliques(graph)
     return response
 
 
 
-vts = Blueprint('vts', __name__, )
+vts = Blueprint('vts', __name__, template_folder='templates', static_folder='static')
 active_tab = "vts"
 
 @vts.route('/', methods=["POST", "GET"])
 def vts_route():
-    if request.method == "GET":
-        return render_template("vts.html", active_tab=active_tab)
     if request.method == "POST":
         req = request.get_json()
         file = req["data"]
@@ -104,20 +92,4 @@ def vts_route():
         except:
             response = ["Niewłaściwy plik"]
         return response
-    # return render_template("vts.html", active_tab=active_tab)
-
-@vts.route("/file-submit", methods=["POST", "GET"])
-def file_submit():
-    if request.method == "GET":
-        return render_template("file-submit.html", active_tab=active_tab)
-    if request.method == "POST":
-        file = request.form.get('dane')
-        try:
-            response = main(file)
-        except:
-            response = [["Niewłaściwy plik"]]
-        return response
-    
-@vts.route("/editor")
-def editor():
-    return render_template("editor.html", active_tab=active_tab)
+    return render_template("vts.html", active_tab=active_tab)

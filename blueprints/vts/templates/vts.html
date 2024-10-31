@@ -3,7 +3,7 @@
 {% block title %}vts{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="/static/css/vts.css">
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/vts.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -70,5 +70,5 @@
 <!-- https://cdnjs.com/libraries/FileSaver.js -->
 <!-- https://github.com/eligrey/FileSaver.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-<script src="/static/scripts/editor.js"></script>
+<script src="{{ url_for('.static', filename='scripts/vts.js') }}"></script>
 {% endblock %}

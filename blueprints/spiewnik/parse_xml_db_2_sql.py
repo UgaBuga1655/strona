@@ -1,7 +1,7 @@
 from app import app, db
 import xml.etree.ElementTree as ET
 import os
-from models import *
+from blueprints.spiewnik.models import *
 
 folder = 'songs'
 

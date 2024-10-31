@@ -1,4 +1,4 @@
-from db_config import db
+from config import db
 from flask import url_for
 
 song_author = db.Table('song_author',

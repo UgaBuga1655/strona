@@ -1,8 +1,8 @@
-from flask import Blueprint, render_template, request, redirect, url_for
-from forms import SongSearchForm
-from models import Tag, Song, Author
+from flask import Blueprint, render_template, request, redirect
+from .forms import SongSearchForm
+from .models import Tag, Song, Author
 
-spiewnik = Blueprint('spiewnik', __name__, )
+spiewnik = Blueprint('spiewnik', __name__, template_folder='templates', static_folder='static')
 active_tab="spiewnik"
 
 @spiewnik.route('/', methods=['GET', 'POST'])

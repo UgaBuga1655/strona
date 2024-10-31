@@ -1,3 +1,7 @@
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
 with open('passwd') as f:
     password = f.read().strip()
 
