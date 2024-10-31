@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, url_for
 import json
 from random import randint
 from unidecode import unidecode
@@ -184,7 +184,7 @@ def remove_diacritics(message):
 
 
 
-szyfry = Blueprint('szyfry', __name__, )
+szyfry = Blueprint('szyfry', __name__, template_folder='templates', static_folder='static')
 active_tab="szyfry"
 
 @szyfry.route("/")
@@ -193,16 +193,9 @@ def index():
 
 @szyfry.route("/morse", methods=["POST"])
 def morse():
-    
     message = request.get_json()
-    # print(message)
-
-
-    # print(message)s
     message = morse_encrypt(message["text"]) if message['mode']=='zaszyfruj' else morse_decrypt(message['text'])
     response = json.dumps(message)
-
-    # print(response)
     return response
 
 @szyfry.route("/cezar", methods=["POST"])
