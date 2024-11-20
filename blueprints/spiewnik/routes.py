@@ -23,18 +23,18 @@ def spiewnik_index():
     
     return render_template('search.html', results = results, form=form, active_tab=active_tab)
 
-@spiewnik.route('/song/<id>')
+@spiewnik.route('/song/<int:id>')
 def song(id):
     song = Song.query.filter_by(id=id).first()
     return render_template("song.html", song=song, active_tab=active_tab)
 
-@spiewnik.route('/author/<id>')
+@spiewnik.route('/author/<int:id>')
 def author(id):
     author = Author.query.filter_by(id=id).first()
     songs = author.songs
     return render_template('search.html', results=songs, form=SongSearchForm(), query=author.name)
 
-@spiewnik.route('/tag/<id>')
+@spiewnik.route('/tag/<int:id>')
 def tag(id):
     tag = Tag.query.filter_by(id=id).first()
     songs = tag.songs
