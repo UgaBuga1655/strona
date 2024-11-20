@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+
+{% block title %}Gra{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/scouting.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h1>Gra roczna 7. DK</h1>
+    <p>Na razie tabela, pracuję nad grafiką.</p>
+    <form method="POST" action="{{ url_for('scouting.gra') }}">
+        {{ form.csrf_token }}
+        {{ form.password(size=32) }} {{ form.submit() }}
+    </form>
+    <h2>Budynki</h2>
+    <table >
+        <tr>
+            <th>Budynek</th>
+            <th>Poziom (Sokół)</th>
+            <th>Poziom (Orzeł)</th>
+            {% if view=='sokół' %}
+            <th>Żołnierze (Sokół)</th>
+            {% endif %}
+            {% if view=='orzeł' %}
+            <th>Żołnierze (Orzeł)</th>
+            {% endif %}
+        </tr>
+        {% for budynek in budynki %}
+        <tr>
+            <td>{{ budynek[0] }}</td>
+            <td>{{ budynek[1] }}</td>
+            <td>{{ budynek[2] }}</td>
+            {% if view=='sokół' %}
+            <td>{{ budynek[3] }}</td>
+            {% endif %}
+            {% if view=='orzeł' %}
+            <td>{{ budynek[4] }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+    {% if zasoby %}
+    <h2>Zasoby</h2>
+    <table>
+        <tr>
+            <th>Drewno</th>
+            <th>Kamień</th>
+            <th>Żelazo</th>
+            <th>Złoto</th>
+        </tr>
+        <tr>
+            <td>{{ zasoby['D'] }}</td>
+            <td>{{ zasoby['K'] }}</td>
+            <td>{{ zasoby['Ż'] }}</td>
+            <td>{{ zasoby['Z'] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+    <h2>Zasady</h2>
+    <p>Celem gry jest zdobycie jak największej liczby Punktów Zwycięstwa poprzez budowanie budynków w swoim mieście. </p>
+    <p>Po każdej zbiórce zastępowy zdaje mi raport i może wykonać turę <i>(im więcej zbiórek, tym więcej tur)</i>. Zastępy widzą na jakich poziomach są budynki drugiego zastępu, ale nie widzą ilu jest tam rycerzy. </p>
+    <p>Ruch składa się z trzech faz: </p>
+    <ol>
+        <li>Zdobywanie zasobów </li>
+        <li>Budowanie </li>
+        <li>Ruchy wojskowe </li>
+    </ol>
+    <h3>Zdobywanie Zasobów</h3>
+    <p><b>Rycerze:</b> za frekwencję (1 szt. Za 4 obecnych na zbiórce)</p>
+    <p><b>Surowce:</b></p>
+    <p><b>Żelazo:</b> za zadania na stopnie członków (1 szt. Za 3 zadania) lub sprawności (2 szt. Za sprawność).</p>
+    <p><b>Drewno:</b> za zadania na stopnie zastępowego (1 szt. za 2 zadania) lub sprawności (3 szt. Za sprawność).</p>
+    <p><b>Kamień:</b> za zadania na cykl (2 szt. Za 1 zadanie).</p>
+    <p><b>Złoto: </b> tylko z budynków.</p>
+    <p>Warunki kumulują się między zbiórkami. <br>
+    <b>Przykład:</b><i> Jeśli na jednej zbiórce było 3 obecnych, a na kolejnej 6, zastęp zdobywa 2 rycerzy. Drewno, Kamień, Żelazo i Złoto to Surowce.</i></p>
+    <h3>Budowanie</h3>
+    <p>Płacąc koszt budynku można zwiększyć jego poziom. Każdy poziom daje konkretny efekt i Punkty Zwycięstwa. Efekt Tartaku, Kopalni, Kamieniołomu i Mennicy staje się aktywny od kolejnej zbiórki. </p>
+    <table>
+        <tr>
+            <th>Budynek</th>
+            <th>Koszt</th>
+            <th>Efekt za poziom</th>
+            <th>PZ</th>
+            <th>Obrona</th>
+            <th>Max. Poziom</th>
+        </tr>
+        <tr>
+            <td>Tartak</td>
+            <td>3K 3Ż</td>
+            <td>Po każdej zbiórce, na której zdobędziecie Drewno, zdobywacie 1 więcej.</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Kopalnia</td>
+            <td>3D 3K</td>
+            <td>Po każdej zbiórce, na której zdobędziecie Żelazo, zdobywacie 1 więcej.</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Kamieniołom</td>
+            <td>3D 3Ż</td>
+            <td>Po każdej zbiórce, na której zdobędziecie Kamień, zdobywacie 1 więcej.</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Mennica</td>
+            <td>5D 5K 5Ż</td>
+            <td>Po każdej zbiórce dostajecie 1 Złoto.</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Koszary</td>
+            <td>4D 4K 4Ż</td>
+            <td>Po każdej zbiórce, na której zdobędziecie Rycerzy, zdobywacie 1 więcej. <br>  
+                Możecie zamienić 1 złoto na 1 Rycerza. </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Uniwersytet</td>
+            <td>5D 5K 5Ż 5Z</td>
+            <td>Możecie wydać 1 Złoto, żeby sprawdzić ilu rycerzy znajduje się w danym budynku.</td>
+            <td>5</td>
+            <td>0</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Port</td>
+            <td>2D 2K 4Ż</td>
+            <td>Możecie wymienić 2 szt. dowolnego surowca na 1 szt. innego.</td>
+            <td>0</td>
+            <td>2</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Zamek</td>
+            <td>5D 5K 5Ż 3Z</td>
+            <td>1 Rycerz z zamku jest liczony jako obrońca dowolnego zaatakowanego budynku.</td>
+            <td>3</td>
+            <td>3</td>
+            <td>-</td>
+        </tr>
+    </table>
+    <p><i><b>Przykład:</b> Jeśli macie Port na poziomie 3, możecie wykonać 3 wymiany.</i></p>
+    <h3>Ruchy wojskowe</h3>
+    <p>Rycerzy można dowolnie ustawiać we wszystkich wybudowanych budynkach. Można przemieszczać żołnierzy już wystawionych na planszy i wystawiać zdobytych w poprzednich turach. Można też wysłać dowolną liczbę rycerzy na wojnę. Koszt wyruszenia na wojnę to 2D 2Ż 2Z. Zastępowy wybiera, który budynek chce zaatakować. Następnie obliczane są siły ataku i obrony </p>
+    <p>Aby atakujący wygrał, siła ataku musi być o 2 większa od siły obrony. </p>
+    <p><b>Siła ataku</b></p>
+    <p>Liczba atakujących Rycerzy + rzut kością za każdego rycerza. Każde 5 lub 6 zwiększa siłę ataku o 1.</p>
+    <p><b>Siła obrony</b></p>
+    <p>Obrona * Poziom budynku + Liczba broniących Rycerzy + rzut kością za każdego rycerza. Każde 5 lub 6 zwiększa siłę ataku o 1. </p>
+    <p><b>Obliczanie strat</b></p>
+    <p>Gdy wygrywa broniący, giną wszyscy atakujący rycerze. Ginie też połowa broniących rycerzy, zaokrąglając w dół. W pierwszej kolejności giną rycerze z Zamku.</p>
+    <p>Gdy wygrywa atakujący, giną wszyscy broniący rycerze. Atakujący traci tyle samo rycerzy. Jeśli żaden rycerz nie bronił budynku, atakujący traci 1 rycerza. Budynek traci jeden poziom. </p>
+    <p>Jeśli atakujący wygra atak, może zaatakować kolejny budynek. Jeśli nie, rozkłada dowolnie pozostałych rycerzy w swoim mieście.</p>
+
+
+{% endblock %}
