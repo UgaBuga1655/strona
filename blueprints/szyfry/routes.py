@@ -1,227 +1,58 @@
-from flask import Blueprint, render_template, request, url_for
-import json
-from random import randint
+from flask import Blueprint, render_template
 from unidecode import unidecode
-
-def morse_encrypt(text):
-    morse = {
-        'a' : '·–',
-        'ą' : '·–',
-        'b' : '–···',
-        'c' : '–·–·',
-        'ć' : '–·–·',
-        'd' : '–··',
-        'e' : '·',
-        'ę' : '·',
-        'f' : '··–·',
-        'g' : '––·',
-        'h' : '····',
-        'i' : '··',
-        'j' : '·–––',
-        'k' : '–·–',
-        'l' : '·–··',
-        'ł' : '·–··',
-        'm' : '––',
-        'n' : '–·',
-        'ń' : '–·',
-        'o' : '–––',
-        'ó' : '–––',
-        'p' : '·––·',
-        'r' : '·–·',
-        's' : '···',
-        'ś' : '···',
-        't' : '–',
-        'u' : '··–',
-        'v' : '···–',
-        'w' : '·––',
-        'x' : '–··–',
-        'y' : '–·––',
-        'z' : '––··',
-        'ź' : '––··',
-        'ż' : '––··',
-        '1' : '·––––',
-        '2' : '··–––',
-        '3' : '···––',
-        '4' : '····–',
-        '5' : '·····',
-        '6' : '–····',
-        '7' : '––···',
-        '8' : '–––··',
-        '9' : '––––·',
-        '0' : '–––––',
-        '.' : '/',
-        '!' : '/',
-        '?' : '/',
-        ' ' : ''
-    }
-    text = text.lower()
-    response = ''
-    for letter in text:
-        try:
-            response += morse[letter]+"/"
-        except:
-            pass
-    return response
-
-def morse_decrypt(message):
-    morse = {
-        '///' : '.',
-        '//' : ' ',
-        '·––––' : '1',
-        '··–––' : '2',
-        '···––' : '3',
-        '····–' : '4',
-        '·····' : '5',
-        '–····' : '6',
-        '––···' : '7',
-        '–––··' : '8',
-        '––––·' : '9',
-        '–––––' : '0',
-        '–··–' : 'x',
-        '–·––' : 'y',
-        '––··' : 'z',
-        '···–' : 'v',
-        '–···' : 'b',
-        '–·–·' : 'c',
-        '··–·' : 'f',
-        '·–––' : 'j',
-        '····' : 'h',
-        '·–··' : 'l', 
-        '·––·' : 'p',
-        '–··' : 'd',
-        '––·' : 'g',
-        '–·–' : 'k',
-        '·–·' : 'r',
-        '···' : 's',
-        '·––' : 'w',
-        '–––' : 'o',
-        '··–' : 'u',
-        '·–' : 'a',
-        '··' : 'i',
-        '––' : 'm',
-        '–·' : 'n',
-        '–' : 't',
-        '·' : 'e',
-        '/' : ''
-    }
-    message = message.replace('.', '·').replace('-', '–')
-
-    for symbol in morse.keys():
-        message = message.replace(symbol, morse[symbol])
-
-    return message
-
-def cezar_encrypt(message):
-    response = ''
-    text = message['text']
-    upper = message["alphabet"]
-    lower = upper.lower()
-    mode = int(message['mode'])
-    move = int(message['move'])%len(upper)
-    for letter in text:
-        if letter in upper:
-            i = upper.index(letter)
-            response += upper[(i+mode*move)%len(upper)]
-        elif letter in lower:
-            i = lower.index(letter)
-            response += lower[(i+mode*move)%len(lower)]
-        else:
-            response += letter
-    return response
-
-def sylabowy_encrypt(message):
-    response = ''
-    text = message['text']
-    key = message['key']+message['key'].lower()
-    for letter in text:
-        if letter in key:
-            i = key.index(letter)
-            letter = (key[i-1] if i%2 else key[i+1])
-        response+=letter
-    return response
-
-def vigenere_encrypt(message):
-    response = {"text": '', "key" : ''}
-    text = message['text']
-    upper = message['alphabet']
-    lower = upper.lower()
-    al_len = len(upper)
-    rawkey = message['key'].upper()
-
-    # formatuje klucz, żeby to były same duże litery
-    if rawkey:
-        key = [x for x in rawkey if x in upper]
-    else:
-        # liczy znaki w tekście, które należa do alfabetu
-        condensed_text = [x for x in text.upper() if x in upper]
-        # losuje literę klucza dla każdej litery w skondensowanym tekście
-        key = [upper[randint(1, al_len)-1] for _ in condensed_text]
-
-    key_len = len(key)
-    mode = int(message['mode'])
-    k = 0
-    for letter in text:
-        if letter in upper:
-            # numer litery w wiadomości
-            i = upper.index(letter)
-            # przesunięcie to numer odpowiedniej litery klucza
-            move = upper.index(key[k%key_len])
-            # stosuje szyfr cezara z właściwym przesunięciem
-            response['text'] += upper[(i+move*mode)%al_len]
-            k+=1
-        elif letter in lower:
-            i = lower.index(letter)
-            move = upper.index(key[k%key_len])
-            response['text'] += lower[(i+move*mode)%al_len]
-            k+=1
-        else:
-            response['text'] += letter
-    response['key'] = ''.join(key)
-    return response
-
-def remove_diacritics(message):
-    return unidecode(message['text'])
-
+from .forms import CezarForm, CipherForm, VigenereForm, SylabowyForm, DiacriticsForm
+from .functions import morse_process, cezar_process, vigenere_process, sylabowy_process
 
 
 szyfry = Blueprint('szyfry', __name__, template_folder='templates', static_folder='static')
-active_tab="szyfry"
+active_tab = "szyfry"
+
 
 @szyfry.route("/")
 def index():
     return render_template("szyfry.html", active_tab=active_tab)
 
-@szyfry.route("/morse", methods=["POST"])
+
+@szyfry.route("/morse", methods=["GET", "POST"])
 def morse():
-    message = request.get_json()
-    message = morse_encrypt(message["text"]) if message['mode']=='zaszyfruj' else morse_decrypt(message['text'])
-    response = json.dumps(message)
-    return response
+    form = CipherForm()
+    message = None
+    if form.validate_on_submit():
+        message = morse_process(form)
+    return render_template("morse.html", active_tab=active_tab, form=form, message=message)
 
-@szyfry.route("/cezar", methods=["POST"])
+
+@szyfry.route("/cezar", methods=["GET", "POST"])
 def cezar():
-    message = request.get_json()
-    message = cezar_encrypt(message)
-    response = json.dumps(message)
-    return response
+    form = CezarForm()
+    message = None
+    if form.validate_on_submit():
+        message = cezar_process(form)
+    return render_template("cezar.html", active_tab=active_tab, form=form, message=message)
 
-@szyfry.route("/sylabowy", methods=["POST"])
-def sylabowy():
-    message = request.get_json()
-    message = sylabowy_encrypt(message)
-    response = json.dumps(message)
-    return response
 
-@szyfry.route("/vigenere", methods=["POST"])
+@szyfry.route("/vigenere", methods=["GET", "POST"])
 def vigenere():
-    message = request.get_json()
-    message = vigenere_encrypt(message)
-    response = json.dumps(message)
-    return response
+    form = VigenereForm()
+    message = None
+    if form.validate_on_submit():
+        message, form.key.data = vigenere_process(form)
+    return render_template("vigenere.html", active_tab=active_tab, form=form, message=message)
 
-@szyfry.route("/remove-diacritics", methods=["POST"])
+
+@szyfry.route("/sylabowy", methods=["GET", "POST"])
+def sylabowy():
+    form = SylabowyForm()
+    message = None
+    if form.validate_on_submit():
+        message = sylabowy_process(form)
+    return render_template("sylabowy.html", active_tab=active_tab, form=form, message=message)
+
+
+@szyfry.route("/remove-diacritics", methods=["GET", "POST"])
 def diacritics():
-    message = request.get_json()
-    message = remove_diacritics(message)
-    response = json.dumps(message)
-    return response
+    form = DiacriticsForm()
+    message = None
+    if form.validate_on_submit():
+        message = unidecode(form.message.data)
+    return render_template("diacritics.html", active_tab=active_tab, form=form, message=message)

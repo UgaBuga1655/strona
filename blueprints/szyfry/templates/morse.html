@@ -1,0 +1,13 @@
+{% extends "szyfry.html" %}
+{% block form %}
+<div id="morse">
+    <h2>Alfabet Morse'a</h2>
+    <form method="POST", action="{{ url_for('szyfry.morse') }}">
+        {{ form.csrf_token }}
+        {{ form.message.label }} <br>
+        {{ form.message }}
+        {{ form.mode.label }} {{ form.mode }} <br>
+        {{ form.submit }}
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "szyfry.html" %}
+{% block form %}
+<div id="morse">
+    <h2>Usuń znaki diakrytyczne</h2>
+    <form method="POST", action="{{ url_for('szyfry.diacritics') }}">
+        {{ form.csrf_token }}
+        {{ form.message.label }} <br>
+        {{ form.message }}
+        {{ form.submit }}
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "szyfry.html" %}
+{% block form %}
+<div id="morse">
+    <h2>Szyfr Cezara</h2>
+    <form method="POST", action="{{ url_for('szyfry.cezar') }}">
+        {{ form.csrf_token }}
+        {{ form.message.label }} <br>
+        {{ form.message }}
+        {{ form.alphabet.label }} {{ form.alphabet }} <br>
+        {{ form.move.label }} {{ form.move(style="width:45px;") }} <br>
+        {{ form.mode.label }} {{ form.mode }} <br>
+
+        {{ form.submit }}
+    </form>
+</div>
+{% endblock %}
