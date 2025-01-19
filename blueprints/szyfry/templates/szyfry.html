@@ -21,7 +21,16 @@
     {% block form %}{% endblock %}
 
     {% if message %}
-        <div class="card">{{ message }} </div>
+        <div class="card">
+            <div id="message_card">{{ message }}</div> 
+        </div>
+        <input type="submit" class="" onclick="copyMessage()" value="Kopiuj do schowka">
     {% endif %}    
-
+    
+    <script>
+        function copyMessage() {
+            var copyText = document.getElementById("message_card");
+            navigator.clipboard.writeText(copyText.textContent);
+        }
+    </script>
 {% endblock %}

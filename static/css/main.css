@@ -113,6 +113,7 @@ div.card {
     border-color: wheat;
     border-style: dashed;
     border-radius: 5px;
+    overflow-wrap: break-word;
 }
 
 .unvisible {
