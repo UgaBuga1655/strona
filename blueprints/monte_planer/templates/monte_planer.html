@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Planer{% endblock %}
+
+<!-- {% block css %}
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/vts.css') }}">
+{% endblock %} -->
+
+{% block content %}
+<h1>Monte Planer</h1>
+
+<p>Jest w Krakowie takie liceum. O tym, czym różni się od innych szkół możnaby pisać książki, ale skupmy się na planie dnia. Nie ma tam znanego w pruskiej szkole rytmu naprzemiennych 45 lekcji i krótkich przerw. Większość zajęć trwa 30 minut, niektóre ponad godzinę, a w środku dnia w ogóle ich nie ma - uczniowie sami się uczą w ramach Pracy Własnej. Nie ma też klas profilowanych, każdy licealista wybiera właśnie takie rozszerzenia, jakie go pociągają. Miło jest być uczniem takiej szkoły, ale nauczycielem tworzący plan zajęć - już niekoniecznie.</p>
+
+<p>W ramach pracy inżynierskiej tworzę program ułatwiający tą trudną, szlachetną pracę. Bierze pod uwagę:</p>
+<ul>
+    <li><b>Sale</b> oraz ich pojemność.</li>
+    <li><b>Nauczycieli</b> oraz ich dostępność każdego dnia.</li>
+    <li><b>Klasy i podklasy</b>, czyli każdego ucznia i to, na jakie lekcje chodzi.</li>
+    <li><b>Przedmioty</b>, czyli ile lekcji w tygodniu ma się odbyć i jakiej długości, czy muszą odbywać się w konkretnej sali, jakie nauczyciel je prowadzi. Mogą być podstawowe (dla jednej podklasy) albo roszerzone (dla wszystkich podklas w danej klasie)</li>
+</ul>
+<p>Program pozwala na łatwe rysowanie i edytowanie planu, jednocześnie na bieżąco skanuje plan i sprawdza, czy nie ma w nim konfliktów (np. czy ktoś nie musi znajdować się w dwóch miejscach jednocześnie). Na koniec generuje spersonalizowany pdf dla każdej podklasy, ucznia, nauczyciela oraz sali.</p>
+
+<p>Napisałem go w pythonie, korzystając z biblioteki PyQt5, więc powinien działać na każdym systemie operacyjnym. Kod źródłowy można znaleść <a href="https://github.com/TobiaszAGH/monte_planer/">tutaj</a>. Dla mniej technicznych osób przygotowałem pakiet <a href="{{ url_for('.static', filename='monte-planer.deb') }}">.deb</a>, który można zainstalować na Debianie i jego pochodnych, np. Ubuntu. Jeśli chcesz przetestować i potrzebujesz pomocy - <a href="mailto:tobiasz.salik@gmail.com">zachęcam do kontaktu!</a> :)</p>
+
+<h2>Instrukcja obsługi</h2>
+<p>Najpierw zachęcam, żeby spróbować samodzielnie rozkmninić działanie programu. Zależy mi na tym, żeby był łatwy w obsłudze, więc jestem gotowy pozmieniać go, żeby był bardziej intuicyjny. Jeśli wydaje Ci się, że coś powinno działać w jakiś sposób, to spróbuj to zrobić. Jeśli się nie da, to zapisz to sobie i wyślij mi potem wszystko <a href="mailto:tobiasz.salik@gmail.com">mailem.</a> Powiem tylko, że najlepiej zacząć wypełniać dane zaczynająć od pierwszej zakładki z prawej strony (Pomieszczenia) i iść w lewo. Tak czy siak wrzucam instrukcję jako <a href="https://github.com/TobiaszAGH/monte_planer/">readme na githubie</a>, bo pewnie nie wszystkie funkcje są oczywiste.</p>
+{% endblock %}

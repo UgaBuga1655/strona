@@ -22,6 +22,9 @@ app.register_blueprint(szyfry, url_prefix="/szyfry")
 from blueprints.scouting.routes import scouting
 app.register_blueprint(scouting, url_prefix="/scouting")
 
+from blueprints.monte_planer.routes import monte_planer
+app.register_blueprint(monte_planer, url_prefix='/vdp')
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all() 
