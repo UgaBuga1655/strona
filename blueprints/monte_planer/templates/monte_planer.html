@@ -2,9 +2,10 @@
 
 {% block title %}Planer{% endblock %}
 
-<!-- {% block css %}
-<link rel="stylesheet" href="{{ url_for('.static', filename='css/vts.css') }}">
-{% endblock %} -->
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css') }}">
+{% endblock %}
+
 
 {% block content %}
 <h1>Monte Planer</h1>
@@ -22,6 +23,9 @@
 
 <p>Napisałem go w pythonie, korzystając z biblioteki PyQt5, więc powinien działać na każdym systemie operacyjnym. Kod źródłowy można znaleść <a href="https://github.com/TobiaszAGH/monte_planer/">tutaj</a>. Dla mniej technicznych osób przygotowałem pakiet <a href="{{ url_for('.static', filename='monte-planer.deb') }}">.deb</a>, który można zainstalować na Debianie i jego pochodnych, np. Ubuntu. Jeśli chcesz przetestować i potrzebujesz pomocy - <a href="mailto:tobiasz.salik@gmail.com">zachęcam do kontaktu!</a> :)</p>
 
+<p style="text-align: center; margin: 30px;">
+<a class="big-button" href="{{ url_for('.static', filename='monte-planer.deb') }}">Pobierz</a>
+</p>
 <h2>Instrukcja obsługi</h2>
 <p>Najpierw zachęcam, żeby spróbować samodzielnie rozkmninić działanie programu. Zależy mi na tym, żeby był łatwy w obsłudze, więc jestem gotowy pozmieniać go, żeby był bardziej intuicyjny. Jeśli wydaje Ci się, że coś powinno działać w jakiś sposób, to spróbuj to zrobić. Jeśli się nie da, to zapisz to sobie i wyślij mi potem wszystko <a href="mailto:tobiasz.salik@gmail.com">mailem.</a> Powiem tylko, że najlepiej zacząć wypełniać dane zaczynająć od pierwszej zakładki z prawej strony (Pomieszczenia) i iść w lewo. Tak czy siak wrzucam instrukcję jako <a href="https://github.com/TobiaszAGH/monte_planer/">readme na githubie</a>, bo pewnie nie wszystkie funkcje są oczywiste.</p>
 {% endblock %}
