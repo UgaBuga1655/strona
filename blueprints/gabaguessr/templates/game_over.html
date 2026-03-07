@@ -1,13 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "gaba.html" %}
+{% block content %}
     <h1>Koniec gry!</h1>
-    <p>Twój wynik: {{ total }}</p>
-    <a href="{{ url_for('gabaguessr.game') }}">Jeszcze raz!</a>
+    <!-- <p>Twój wynik: {{ total }}</p> -->
+    <div class="row justify-content-center">
+        {% for image in images %}
+            <div class="col-md-4  col-6 mb-1">
+                <img src="{{ image }}" alt="" class="card-img-top card-img-bottom">
+            </div>
+        {% endfor %}
+    </div>
+    <br>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{total}}" aria-valuemin="0" aria-valuemax="5000" {{ bar_style }}>{{total}}</div>
+    </div>
+    <br>
+    {% if total<2500 %}
+        <h1 style="text-align: center;">No słabo Ci poszło... 😕</h1>
+    {% elif total <3500 %}
+        <h1 style="text-align: center;">Nie poddawaj się! 💪</h1>
+    {% elif total<4500 %}
+        <h1 style="text-align: center;">Już prawie! 😍</h1>
+    {% else %}
+     <h1 style="text-align: center;">Wygrałaś!</h1>
+    {% endif %}
+    <div style="text-align: right;">
+        <a href="{{ url_for('gabaguessr.restart') }}"><button>Jeszcze raz!</button></a>
+    </div>
 </body>
-</html>
+{% endblock %}

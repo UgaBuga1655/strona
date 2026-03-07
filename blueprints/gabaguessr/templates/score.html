@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GabaGuessr</title>
-</head>
-<body>
-    <p>
-        Właściwa data: {{ correct_date }} <br>
-        Twój strzał: {{ guess_date }} <br>
-        Wynik: {{ score }} <br>
-        Łączny wynik: {{ total }} <br>
-    </p>
-    {% if over %}
-    <a href="{{ url_for('gabaguessr.game_over') }}">Zakończ</a>
-    {% else %}
-    <a href="{{ url_for('gabaguessr.game') }}">Kolejne</a>
-
-     {% endif %}
-</body>
-</html>
+{% extends "gaba.html" %}
+{% block content %}
+    <div style="text-align: center;">
+        <h1>{{ message }}</h1>
+        <p>
+            Twój strzał: {{ guess_date }} <br>
+        </p>
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{total}}" aria-valuemin="0" aria-valuemax="5000" {{ bar_style }}>{{total}}</div>
+    </div>
+    <br>
+    <div style="text-align: right;">
+        {% if over %}
+        <a href="{{ url_for('gabaguessr.game_over') }}"><button>Zakończ</button></a>
+        {% else %}
+        <a href="{{ url_for('gabaguessr.game') }}"><button>Kolejne</button></a>
+         {% endif %}
+    </div>
+{% endblock %}
