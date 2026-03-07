@@ -6,3 +6,4 @@ SQLAlchemy
 Unidecode
 Werkzeug
 WTForms
+pillow
