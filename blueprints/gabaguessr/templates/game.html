@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GabaGuessr</title>
+</head>
+<body>
+    <h2>{{stage}}/5</h2>
+    <img src="{{ image }}" alt="" style="height: 50em;">
+    <!-- <h2>{{ date_time }}</h2> -->
+     <br>
+     <form action="{{ url_for('gabaguessr.game') }}" method="post">
+         {{ form.csrf_token }} {{ form.date() }} <br>
+         {{ form.submit() }}
+     </form>
+</body>
+</html>

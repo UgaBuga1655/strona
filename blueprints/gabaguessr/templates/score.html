@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GabaGuessr</title>
+</head>
+<body>
+    <p>
+        Właściwa data: {{ correct_date }} <br>
+        Twój strzał: {{ guess_date }} <br>
+        Wynik: {{ score }} <br>
+        Łączny wynik: {{ total }} <br>
+    </p>
+    {% if over %}
+    <a href="{{ url_for('gabaguessr.game_over') }}">Zakończ</a>
+    {% else %}
+    <a href="{{ url_for('gabaguessr.game') }}">Kolejne</a>
+
+     {% endif %}
+</body>
+</html>

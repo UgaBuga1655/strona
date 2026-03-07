@@ -25,6 +25,9 @@ app.register_blueprint(scouting, url_prefix="/scouting")
 from blueprints.monte_planer.routes import monte_planer
 app.register_blueprint(monte_planer, url_prefix='/vdp')
 
+from blueprints.gabaguessr.routes import gabaguessr
+app.register_blueprint(gabaguessr, url_prefix='/gabaguessr')
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all() 
