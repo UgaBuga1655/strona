@@ -1,3 +1,5 @@
+from sqlalchemy import Null, null
+
 from config import db
 from flask import url_for
 
@@ -18,6 +20,7 @@ class Song(db.Model):
     verse_order = db.Column(db.String(150))
     verses = db.relationship('Verse', backref='song')
     tags = db.relationship('Tag', secondary=song_tag, backref='songs')
+    hidden = db.Column(db.Boolean)
     def Link(self):
         return url_for('spiewnik.song', id=self.id)
     
@@ -38,6 +41,11 @@ class Song(db.Model):
             verse = Verse.query.filter_by(song_id = self.id, name=name).first()
             verses_in_order.append(verse)
         return verses_in_order
+    
+class WaintingRoomEntry(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    song_id = db.Column(db.Integer, db.ForeignKey('song.id'), nullable=False)
+    edited_song_id = db.Column(db.Integer, db.ForeignKey('song.id'), nullable=True)
     
 
 class Author(db.Model):

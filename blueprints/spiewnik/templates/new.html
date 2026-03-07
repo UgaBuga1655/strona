@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Śpiewnik{% endblock %}
+
+{% block content %}
+<h1>Dodaj piosenkę</h1>
+
+<form action="" method="post">
+        {{ form.hidden_tag() }}
+        <h3>Tytuł: {{ form.title }}</h3>
+        <h3>Autorzy: 
+                {% for author in form.authors.entries %}
+                        {{ author.hidden_tag() }}
+                        {{ author.form.author }}
+                {% endfor %}
+        </h3>
+        <div id="verseFields">
+                {% for verse in form.verses.entries %}
+                <div class="verseField">
+                        {{ verse.form.type_ }} <br>
+                        {{ verse.form.text }} {{ verse.form.chords }}
+                </div>
+                {% endfor %}
+                
+        </div>
+        <button onclick="addVerse()">+</button>
+        {{ form.submit }}
+</form>
+
+<h3 style="margin-bottom: 5px;">Tagi:</h3>
+
+
+{% endblock %}
+{% block javascript %}
+<script src="{{ url_for('.static', filename='scripts/new.js') }}"></script>
+{% endblock %}
