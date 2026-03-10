@@ -1,3 +1,5 @@
+from fileinput import filename
+
 from flask import Blueprint, redirect, url_for, render_template, make_response, request
 from flask_wtf import FlaskForm
 from wtforms import DateField, SubmitField
@@ -131,4 +133,18 @@ def restart():
     reset_game(response)
     # response.set_data(redirect(url_for('gabaguessr.game')))
     return response
+
+@gabaguessr.route('letter')
+def letter():
+
+    files = os.listdir(gabaguessr.static_folder)
+    images = []
+    for file in files:
+        path= url_for('.static', filename=file)
+        img = Image.open(gabaguessr.static_folder + '/' + file)
+        date_time = img.getexif().get(306, 'Unknown')
+        display_date = '-'.join(date_time.split(' ')[0].split(':'))
+        images.append((path, display_date))
+    images.sort(key=lambda image: image[1])
+    return render_template('letter.html', images=images)
 

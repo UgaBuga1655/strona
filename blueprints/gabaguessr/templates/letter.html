@@ -1,0 +1,26 @@
+{% extends "gaba.html" %}
+
+{% block content %}
+<h1>Kochanie!</h1>
+<div style="text-align: justify;">
+
+    <p>Gratuluję wygranej! Mam nadzieję, że się spodobało. Liczy się jako hand-made? Uznałem, że plastycznie nie jestem uzdolniony, ale umiem programować, więc wymyśliłem coś takiego.</p>
+    <p>Trochę dziwnie się czuję, bo z jednej strony te dwa lata mineły tak szybko, a z drugiej nie wyobrażam sobie jak mogłem żyć bez Ciebie. Dziękuję Ci za wszystkie friends spotkania, randki, spacerki, rozmowy, wyjazdy, nocowanki i co tam jeszcze razem robiliśmy. Cieszę się, że to dopiero początek!</p>
+
+    <p>Tutaj masz wszystkie zdjęcia z datami:</p>
+    <div class="row">
+
+        {% for image, date in images %}
+                <div class="col-md-4 mb-1">
+                    <img src="{{ image }}" alt="" class="card-img-top card-img-bottom">
+                    <p style="text-align: center;">{{ date }}<p>
+                </div>
+        {% endfor %}
+    </div>
+    <div style="text-align: right;">
+
+        <p>Kocham Cię 💓💓💓 <br>
+        Tobi</p>
+    </div>
+</div>
+{% endblock %}
