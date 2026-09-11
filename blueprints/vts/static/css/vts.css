@@ -2,27 +2,26 @@ td {
     padding: 0px 10px;
 }
 button{
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     font-size: large;
     border-radius: 5px;
-    color: wheat;
-    background-color: dimgray;
+    background-color:  orange;
 }
 button:hover{
     filter: brightness(120%);
     cursor: pointer;
 } 
 tr:nth-child(even) td{
-    background-color: dimgray;
+    background-color: orange;
 }
 #table tr:nth-child(odd) td, #table tr:nth-child(odd) button {
-    background-color: gray;
+    background-color: whitesmoke;
 }
 
 #answers tr button  {
     margin-bottom: 3px;
 }
-input[type=text] {
+/* input[type=text] {
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     color: wheat;
@@ -35,10 +34,10 @@ input[type=text] {
     border-color: wheat;
     border-radius: 10px;
     transition: all 0.2s ease-in;
-}
+} */
 
 
-input[type=button], input[type=submit], label{
+/* input[type=button], input[type=submit], label{
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     color: wheat;
@@ -51,21 +50,22 @@ input[type=button], input[type=submit], label{
     border-color: black;
     border-radius: 10px;
     transition: all 0.2s ease-in;
-}
+} */
 
-input[type=button]:hover, input[type=submit]:hover, label:hover {
+/* input[type=button]:hover, input[type=submit]:hover, label:hover {
     font-weight: bold;
     border-color: wheat;
     cursor: pointer;
     color: antiquewhite;
-}
-
+} */
+/* 
 ::placeholder {
     font-family: 'Courier New', Courier, monospace;
-    color: antiquewhite;
+    color: antiquewhite; */
 
-}
+/* } */
 
 .inset {
     border-style: inset;
+    filter: brightness(120%);
 }
