@@ -2,7 +2,6 @@ td {
     padding: 0px 10px;
 }
 button{
-    /* font-family: 'Courier New', Courier, monospace; */
     font-size: large;
     border-radius: 5px;
     background-color:  var(--secondary-accent-color);
@@ -22,49 +21,6 @@ tr:nth-child(even) td{
 #answers tr button  {
     margin-bottom: 3px;
 }
-/* input[type=text] {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    color: wheat;
-    text-decoration: none;
-    display: inline-block;
-    background-color: black;
-    padding: 10px;
-    border: 1px;
-    border-style: solid;
-    border-color: wheat;
-    border-radius: 10px;
-    transition: all 0.2s ease-in;
-} */
-
-
-/* input[type=button], input[type=submit], label{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: medium;
-    color: wheat;
-    text-decoration: none;
-    display: inline-block;
-    background-color: black;
-    padding: 10px;
-    border: 3px;
-    border-style: dotted;
-    border-color: black;
-    border-radius: 10px;
-    transition: all 0.2s ease-in;
-} */
-
-/* input[type=button]:hover, input[type=submit]:hover, label:hover {
-    font-weight: bold;
-    border-color: wheat;
-    cursor: pointer;
-    color: antiquewhite;
-} */
-/* 
-::placeholder {
-    font-family: 'Courier New', Courier, monospace;
-    color: antiquewhite; */
-
-/* } */
 
 .inset {
     border-style: inset;

@@ -71,6 +71,11 @@ input, textarea, select {
     border-style: solid;
     border-color: var(--accent-color);
 }
+.message_card {
+
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+}
 input:hover, select:hover{
     color: var(--accent-color);
     border-color: var(--text-color);

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, session
 from unidecode import unidecode
 from .forms import CezarForm, CipherForm, VigenereForm, SylabowyForm, DiacriticsForm
 from .functions import morse_process, cezar_process, vigenere_process, sylabowy_process
@@ -15,7 +15,7 @@ def index():
 
 @szyfry.route("/morse", methods=["GET", "POST"])
 def morse():
-    form = CipherForm()
+    form = CipherForm(session.get('message'))
     message = None
     if form.validate_on_submit():
         message = morse_process(form)
@@ -24,35 +24,46 @@ def morse():
 
 @szyfry.route("/cezar", methods=["GET", "POST"])
 def cezar():
-    form = CezarForm()
+    form = CezarForm(session.get('message'))
+    # form.message.data = session.get('message')
     message = None
     if form.validate_on_submit():
         message = cezar_process(form)
+        session['message'] = message
     return render_template("cezar.html", active_tab=active_tab, form=form, message=message)
 
 
 @szyfry.route("/vigenere", methods=["GET", "POST"])
 def vigenere():
-    form = VigenereForm()
+    form = VigenereForm(session.get('message'))
+    # form.message.data = session.get('message')
     message = None
     if form.validate_on_submit():
         message, form.key.data = vigenere_process(form)
+        session['message'] = message
     return render_template("vigenere.html", active_tab=active_tab, form=form, message=message)
 
 
 @szyfry.route("/sylabowy", methods=["GET", "POST"])
 def sylabowy():
-    form = SylabowyForm()
+    form = SylabowyForm(session.get('message'))
+    # form.message.data = session.get('message')
     message = None
     if form.validate_on_submit():
         message = sylabowy_process(form)
+        session['message'] = message
     return render_template("sylabowy.html", active_tab=active_tab, form=form, message=message)
 
 
 @szyfry.route("/remove-diacritics", methods=["GET", "POST"])
 def diacritics():
-    form = DiacriticsForm()
+    form = DiacriticsForm(session.get('message'))
     message = None
+    print(session.get('message'))
+    # form.message.data = session.get('message')
     if form.validate_on_submit():
         message = unidecode(form.message.data)
+        session['message'] = message
+    else:
+        print('not validated')
     return render_template("diacritics.html", active_tab=active_tab, form=form, message=message)
