@@ -8,6 +8,28 @@
     <title>
         {% block title %}{% endblock %} - tobiasz.xyz
     </title>
+    {% if session.get('theme') == 'dark' %}
+    <style>
+        :root{
+                --main-bg-color: rgb(28, 1, 63);
+                --secondary-bg-color: rgb(52, 4, 65);
+                --text-color: whitesmoke;
+                --accent-color: rgb(219, 83, 34);
+                --secondary-accent-color: orange;
+            }
+    </style>
+    {% else %}
+    <style>
+        :root{
+                --main-bg-color: whitesmoke;
+                --secondary-bg-color: seashell;
+                --text-color: black;
+                --accent-color: rgb(219, 83, 34);
+                --secondary-accent-color: orange;
+            }
+    </style>
+    {% endif %}
+ 
 </head>
 <header id="navbar" class="navbar">
     <a id="a-index" href="/">Strona główna</a>
@@ -15,6 +37,7 @@
     <a id="a-szyfry" href="/szyfry">Szyfry</a>
     <a id="a-vts" href="/vts">VTS</a>
     <a id='a-monte_planer' href="/vdp">Planer</a>
+    <a href="{{ url_for('toggle_theme', current_page=request.path) }}">Tryb</a>
     <!-- <a id="a-gra" href="/scouting/gra">Gra 7.DK</a> -->
 </header>
 <body>

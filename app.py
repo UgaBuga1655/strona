@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session, redirect, request
 from config import Config, db
 
 app = Flask(__name__)
@@ -27,6 +27,14 @@ app.register_blueprint(monte_planer, url_prefix='/vdp')
 
 from blueprints.gabaguessr.routes import gabaguessr
 app.register_blueprint(gabaguessr, url_prefix='/gabaguessr')
+
+@app.get('/toggle_theme')
+def toggle_theme():
+    current_theme = session.get('theme')
+    session['theme'] ='dark' if current_theme == 'light' else 'light'
+    print(session.get('theme'))
+
+    return redirect(request.args.get('current_page'))
 
 if __name__ == "__main__":
     with app.app_context():

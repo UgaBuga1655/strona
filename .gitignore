@@ -2,3 +2,4 @@ passwd
 .venv
 __pycache__
 instance
+venv

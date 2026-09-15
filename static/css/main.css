@@ -1,17 +1,22 @@
+
 html {
     min-height: 100%;
     font-size: large;
-    font-family:'Courier New', Courier, monospace;
+    font-family:Arial;
 }
 
 body {
     height: 100%;
     /* background-color: rgb(18, 33, 26); */
-    background: linear-gradient(160deg,rgb(89, 161, 125) 0%, rgb(18, 33, 26)100%);
+    background-color: var(--main-bg-color);
+    color: var(--text-color)
+    /* background: linear-gradient(160deg,rgb(89, 161, 125) 0%, rgb(18, 33, 26)100%); */
     /* background: linear-gradient(160deg,rgba(37,0,186,1) 0%, rgba(9,9,121,1) 30%, rgba(2,0,36,1) 100%); */
 }
 
-
+    h1, h2, h3 {
+        color: var(--accent-color);
+}
 header.navbar{
     max-width: 950px;
     width: fit-content;
@@ -21,52 +26,82 @@ header.navbar{
 
 header.navbar a:hover, .button:hover, .active-tab {
     cursor: pointer;
-    color: antiquewhite !important;
-    border-color: wheat !important;
-    font-weight: bold;
+    color: var(--accent-color) !important;
+    border-color: var(--text-color) !important;
+    /* font-weight: bold; */
 }
 
 header.navbar a, .button {
     font-size: large;
-    color: wheat;
+    color: var(--text-color);
     text-decoration: none;
     display: inline-block;
-    background-color: black;
+    /* background-color: var(--main-bg-color); */
     padding: 10px;
-    border: 5px;
-    border-style: dotted;
-    border-color: black;
+    border: 3px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: var(--accent-color);
     transition: all 0.2s ease-out;
-    border-radius: 10px;
+    border-radius: 4px;
     margin-bottom: 10px;
 }
 
-input {
+header.navbar a {
+    background-color: var(--secondary-bg-color);
+}
+
+.button {
+    background-color: var(--main-bg-color);
+}
+input, textarea, select {
+    cursor: pointer;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-size: medium;
+    color: var(--text-color);
+    text-decoration: none;
+    /* display: block; */
+    background-color: var(--main-bg-color);
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    padding: 10px;
+    margin: 5px;
+    border: 3px;
+    border-style: solid;
+    border-color: var(--accent-color);
+}
+input:hover, select:hover{
+    color: var(--accent-color);
+    border-color: var(--text-color);
+}
+
+textarea {
+    width: calc(100% - 35px);
+    display: block;
+}
+/* input, textarea, select{
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     color: wheat;
     text-decoration: none;
     /* display: block; */
-    background-color: black;
+    /* background-color: var(--text-color);
     border-radius: 10px;
     transition: all 0.1s ease-in;
     padding: 10px;
     margin: 5px;
     border: 1px;
-    border-style: solid;
-}
+    border-style: solid; */
+/* } */ 
 
-input[type='submit']{
-    cursor: pointer;
-}
 
 a {
     text-decoration: none;
-    color: goldenrod;
+    color: var(--accent-color);
 }
 
 a:hover {
-    color: wheat;
+    color: var(--secondary-accent-color);
 }
 
 div.wrapper {
@@ -74,12 +109,11 @@ div.wrapper {
     margin: auto;
     margin-bottom: 2em;
     max-width: 1000px;
-    background-color: black;
-    color: wheat;
-    border: 10px;
-    border-color: wheat;
-    border-style: dashed;
-    border-radius: 10px;
+    background-color: var(--secondary-bg-color);
+    border: 3px;
+    border-color: var(--accent-color);
+    border-style: solid;
+    border-radius: 4px;
 }
 
 figure {
@@ -104,15 +138,16 @@ figcaption {
 }
 
 div.card {
-    padding: 15px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    background-color: dimgrey;
-    color: wheat;
-    border: 5px;
-    border-color: wheat;
-    border-style: dashed;
-    border-radius: 5px;
+    padding: 10px;
+    /* margin-top: 1em; */
+    /* margin-bottom: 1em; */
+    margin: 5px;
+    background-color: var(--main-bg-color);
+    /* color: ; */
+    border: 3px;
+    border-color: var(--accent-color);
+    border-style: solid;
+    border-radius: 4px;
     overflow-wrap: break-word;
 }
 
