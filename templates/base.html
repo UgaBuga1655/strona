@@ -1,3 +1,4 @@
+{% from "macros/svgs.html" import moon, sun %}
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -37,7 +38,14 @@
     <a id="a-szyfry" href="/szyfry">Szyfry</a>
     <a id="a-vts" href="/vts">VTS</a>
     <a id='a-monte_planer' href="/vdp">Planer</a>
-    <a href="{{ url_for('toggle_theme', current_page=request.path) }}">Tryb</a>
+    <a href="{{ url_for('toggle_theme', current_page=request.path) }}">
+
+    {% if session.get('theme') == 'dark' %}
+     {{ sun('foo') }}
+    {% else %}
+     {{ moon('foo') }}
+    {% endif %}
+    </a>
     <!-- <a id="a-gra" href="/scouting/gra">Gra 7.DK</a> -->
 </header>
 <body>

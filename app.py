@@ -32,7 +32,6 @@ app.register_blueprint(gabaguessr, url_prefix='/gabaguessr')
 def toggle_theme():
     current_theme = session.get('theme')
     session['theme'] ='dark' if current_theme == 'light' else 'light'
-    print(session.get('theme'))
 
     return redirect(request.args.get('current_page'))
 

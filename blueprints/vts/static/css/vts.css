@@ -5,17 +5,18 @@ button{
     /* font-family: 'Courier New', Courier, monospace; */
     font-size: large;
     border-radius: 5px;
-    background-color:  orange;
+    background-color:  var(--secondary-accent-color);
 }
 button:hover{
     filter: brightness(120%);
     cursor: pointer;
 } 
 tr:nth-child(even) td{
-    background-color: orange;
+    background-color:  var(--secondary-accent-color);
 }
 #table tr:nth-child(odd) td, #table tr:nth-child(odd) button {
-    background-color: whitesmoke;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
 }
 
 #answers tr button  {

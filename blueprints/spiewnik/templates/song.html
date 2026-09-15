@@ -30,7 +30,7 @@
         </div>
         
     </div>
-    <h3 style="margin-bottom: 0px; margin-top: 5%;">Tagi:</h3>
+    <h3 style="margin-bottom: 4px;">Tagi:</h3>
     {% for tag in song.tags%}
         <a class="button" href="/spiewnik/tag/{{ tag.id }}">{{ tag.name }}</a>
     {% endfor %}
